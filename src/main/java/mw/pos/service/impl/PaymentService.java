@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("PaymentService")
+@Service("paymentService")
 public class PaymentService implements IPaymentService {
 	@Resource
-	private PaymentMapper PaymentMapper;
+	private PaymentMapper paymentMapper;
 
 	public int insert(Payment payment){
-		return PaymentMapper.insert(payment);
+		return paymentMapper.insert(payment);
 	}
 	public int insertSelective(Payment payment){
-		return PaymentMapper.insertSelective(payment);
+		return paymentMapper.insertSelective(payment);
 	}
 	public int deleteByPrimaryKey(PaymentKey paymentKey){
-		return PaymentMapper.deleteByPrimaryKey(paymentKey);
+		return paymentMapper.deleteByPrimaryKey(paymentKey);
 	}
 	public Payment selectByPrimaryKey(PaymentKey paymentKey){
-		return PaymentMapper.selectByPrimaryKey(paymentKey);
-	}
-	public int updateByPrimaryKey(Payment payment){
-		return PaymentMapper.updateByPrimaryKey(payment);
+		return paymentMapper.selectByPrimaryKey(paymentKey);
 	}
 	public int updateByPrimaryKeySelective(Payment payment){
-		return PaymentMapper.updateByPrimaryKeySelective(payment);
+		return paymentMapper.updateByPrimaryKeySelective(payment);
+	}
+	public int updateByPrimaryKey(Payment payment){
+		return paymentMapper.updateByPrimaryKey(payment);
 	}
 
 

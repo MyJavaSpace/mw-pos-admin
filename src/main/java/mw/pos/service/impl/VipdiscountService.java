@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("VipdiscountService")
+@Service("vipdiscountService")
 public class VipdiscountService implements IVipdiscountService {
 	@Resource
-	private VipdiscountMapper VipdiscountMapper;
+	private VipdiscountMapper vipdiscountMapper;
 
 	public int insert(Vipdiscount vipdiscount){
-		return VipdiscountMapper.insert(vipdiscount);
+		return vipdiscountMapper.insert(vipdiscount);
 	}
 	public int insertSelective(Vipdiscount vipdiscount){
-		return VipdiscountMapper.insertSelective(vipdiscount);
+		return vipdiscountMapper.insertSelective(vipdiscount);
 	}
 	public int deleteByPrimaryKey(VipdiscountKey vipdiscountKey){
-		return VipdiscountMapper.deleteByPrimaryKey(vipdiscountKey);
+		return vipdiscountMapper.deleteByPrimaryKey(vipdiscountKey);
 	}
 	public Vipdiscount selectByPrimaryKey(VipdiscountKey vipdiscountKey){
-		return VipdiscountMapper.selectByPrimaryKey(vipdiscountKey);
-	}
-	public int updateByPrimaryKey(Vipdiscount vipdiscount){
-		return VipdiscountMapper.updateByPrimaryKey(vipdiscount);
+		return vipdiscountMapper.selectByPrimaryKey(vipdiscountKey);
 	}
 	public int updateByPrimaryKeySelective(Vipdiscount vipdiscount){
-		return VipdiscountMapper.updateByPrimaryKeySelective(vipdiscount);
+		return vipdiscountMapper.updateByPrimaryKeySelective(vipdiscount);
+	}
+	public int updateByPrimaryKey(Vipdiscount vipdiscount){
+		return vipdiscountMapper.updateByPrimaryKey(vipdiscount);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("ShopgroupdtlService")
+@Service("shopgroupdtlService")
 public class ShopgroupdtlService implements IShopgroupdtlService {
 	@Resource
-	private ShopgroupdtlMapper ShopgroupdtlMapper;
+	private ShopgroupdtlMapper shopgroupdtlMapper;
 
 	public int insert(Shopgroupdtl shopgroupdtl){
-		return ShopgroupdtlMapper.insert(shopgroupdtl);
+		return shopgroupdtlMapper.insert(shopgroupdtl);
 	}
 	public int insertSelective(Shopgroupdtl shopgroupdtl){
-		return ShopgroupdtlMapper.insertSelective(shopgroupdtl);
+		return shopgroupdtlMapper.insertSelective(shopgroupdtl);
 	}
 	public int deleteByPrimaryKey(ShopgroupdtlKey shopgroupdtlKey){
-		return ShopgroupdtlMapper.deleteByPrimaryKey(shopgroupdtlKey);
+		return shopgroupdtlMapper.deleteByPrimaryKey(shopgroupdtlKey);
 	}
 	public Shopgroupdtl selectByPrimaryKey(ShopgroupdtlKey shopgroupdtlKey){
-		return ShopgroupdtlMapper.selectByPrimaryKey(shopgroupdtlKey);
-	}
-	public int updateByPrimaryKey(Shopgroupdtl shopgroupdtl){
-		return ShopgroupdtlMapper.updateByPrimaryKey(shopgroupdtl);
+		return shopgroupdtlMapper.selectByPrimaryKey(shopgroupdtlKey);
 	}
 	public int updateByPrimaryKeySelective(Shopgroupdtl shopgroupdtl){
-		return ShopgroupdtlMapper.updateByPrimaryKeySelective(shopgroupdtl);
+		return shopgroupdtlMapper.updateByPrimaryKeySelective(shopgroupdtl);
+	}
+	public int updateByPrimaryKey(Shopgroupdtl shopgroupdtl){
+		return shopgroupdtlMapper.updateByPrimaryKey(shopgroupdtl);
 	}
 
 

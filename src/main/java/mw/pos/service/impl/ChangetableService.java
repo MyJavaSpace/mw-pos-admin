@@ -8,16 +8,16 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("ChangetableService")
+@Service("changetableService")
 public class ChangetableService implements IChangetableService {
 	@Resource
-	private ChangetableMapper ChangetableMapper;
+	private ChangetableMapper changetableMapper;
 
 	public int insert(Changetable changetable){
-		return ChangetableMapper.insert(changetable);
+		return changetableMapper.insert(changetable);
 	}
 	public int insertSelective(Changetable changetable){
-		return ChangetableMapper.insertSelective(changetable);
+		return changetableMapper.insertSelective(changetable);
 	}
 
 

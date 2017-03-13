@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("SellorderitemService")
+@Service("sellorderitemService")
 public class SellorderitemService implements ISellorderitemService {
 	@Resource
-	private SellorderitemMapper SellorderitemMapper;
+	private SellorderitemMapper sellorderitemMapper;
 
 	public int insert(SellorderitemWithBLOBs sellorderitemWithBLOBs){
-		return SellorderitemMapper.insert(sellorderitemWithBLOBs);
+		return sellorderitemMapper.insert(sellorderitemWithBLOBs);
 	}
 	public int insertSelective(SellorderitemWithBLOBs sellorderitemWithBLOBs){
-		return SellorderitemMapper.insertSelective(sellorderitemWithBLOBs);
+		return sellorderitemMapper.insertSelective(sellorderitemWithBLOBs);
 	}
 	public int deleteByPrimaryKey(SellorderitemKey sellorderitemKey){
-		return SellorderitemMapper.deleteByPrimaryKey(sellorderitemKey);
+		return sellorderitemMapper.deleteByPrimaryKey(sellorderitemKey);
 	}
 	public SellorderitemWithBLOBs selectByPrimaryKey(SellorderitemKey sellorderitemKey){
-		return SellorderitemMapper.selectByPrimaryKey(sellorderitemKey);
-	}
-	public int updateByPrimaryKey(Sellorderitem sellorderitem){
-		return SellorderitemMapper.updateByPrimaryKey(sellorderitem);
+		return sellorderitemMapper.selectByPrimaryKey(sellorderitemKey);
 	}
 	public int updateByPrimaryKeySelective(SellorderitemWithBLOBs sellorderitemWithBLOBs){
-		return SellorderitemMapper.updateByPrimaryKeySelective(sellorderitemWithBLOBs);
+		return sellorderitemMapper.updateByPrimaryKeySelective(sellorderitemWithBLOBs);
+	}
+	public int updateByPrimaryKey(Sellorderitem sellorderitem){
+		return sellorderitemMapper.updateByPrimaryKey(sellorderitem);
 	}
 	public int updateByPrimaryKeyWithBLOBs(SellorderitemWithBLOBs sellorderitemWithBLOBs){
-		return SellorderitemMapper.updateByPrimaryKeyWithBLOBs(sellorderitemWithBLOBs);
+		return sellorderitemMapper.updateByPrimaryKeyWithBLOBs(sellorderitemWithBLOBs);
 	}
 
 

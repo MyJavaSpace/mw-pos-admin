@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("UserdiscountService")
+@Service("userdiscountService")
 public class UserdiscountService implements IUserdiscountService {
 	@Resource
-	private UserdiscountMapper UserdiscountMapper;
+	private UserdiscountMapper userdiscountMapper;
 
 	public int insert(Userdiscount userdiscount){
-		return UserdiscountMapper.insert(userdiscount);
+		return userdiscountMapper.insert(userdiscount);
 	}
 	public int insertSelective(Userdiscount userdiscount){
-		return UserdiscountMapper.insertSelective(userdiscount);
+		return userdiscountMapper.insertSelective(userdiscount);
 	}
 	public int deleteByPrimaryKey(UserdiscountKey userdiscountKey){
-		return UserdiscountMapper.deleteByPrimaryKey(userdiscountKey);
+		return userdiscountMapper.deleteByPrimaryKey(userdiscountKey);
 	}
 	public Userdiscount selectByPrimaryKey(UserdiscountKey userdiscountKey){
-		return UserdiscountMapper.selectByPrimaryKey(userdiscountKey);
-	}
-	public int updateByPrimaryKey(Userdiscount userdiscount){
-		return UserdiscountMapper.updateByPrimaryKey(userdiscount);
+		return userdiscountMapper.selectByPrimaryKey(userdiscountKey);
 	}
 	public int updateByPrimaryKeySelective(Userdiscount userdiscount){
-		return UserdiscountMapper.updateByPrimaryKeySelective(userdiscount);
+		return userdiscountMapper.updateByPrimaryKeySelective(userdiscount);
+	}
+	public int updateByPrimaryKey(Userdiscount userdiscount){
+		return userdiscountMapper.updateByPrimaryKey(userdiscount);
 	}
 
 

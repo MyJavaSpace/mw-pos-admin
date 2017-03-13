@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("MtableService")
+@Service("mtableService")
 public class MtableService implements IMtableService {
 	@Resource
-	private MtableMapper MtableMapper;
+	private MtableMapper mtableMapper;
 
 	public int insert(Mtable mtable){
-		return MtableMapper.insert(mtable);
+		return mtableMapper.insert(mtable);
 	}
 	public int insertSelective(Mtable mtable){
-		return MtableMapper.insertSelective(mtable);
+		return mtableMapper.insertSelective(mtable);
 	}
 	public int deleteByPrimaryKey(MtableKey mtableKey){
-		return MtableMapper.deleteByPrimaryKey(mtableKey);
+		return mtableMapper.deleteByPrimaryKey(mtableKey);
 	}
 	public Mtable selectByPrimaryKey(MtableKey mtableKey){
-		return MtableMapper.selectByPrimaryKey(mtableKey);
-	}
-	public int updateByPrimaryKey(Mtable mtable){
-		return MtableMapper.updateByPrimaryKey(mtable);
+		return mtableMapper.selectByPrimaryKey(mtableKey);
 	}
 	public int updateByPrimaryKeySelective(Mtable mtable){
-		return MtableMapper.updateByPrimaryKeySelective(mtable);
+		return mtableMapper.updateByPrimaryKeySelective(mtable);
+	}
+	public int updateByPrimaryKey(Mtable mtable){
+		return mtableMapper.updateByPrimaryKey(mtable);
 	}
 
 

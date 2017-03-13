@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("MenuitemService")
+@Service("menuitemService")
 public class MenuitemService implements IMenuitemService {
 	@Resource
-	private MenuitemMapper MenuitemMapper;
+	private MenuitemMapper menuitemMapper;
 
 	public int insert(Menuitem menuitem){
-		return MenuitemMapper.insert(menuitem);
+		return menuitemMapper.insert(menuitem);
 	}
 	public int insertSelective(Menuitem menuitem){
-		return MenuitemMapper.insertSelective(menuitem);
+		return menuitemMapper.insertSelective(menuitem);
 	}
 	public int deleteByPrimaryKey(MenuitemKey menuitemKey){
-		return MenuitemMapper.deleteByPrimaryKey(menuitemKey);
+		return menuitemMapper.deleteByPrimaryKey(menuitemKey);
 	}
 	public Menuitem selectByPrimaryKey(MenuitemKey menuitemKey){
-		return MenuitemMapper.selectByPrimaryKey(menuitemKey);
-	}
-	public int updateByPrimaryKey(Menuitem menuitem){
-		return MenuitemMapper.updateByPrimaryKey(menuitem);
+		return menuitemMapper.selectByPrimaryKey(menuitemKey);
 	}
 	public int updateByPrimaryKeySelective(Menuitem menuitem){
-		return MenuitemMapper.updateByPrimaryKeySelective(menuitem);
+		return menuitemMapper.updateByPrimaryKeySelective(menuitem);
+	}
+	public int updateByPrimaryKey(Menuitem menuitem){
+		return menuitemMapper.updateByPrimaryKey(menuitem);
 	}
 
 

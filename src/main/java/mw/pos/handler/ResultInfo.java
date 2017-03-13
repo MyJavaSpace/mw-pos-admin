@@ -1,9 +1,11 @@
 package mw.pos.handler;
 
+import mw.pos.util.ConfigUtil;
+
 public class ResultInfo<T> {
 
 	private boolean status;
-	private String message;
+	private String message=ConfigUtil.getFaile();
 	private T data;
 	private StackTraceElement[] stackTrace;
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("MenuitemuintService")
+@Service("menuitemuintService")
 public class MenuitemuintService implements IMenuitemuintService {
 	@Resource
-	private MenuitemuintMapper MenuitemuintMapper;
+	private MenuitemuintMapper menuitemuintMapper;
 
 	public int insert(Menuitemuint menuitemuint){
-		return MenuitemuintMapper.insert(menuitemuint);
+		return menuitemuintMapper.insert(menuitemuint);
 	}
 	public int insertSelective(Menuitemuint menuitemuint){
-		return MenuitemuintMapper.insertSelective(menuitemuint);
+		return menuitemuintMapper.insertSelective(menuitemuint);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return MenuitemuintMapper.deleteByPrimaryKey(integer);
+		return menuitemuintMapper.deleteByPrimaryKey(integer);
 	}
 	public Menuitemuint selectByPrimaryKey(Integer integer){
-		return MenuitemuintMapper.selectByPrimaryKey(integer);
-	}
-	public int updateByPrimaryKey(Menuitemuint menuitemuint){
-		return MenuitemuintMapper.updateByPrimaryKey(menuitemuint);
+		return menuitemuintMapper.selectByPrimaryKey(integer);
 	}
 	public int updateByPrimaryKeySelective(Menuitemuint menuitemuint){
-		return MenuitemuintMapper.updateByPrimaryKeySelective(menuitemuint);
+		return menuitemuintMapper.updateByPrimaryKeySelective(menuitemuint);
+	}
+	public int updateByPrimaryKey(Menuitemuint menuitemuint){
+		return menuitemuintMapper.updateByPrimaryKey(menuitemuint);
 	}
 
 

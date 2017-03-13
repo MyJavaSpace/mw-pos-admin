@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("PrinterService")
+@Service("printerService")
 public class PrinterService implements IPrinterService {
 	@Resource
-	private PrinterMapper PrinterMapper;
+	private PrinterMapper printerMapper;
 
 	public int insert(Printer printer){
-		return PrinterMapper.insert(printer);
+		return printerMapper.insert(printer);
 	}
 	public int insertSelective(Printer printer){
-		return PrinterMapper.insertSelective(printer);
+		return printerMapper.insertSelective(printer);
 	}
 	public int deleteByPrimaryKey(PrinterKey printerKey){
-		return PrinterMapper.deleteByPrimaryKey(printerKey);
+		return printerMapper.deleteByPrimaryKey(printerKey);
 	}
 	public Printer selectByPrimaryKey(PrinterKey printerKey){
-		return PrinterMapper.selectByPrimaryKey(printerKey);
-	}
-	public int updateByPrimaryKey(Printer printer){
-		return PrinterMapper.updateByPrimaryKey(printer);
+		return printerMapper.selectByPrimaryKey(printerKey);
 	}
 	public int updateByPrimaryKeySelective(Printer printer){
-		return PrinterMapper.updateByPrimaryKeySelective(printer);
+		return printerMapper.updateByPrimaryKeySelective(printer);
+	}
+	public int updateByPrimaryKey(Printer printer){
+		return printerMapper.updateByPrimaryKey(printer);
 	}
 
 

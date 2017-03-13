@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("SellcheckService")
+@Service("sellcheckService")
 public class SellcheckService implements ISellcheckService {
 	@Resource
-	private SellcheckMapper SellcheckMapper;
+	private SellcheckMapper sellcheckMapper;
 
 	public int insert(Sellcheck sellcheck){
-		return SellcheckMapper.insert(sellcheck);
+		return sellcheckMapper.insert(sellcheck);
 	}
 	public int insertSelective(Sellcheck sellcheck){
-		return SellcheckMapper.insertSelective(sellcheck);
+		return sellcheckMapper.insertSelective(sellcheck);
 	}
 	public int deleteByPrimaryKey(SellcheckKey sellcheckKey){
-		return SellcheckMapper.deleteByPrimaryKey(sellcheckKey);
+		return sellcheckMapper.deleteByPrimaryKey(sellcheckKey);
 	}
 	public Sellcheck selectByPrimaryKey(SellcheckKey sellcheckKey){
-		return SellcheckMapper.selectByPrimaryKey(sellcheckKey);
-	}
-	public int updateByPrimaryKey(Sellcheck sellcheck){
-		return SellcheckMapper.updateByPrimaryKey(sellcheck);
+		return sellcheckMapper.selectByPrimaryKey(sellcheckKey);
 	}
 	public int updateByPrimaryKeySelective(Sellcheck sellcheck){
-		return SellcheckMapper.updateByPrimaryKeySelective(sellcheck);
+		return sellcheckMapper.updateByPrimaryKeySelective(sellcheck);
+	}
+	public int updateByPrimaryKey(Sellcheck sellcheck){
+		return sellcheckMapper.updateByPrimaryKey(sellcheck);
 	}
 
 

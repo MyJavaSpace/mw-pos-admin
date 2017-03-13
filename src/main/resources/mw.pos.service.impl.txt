@@ -11,7 +11,7 @@ import com.pos.dao.*;
 @Service("{serviceName}Service")
 public class {ServiceName}Service implements I{ServiceName}Service {
 	@Resource
-	private {serviceName}Mapper {serviceName}Mapper;
+	private {ServiceName}Mapper {serviceName}Mapper;
 
 {MethodName}
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("CookbookService")
+@Service("cookbookService")
 public class CookbookService implements ICookbookService {
 	@Resource
-	private CookbookMapper CookbookMapper;
+	private CookbookMapper cookbookMapper;
 
 	public int insert(Cookbook cookbook){
-		return CookbookMapper.insert(cookbook);
+		return cookbookMapper.insert(cookbook);
 	}
 	public int insertSelective(Cookbook cookbook){
-		return CookbookMapper.insertSelective(cookbook);
+		return cookbookMapper.insertSelective(cookbook);
 	}
 	public int deleteByPrimaryKey(CookbookKey cookbookKey){
-		return CookbookMapper.deleteByPrimaryKey(cookbookKey);
+		return cookbookMapper.deleteByPrimaryKey(cookbookKey);
 	}
 	public Cookbook selectByPrimaryKey(CookbookKey cookbookKey){
-		return CookbookMapper.selectByPrimaryKey(cookbookKey);
-	}
-	public int updateByPrimaryKey(Cookbook cookbook){
-		return CookbookMapper.updateByPrimaryKey(cookbook);
+		return cookbookMapper.selectByPrimaryKey(cookbookKey);
 	}
 	public int updateByPrimaryKeySelective(Cookbook cookbook){
-		return CookbookMapper.updateByPrimaryKeySelective(cookbook);
+		return cookbookMapper.updateByPrimaryKeySelective(cookbook);
+	}
+	public int updateByPrimaryKey(Cookbook cookbook){
+		return cookbookMapper.updateByPrimaryKey(cookbook);
 	}
 
 

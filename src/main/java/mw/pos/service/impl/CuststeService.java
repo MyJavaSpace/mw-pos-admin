@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("CuststeService")
+@Service("custsteService")
 public class CuststeService implements ICuststeService {
 	@Resource
-	private CuststeMapper CuststeMapper;
+	private CuststeMapper custsteMapper;
 
 	public int insert(Custste custste){
-		return CuststeMapper.insert(custste);
+		return custsteMapper.insert(custste);
 	}
 	public int insertSelective(Custste custste){
-		return CuststeMapper.insertSelective(custste);
+		return custsteMapper.insertSelective(custste);
 	}
 	public int deleteByPrimaryKey(CuststeKey custsteKey){
-		return CuststeMapper.deleteByPrimaryKey(custsteKey);
+		return custsteMapper.deleteByPrimaryKey(custsteKey);
 	}
 	public Custste selectByPrimaryKey(CuststeKey custsteKey){
-		return CuststeMapper.selectByPrimaryKey(custsteKey);
-	}
-	public int updateByPrimaryKey(Custste custste){
-		return CuststeMapper.updateByPrimaryKey(custste);
+		return custsteMapper.selectByPrimaryKey(custsteKey);
 	}
 	public int updateByPrimaryKeySelective(Custste custste){
-		return CuststeMapper.updateByPrimaryKeySelective(custste);
+		return custsteMapper.updateByPrimaryKeySelective(custste);
+	}
+	public int updateByPrimaryKey(Custste custste){
+		return custsteMapper.updateByPrimaryKey(custste);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("SellhurryService")
+@Service("sellhurryService")
 public class SellhurryService implements ISellhurryService {
 	@Resource
-	private SellhurryMapper SellhurryMapper;
+	private SellhurryMapper sellhurryMapper;
 
 	public int insert(Sellhurry sellhurry){
-		return SellhurryMapper.insert(sellhurry);
+		return sellhurryMapper.insert(sellhurry);
 	}
 	public int insertSelective(Sellhurry sellhurry){
-		return SellhurryMapper.insertSelective(sellhurry);
+		return sellhurryMapper.insertSelective(sellhurry);
 	}
 	public int deleteByPrimaryKey(SellhurryKey sellhurryKey){
-		return SellhurryMapper.deleteByPrimaryKey(sellhurryKey);
+		return sellhurryMapper.deleteByPrimaryKey(sellhurryKey);
 	}
 	public Sellhurry selectByPrimaryKey(SellhurryKey sellhurryKey){
-		return SellhurryMapper.selectByPrimaryKey(sellhurryKey);
-	}
-	public int updateByPrimaryKey(Sellhurry sellhurry){
-		return SellhurryMapper.updateByPrimaryKey(sellhurry);
+		return sellhurryMapper.selectByPrimaryKey(sellhurryKey);
 	}
 	public int updateByPrimaryKeySelective(Sellhurry sellhurry){
-		return SellhurryMapper.updateByPrimaryKeySelective(sellhurry);
+		return sellhurryMapper.updateByPrimaryKeySelective(sellhurry);
+	}
+	public int updateByPrimaryKey(Sellhurry sellhurry){
+		return sellhurryMapper.updateByPrimaryKey(sellhurry);
 	}
 
 

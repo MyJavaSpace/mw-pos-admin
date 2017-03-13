@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("MenuitemmuldeptService")
+@Service("menuitemmuldeptService")
 public class MenuitemmuldeptService implements IMenuitemmuldeptService {
 	@Resource
-	private MenuitemmuldeptMapper MenuitemmuldeptMapper;
+	private MenuitemmuldeptMapper menuitemmuldeptMapper;
 
 	public int insert(Menuitemmuldept menuitemmuldept){
-		return MenuitemmuldeptMapper.insert(menuitemmuldept);
+		return menuitemmuldeptMapper.insert(menuitemmuldept);
 	}
 	public int insertSelective(Menuitemmuldept menuitemmuldept){
-		return MenuitemmuldeptMapper.insertSelective(menuitemmuldept);
+		return menuitemmuldeptMapper.insertSelective(menuitemmuldept);
 	}
 	public int deleteByPrimaryKey(MenuitemmuldeptKey menuitemmuldeptKey){
-		return MenuitemmuldeptMapper.deleteByPrimaryKey(menuitemmuldeptKey);
+		return menuitemmuldeptMapper.deleteByPrimaryKey(menuitemmuldeptKey);
 	}
 	public Menuitemmuldept selectByPrimaryKey(MenuitemmuldeptKey menuitemmuldeptKey){
-		return MenuitemmuldeptMapper.selectByPrimaryKey(menuitemmuldeptKey);
-	}
-	public int updateByPrimaryKey(Menuitemmuldept menuitemmuldept){
-		return MenuitemmuldeptMapper.updateByPrimaryKey(menuitemmuldept);
+		return menuitemmuldeptMapper.selectByPrimaryKey(menuitemmuldeptKey);
 	}
 	public int updateByPrimaryKeySelective(Menuitemmuldept menuitemmuldept){
-		return MenuitemmuldeptMapper.updateByPrimaryKeySelective(menuitemmuldept);
+		return menuitemmuldeptMapper.updateByPrimaryKeySelective(menuitemmuldept);
+	}
+	public int updateByPrimaryKey(Menuitemmuldept menuitemmuldept){
+		return menuitemmuldeptMapper.updateByPrimaryKey(menuitemmuldept);
 	}
 
 

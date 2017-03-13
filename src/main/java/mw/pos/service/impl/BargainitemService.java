@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("BargainitemService")
+@Service("bargainitemService")
 public class BargainitemService implements IBargainitemService {
 	@Resource
-	private BargainitemMapper BargainitemMapper;
+	private BargainitemMapper bargainitemMapper;
 
 	public int insert(Bargainitem bargainitem){
-		return BargainitemMapper.insert(bargainitem);
+		return bargainitemMapper.insert(bargainitem);
 	}
 	public int insertSelective(Bargainitem bargainitem){
-		return BargainitemMapper.insertSelective(bargainitem);
+		return bargainitemMapper.insertSelective(bargainitem);
 	}
 	public int deleteByPrimaryKey(BargainitemKey bargainitemKey){
-		return BargainitemMapper.deleteByPrimaryKey(bargainitemKey);
+		return bargainitemMapper.deleteByPrimaryKey(bargainitemKey);
 	}
 	public Bargainitem selectByPrimaryKey(BargainitemKey bargainitemKey){
-		return BargainitemMapper.selectByPrimaryKey(bargainitemKey);
-	}
-	public int updateByPrimaryKey(Bargainitem bargainitem){
-		return BargainitemMapper.updateByPrimaryKey(bargainitem);
+		return bargainitemMapper.selectByPrimaryKey(bargainitemKey);
 	}
 	public int updateByPrimaryKeySelective(Bargainitem bargainitem){
-		return BargainitemMapper.updateByPrimaryKeySelective(bargainitem);
+		return bargainitemMapper.updateByPrimaryKeySelective(bargainitem);
+	}
+	public int updateByPrimaryKey(Bargainitem bargainitem){
+		return bargainitemMapper.updateByPrimaryKey(bargainitem);
 	}
 
 

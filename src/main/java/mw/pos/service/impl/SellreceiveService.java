@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("SellreceiveService")
+@Service("sellreceiveService")
 public class SellreceiveService implements ISellreceiveService {
 	@Resource
-	private SellreceiveMapper SellreceiveMapper;
+	private SellreceiveMapper sellreceiveMapper;
 
 	public int insert(Sellreceive sellreceive){
-		return SellreceiveMapper.insert(sellreceive);
+		return sellreceiveMapper.insert(sellreceive);
 	}
 	public int insertSelective(Sellreceive sellreceive){
-		return SellreceiveMapper.insertSelective(sellreceive);
+		return sellreceiveMapper.insertSelective(sellreceive);
 	}
 	public int deleteByPrimaryKey(SellreceiveKey sellreceiveKey){
-		return SellreceiveMapper.deleteByPrimaryKey(sellreceiveKey);
+		return sellreceiveMapper.deleteByPrimaryKey(sellreceiveKey);
 	}
 	public Sellreceive selectByPrimaryKey(SellreceiveKey sellreceiveKey){
-		return SellreceiveMapper.selectByPrimaryKey(sellreceiveKey);
-	}
-	public int updateByPrimaryKey(Sellreceive sellreceive){
-		return SellreceiveMapper.updateByPrimaryKey(sellreceive);
+		return sellreceiveMapper.selectByPrimaryKey(sellreceiveKey);
 	}
 	public int updateByPrimaryKeySelective(Sellreceive sellreceive){
-		return SellreceiveMapper.updateByPrimaryKeySelective(sellreceive);
+		return sellreceiveMapper.updateByPrimaryKeySelective(sellreceive);
+	}
+	public int updateByPrimaryKey(Sellreceive sellreceive){
+		return sellreceiveMapper.updateByPrimaryKey(sellreceive);
 	}
 	public int updateByPrimaryKeyWithBLOBs(Sellreceive sellreceive){
-		return SellreceiveMapper.updateByPrimaryKeyWithBLOBs(sellreceive);
+		return sellreceiveMapper.updateByPrimaryKeyWithBLOBs(sellreceive);
 	}
 
 

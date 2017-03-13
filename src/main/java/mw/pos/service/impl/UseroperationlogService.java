@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("UseroperationlogService")
+@Service("useroperationlogService")
 public class UseroperationlogService implements IUseroperationlogService {
 	@Resource
-	private UseroperationlogMapper UseroperationlogMapper;
+	private UseroperationlogMapper useroperationlogMapper;
 
 	public int insert(Useroperationlog useroperationlog){
-		return UseroperationlogMapper.insert(useroperationlog);
+		return useroperationlogMapper.insert(useroperationlog);
 	}
 	public int insertSelective(Useroperationlog useroperationlog){
-		return UseroperationlogMapper.insertSelective(useroperationlog);
+		return useroperationlogMapper.insertSelective(useroperationlog);
 	}
 	public int deleteByPrimaryKey(String string){
-		return UseroperationlogMapper.deleteByPrimaryKey(string);
+		return useroperationlogMapper.deleteByPrimaryKey(string);
 	}
 	public Useroperationlog selectByPrimaryKey(String string){
-		return UseroperationlogMapper.selectByPrimaryKey(string);
-	}
-	public int updateByPrimaryKey(Useroperationlog useroperationlog){
-		return UseroperationlogMapper.updateByPrimaryKey(useroperationlog);
+		return useroperationlogMapper.selectByPrimaryKey(string);
 	}
 	public int updateByPrimaryKeySelective(Useroperationlog useroperationlog){
-		return UseroperationlogMapper.updateByPrimaryKeySelective(useroperationlog);
+		return useroperationlogMapper.updateByPrimaryKeySelective(useroperationlog);
+	}
+	public int updateByPrimaryKey(Useroperationlog useroperationlog){
+		return useroperationlogMapper.updateByPrimaryKey(useroperationlog);
 	}
 
 

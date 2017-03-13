@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("MenuitemsetsidedtlService")
+@Service("menuitemsetsidedtlService")
 public class MenuitemsetsidedtlService implements IMenuitemsetsidedtlService {
 	@Resource
-	private MenuitemsetsidedtlMapper MenuitemsetsidedtlMapper;
+	private MenuitemsetsidedtlMapper menuitemsetsidedtlMapper;
 
 	public int insert(Menuitemsetsidedtl menuitemsetsidedtl){
-		return MenuitemsetsidedtlMapper.insert(menuitemsetsidedtl);
+		return menuitemsetsidedtlMapper.insert(menuitemsetsidedtl);
 	}
 	public int insertSelective(Menuitemsetsidedtl menuitemsetsidedtl){
-		return MenuitemsetsidedtlMapper.insertSelective(menuitemsetsidedtl);
+		return menuitemsetsidedtlMapper.insertSelective(menuitemsetsidedtl);
 	}
 	public int deleteByPrimaryKey(MenuitemsetsidedtlKey menuitemsetsidedtlKey){
-		return MenuitemsetsidedtlMapper.deleteByPrimaryKey(menuitemsetsidedtlKey);
+		return menuitemsetsidedtlMapper.deleteByPrimaryKey(menuitemsetsidedtlKey);
 	}
 	public Menuitemsetsidedtl selectByPrimaryKey(MenuitemsetsidedtlKey menuitemsetsidedtlKey){
-		return MenuitemsetsidedtlMapper.selectByPrimaryKey(menuitemsetsidedtlKey);
-	}
-	public int updateByPrimaryKey(Menuitemsetsidedtl menuitemsetsidedtl){
-		return MenuitemsetsidedtlMapper.updateByPrimaryKey(menuitemsetsidedtl);
+		return menuitemsetsidedtlMapper.selectByPrimaryKey(menuitemsetsidedtlKey);
 	}
 	public int updateByPrimaryKeySelective(Menuitemsetsidedtl menuitemsetsidedtl){
-		return MenuitemsetsidedtlMapper.updateByPrimaryKeySelective(menuitemsetsidedtl);
+		return menuitemsetsidedtlMapper.updateByPrimaryKeySelective(menuitemsetsidedtl);
+	}
+	public int updateByPrimaryKey(Menuitemsetsidedtl menuitemsetsidedtl){
+		return menuitemsetsidedtlMapper.updateByPrimaryKey(menuitemsetsidedtl);
 	}
 
 

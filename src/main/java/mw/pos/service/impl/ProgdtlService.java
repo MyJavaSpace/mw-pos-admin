@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("ProgdtlService")
+@Service("progdtlService")
 public class ProgdtlService implements IProgdtlService {
 	@Resource
-	private ProgdtlMapper ProgdtlMapper;
+	private ProgdtlMapper progdtlMapper;
 
 	public int insert(Progdtl progdtl){
-		return ProgdtlMapper.insert(progdtl);
+		return progdtlMapper.insert(progdtl);
 	}
 	public int insertSelective(Progdtl progdtl){
-		return ProgdtlMapper.insertSelective(progdtl);
+		return progdtlMapper.insertSelective(progdtl);
 	}
 	public int deleteByPrimaryKey(ProgdtlKey progdtlKey){
-		return ProgdtlMapper.deleteByPrimaryKey(progdtlKey);
+		return progdtlMapper.deleteByPrimaryKey(progdtlKey);
 	}
 	public Progdtl selectByPrimaryKey(ProgdtlKey progdtlKey){
-		return ProgdtlMapper.selectByPrimaryKey(progdtlKey);
-	}
-	public int updateByPrimaryKey(Progdtl progdtl){
-		return ProgdtlMapper.updateByPrimaryKey(progdtl);
+		return progdtlMapper.selectByPrimaryKey(progdtlKey);
 	}
 	public int updateByPrimaryKeySelective(Progdtl progdtl){
-		return ProgdtlMapper.updateByPrimaryKeySelective(progdtl);
+		return progdtlMapper.updateByPrimaryKeySelective(progdtl);
+	}
+	public int updateByPrimaryKey(Progdtl progdtl){
+		return progdtlMapper.updateByPrimaryKey(progdtl);
 	}
 
 

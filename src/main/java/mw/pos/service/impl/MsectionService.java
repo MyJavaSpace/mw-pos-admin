@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("MsectionService")
+@Service("msectionService")
 public class MsectionService implements IMsectionService {
 	@Resource
-	private MsectionMapper MsectionMapper;
+	private MsectionMapper msectionMapper;
 
 	public int insert(Msection msection){
-		return MsectionMapper.insert(msection);
+		return msectionMapper.insert(msection);
 	}
 	public int insertSelective(Msection msection){
-		return MsectionMapper.insertSelective(msection);
+		return msectionMapper.insertSelective(msection);
 	}
 	public int deleteByPrimaryKey(MsectionKey msectionKey){
-		return MsectionMapper.deleteByPrimaryKey(msectionKey);
+		return msectionMapper.deleteByPrimaryKey(msectionKey);
 	}
 	public Msection selectByPrimaryKey(MsectionKey msectionKey){
-		return MsectionMapper.selectByPrimaryKey(msectionKey);
-	}
-	public int updateByPrimaryKey(Msection msection){
-		return MsectionMapper.updateByPrimaryKey(msection);
+		return msectionMapper.selectByPrimaryKey(msectionKey);
 	}
 	public int updateByPrimaryKeySelective(Msection msection){
-		return MsectionMapper.updateByPrimaryKeySelective(msection);
+		return msectionMapper.updateByPrimaryKeySelective(msection);
+	}
+	public int updateByPrimaryKey(Msection msection){
+		return msectionMapper.updateByPrimaryKey(msection);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("MtablesteService")
+@Service("mtablesteService")
 public class MtablesteService implements IMtablesteService {
 	@Resource
-	private MtablesteMapper MtablesteMapper;
+	private MtablesteMapper mtablesteMapper;
 
 	public int insert(Mtableste mtableste){
-		return MtablesteMapper.insert(mtableste);
+		return mtablesteMapper.insert(mtableste);
 	}
 	public int insertSelective(Mtableste mtableste){
-		return MtablesteMapper.insertSelective(mtableste);
+		return mtablesteMapper.insertSelective(mtableste);
 	}
 	public int deleteByPrimaryKey(MtablesteKey mtablesteKey){
-		return MtablesteMapper.deleteByPrimaryKey(mtablesteKey);
+		return mtablesteMapper.deleteByPrimaryKey(mtablesteKey);
 	}
 	public Mtableste selectByPrimaryKey(MtablesteKey mtablesteKey){
-		return MtablesteMapper.selectByPrimaryKey(mtablesteKey);
-	}
-	public int updateByPrimaryKey(Mtableste mtableste){
-		return MtablesteMapper.updateByPrimaryKey(mtableste);
+		return mtablesteMapper.selectByPrimaryKey(mtablesteKey);
 	}
 	public int updateByPrimaryKeySelective(Mtableste mtableste){
-		return MtablesteMapper.updateByPrimaryKeySelective(mtableste);
+		return mtablesteMapper.updateByPrimaryKeySelective(mtableste);
+	}
+	public int updateByPrimaryKey(Mtableste mtableste){
+		return mtablesteMapper.updateByPrimaryKey(mtableste);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("UsermenuitemroleService")
+@Service("usermenuitemroleService")
 public class UsermenuitemroleService implements IUsermenuitemroleService {
 	@Resource
-	private UsermenuitemroleMapper UsermenuitemroleMapper;
+	private UsermenuitemroleMapper usermenuitemroleMapper;
 
 	public int insert(Usermenuitemrole usermenuitemrole){
-		return UsermenuitemroleMapper.insert(usermenuitemrole);
+		return usermenuitemroleMapper.insert(usermenuitemrole);
 	}
 	public int insertSelective(Usermenuitemrole usermenuitemrole){
-		return UsermenuitemroleMapper.insertSelective(usermenuitemrole);
+		return usermenuitemroleMapper.insertSelective(usermenuitemrole);
 	}
 	public int deleteByPrimaryKey(UsermenuitemroleKey usermenuitemroleKey){
-		return UsermenuitemroleMapper.deleteByPrimaryKey(usermenuitemroleKey);
+		return usermenuitemroleMapper.deleteByPrimaryKey(usermenuitemroleKey);
 	}
 	public Usermenuitemrole selectByPrimaryKey(UsermenuitemroleKey usermenuitemroleKey){
-		return UsermenuitemroleMapper.selectByPrimaryKey(usermenuitemroleKey);
-	}
-	public int updateByPrimaryKey(Usermenuitemrole usermenuitemrole){
-		return UsermenuitemroleMapper.updateByPrimaryKey(usermenuitemrole);
+		return usermenuitemroleMapper.selectByPrimaryKey(usermenuitemroleKey);
 	}
 	public int updateByPrimaryKeySelective(Usermenuitemrole usermenuitemrole){
-		return UsermenuitemroleMapper.updateByPrimaryKeySelective(usermenuitemrole);
+		return usermenuitemroleMapper.updateByPrimaryKeySelective(usermenuitemrole);
+	}
+	public int updateByPrimaryKey(Usermenuitemrole usermenuitemrole){
+		return usermenuitemroleMapper.updateByPrimaryKey(usermenuitemrole);
 	}
 
 

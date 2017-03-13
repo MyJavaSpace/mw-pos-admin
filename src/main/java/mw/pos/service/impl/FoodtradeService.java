@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("FoodtradeService")
+@Service("foodtradeService")
 public class FoodtradeService implements IFoodtradeService {
 	@Resource
-	private FoodtradeMapper FoodtradeMapper;
+	private FoodtradeMapper foodtradeMapper;
 
 	public int insert(Foodtrade foodtrade){
-		return FoodtradeMapper.insert(foodtrade);
+		return foodtradeMapper.insert(foodtrade);
 	}
 	public int insertSelective(Foodtrade foodtrade){
-		return FoodtradeMapper.insertSelective(foodtrade);
+		return foodtradeMapper.insertSelective(foodtrade);
 	}
 	public int deleteByPrimaryKey(String string){
-		return FoodtradeMapper.deleteByPrimaryKey(string);
+		return foodtradeMapper.deleteByPrimaryKey(string);
 	}
 	public Foodtrade selectByPrimaryKey(String string){
-		return FoodtradeMapper.selectByPrimaryKey(string);
-	}
-	public int updateByPrimaryKey(Foodtrade foodtrade){
-		return FoodtradeMapper.updateByPrimaryKey(foodtrade);
+		return foodtradeMapper.selectByPrimaryKey(string);
 	}
 	public int updateByPrimaryKeySelective(Foodtrade foodtrade){
-		return FoodtradeMapper.updateByPrimaryKeySelective(foodtrade);
+		return foodtradeMapper.updateByPrimaryKeySelective(foodtrade);
+	}
+	public int updateByPrimaryKey(Foodtrade foodtrade){
+		return foodtradeMapper.updateByPrimaryKey(foodtrade);
 	}
 
 

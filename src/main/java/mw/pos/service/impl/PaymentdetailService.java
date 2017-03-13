@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("PaymentdetailService")
+@Service("paymentdetailService")
 public class PaymentdetailService implements IPaymentdetailService {
 	@Resource
-	private PaymentdetailMapper PaymentdetailMapper;
+	private PaymentdetailMapper paymentdetailMapper;
 
 	public int insert(PaymentdetailWithBLOBs paymentdetailWithBLOBs){
-		return PaymentdetailMapper.insert(paymentdetailWithBLOBs);
+		return paymentdetailMapper.insert(paymentdetailWithBLOBs);
 	}
 	public int insertSelective(PaymentdetailWithBLOBs paymentdetailWithBLOBs){
-		return PaymentdetailMapper.insertSelective(paymentdetailWithBLOBs);
+		return paymentdetailMapper.insertSelective(paymentdetailWithBLOBs);
 	}
 	public int deleteByPrimaryKey(PaymentdetailKey paymentdetailKey){
-		return PaymentdetailMapper.deleteByPrimaryKey(paymentdetailKey);
+		return paymentdetailMapper.deleteByPrimaryKey(paymentdetailKey);
 	}
 	public PaymentdetailWithBLOBs selectByPrimaryKey(PaymentdetailKey paymentdetailKey){
-		return PaymentdetailMapper.selectByPrimaryKey(paymentdetailKey);
-	}
-	public int updateByPrimaryKey(Paymentdetail paymentdetail){
-		return PaymentdetailMapper.updateByPrimaryKey(paymentdetail);
+		return paymentdetailMapper.selectByPrimaryKey(paymentdetailKey);
 	}
 	public int updateByPrimaryKeySelective(PaymentdetailWithBLOBs paymentdetailWithBLOBs){
-		return PaymentdetailMapper.updateByPrimaryKeySelective(paymentdetailWithBLOBs);
+		return paymentdetailMapper.updateByPrimaryKeySelective(paymentdetailWithBLOBs);
+	}
+	public int updateByPrimaryKey(Paymentdetail paymentdetail){
+		return paymentdetailMapper.updateByPrimaryKey(paymentdetail);
 	}
 	public int updateByPrimaryKeyWithBLOBs(PaymentdetailWithBLOBs paymentdetailWithBLOBs){
-		return PaymentdetailMapper.updateByPrimaryKeyWithBLOBs(paymentdetailWithBLOBs);
+		return paymentdetailMapper.updateByPrimaryKeyWithBLOBs(paymentdetailWithBLOBs);
 	}
 
 

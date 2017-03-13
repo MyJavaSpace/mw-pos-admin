@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("SellhurryitemService")
+@Service("sellhurryitemService")
 public class SellhurryitemService implements ISellhurryitemService {
 	@Resource
-	private SellhurryitemMapper SellhurryitemMapper;
+	private SellhurryitemMapper sellhurryitemMapper;
 
 	public int insert(Sellhurryitem sellhurryitem){
-		return SellhurryitemMapper.insert(sellhurryitem);
+		return sellhurryitemMapper.insert(sellhurryitem);
 	}
 	public int insertSelective(Sellhurryitem sellhurryitem){
-		return SellhurryitemMapper.insertSelective(sellhurryitem);
+		return sellhurryitemMapper.insertSelective(sellhurryitem);
 	}
 	public int deleteByPrimaryKey(SellhurryitemKey sellhurryitemKey){
-		return SellhurryitemMapper.deleteByPrimaryKey(sellhurryitemKey);
+		return sellhurryitemMapper.deleteByPrimaryKey(sellhurryitemKey);
 	}
 	public Sellhurryitem selectByPrimaryKey(SellhurryitemKey sellhurryitemKey){
-		return SellhurryitemMapper.selectByPrimaryKey(sellhurryitemKey);
-	}
-	public int updateByPrimaryKey(Sellhurryitem sellhurryitem){
-		return SellhurryitemMapper.updateByPrimaryKey(sellhurryitem);
+		return sellhurryitemMapper.selectByPrimaryKey(sellhurryitemKey);
 	}
 	public int updateByPrimaryKeySelective(Sellhurryitem sellhurryitem){
-		return SellhurryitemMapper.updateByPrimaryKeySelective(sellhurryitem);
+		return sellhurryitemMapper.updateByPrimaryKeySelective(sellhurryitem);
+	}
+	public int updateByPrimaryKey(Sellhurryitem sellhurryitem){
+		return sellhurryitemMapper.updateByPrimaryKey(sellhurryitem);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("ProgService")
+@Service("progService")
 public class ProgService implements IProgService {
 	@Resource
-	private ProgMapper ProgMapper;
+	private ProgMapper progMapper;
 
 	public int insert(Prog prog){
-		return ProgMapper.insert(prog);
+		return progMapper.insert(prog);
 	}
 	public int insertSelective(Prog prog){
-		return ProgMapper.insertSelective(prog);
+		return progMapper.insertSelective(prog);
 	}
 	public int deleteByPrimaryKey(String string){
-		return ProgMapper.deleteByPrimaryKey(string);
+		return progMapper.deleteByPrimaryKey(string);
 	}
 	public Prog selectByPrimaryKey(String string){
-		return ProgMapper.selectByPrimaryKey(string);
-	}
-	public int updateByPrimaryKey(Prog prog){
-		return ProgMapper.updateByPrimaryKey(prog);
+		return progMapper.selectByPrimaryKey(string);
 	}
 	public int updateByPrimaryKeySelective(Prog prog){
-		return ProgMapper.updateByPrimaryKeySelective(prog);
+		return progMapper.updateByPrimaryKeySelective(prog);
+	}
+	public int updateByPrimaryKey(Prog prog){
+		return progMapper.updateByPrimaryKey(prog);
 	}
 
 

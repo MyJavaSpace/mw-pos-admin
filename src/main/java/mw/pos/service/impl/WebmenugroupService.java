@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("WebmenugroupService")
+@Service("webmenugroupService")
 public class WebmenugroupService implements IWebmenugroupService {
 	@Resource
-	private WebmenugroupMapper WebmenugroupMapper;
+	private WebmenugroupMapper webmenugroupMapper;
 
 	public int insert(Webmenugroup webmenugroup){
-		return WebmenugroupMapper.insert(webmenugroup);
+		return webmenugroupMapper.insert(webmenugroup);
 	}
 	public int insertSelective(Webmenugroup webmenugroup){
-		return WebmenugroupMapper.insertSelective(webmenugroup);
+		return webmenugroupMapper.insertSelective(webmenugroup);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return WebmenugroupMapper.deleteByPrimaryKey(integer);
+		return webmenugroupMapper.deleteByPrimaryKey(integer);
 	}
 	public Webmenugroup selectByPrimaryKey(Integer integer){
-		return WebmenugroupMapper.selectByPrimaryKey(integer);
-	}
-	public int updateByPrimaryKey(Webmenugroup webmenugroup){
-		return WebmenugroupMapper.updateByPrimaryKey(webmenugroup);
+		return webmenugroupMapper.selectByPrimaryKey(integer);
 	}
 	public int updateByPrimaryKeySelective(Webmenugroup webmenugroup){
-		return WebmenugroupMapper.updateByPrimaryKeySelective(webmenugroup);
+		return webmenugroupMapper.updateByPrimaryKeySelective(webmenugroup);
+	}
+	public int updateByPrimaryKey(Webmenugroup webmenugroup){
+		return webmenugroupMapper.updateByPrimaryKey(webmenugroup);
 	}
 
 

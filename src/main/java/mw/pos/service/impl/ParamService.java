@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("ParamService")
+@Service("paramService")
 public class ParamService implements IParamService {
 	@Resource
-	private ParamMapper ParamMapper;
+	private ParamMapper paramMapper;
 
 	public int insert(Param param){
-		return ParamMapper.insert(param);
+		return paramMapper.insert(param);
 	}
 	public int insertSelective(Param param){
-		return ParamMapper.insertSelective(param);
+		return paramMapper.insertSelective(param);
 	}
 	public int deleteByPrimaryKey(String string){
-		return ParamMapper.deleteByPrimaryKey(string);
+		return paramMapper.deleteByPrimaryKey(string);
 	}
 	public Param selectByPrimaryKey(String string){
-		return ParamMapper.selectByPrimaryKey(string);
-	}
-	public int updateByPrimaryKey(Param param){
-		return ParamMapper.updateByPrimaryKey(param);
+		return paramMapper.selectByPrimaryKey(string);
 	}
 	public int updateByPrimaryKeySelective(Param param){
-		return ParamMapper.updateByPrimaryKeySelective(param);
+		return paramMapper.updateByPrimaryKeySelective(param);
+	}
+	public int updateByPrimaryKey(Param param){
+		return paramMapper.updateByPrimaryKey(param);
 	}
 
 

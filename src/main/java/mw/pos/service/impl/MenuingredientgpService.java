@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("MenuingredientgpService")
+@Service("menuingredientgpService")
 public class MenuingredientgpService implements IMenuingredientgpService {
 	@Resource
-	private MenuingredientgpMapper MenuingredientgpMapper;
+	private MenuingredientgpMapper menuingredientgpMapper;
 
 	public int insert(Menuingredientgp menuingredientgp){
-		return MenuingredientgpMapper.insert(menuingredientgp);
+		return menuingredientgpMapper.insert(menuingredientgp);
 	}
 	public int insertSelective(Menuingredientgp menuingredientgp){
-		return MenuingredientgpMapper.insertSelective(menuingredientgp);
+		return menuingredientgpMapper.insertSelective(menuingredientgp);
 	}
 	public int deleteByPrimaryKey(MenuingredientgpKey menuingredientgpKey){
-		return MenuingredientgpMapper.deleteByPrimaryKey(menuingredientgpKey);
+		return menuingredientgpMapper.deleteByPrimaryKey(menuingredientgpKey);
 	}
 	public Menuingredientgp selectByPrimaryKey(MenuingredientgpKey menuingredientgpKey){
-		return MenuingredientgpMapper.selectByPrimaryKey(menuingredientgpKey);
-	}
-	public int updateByPrimaryKey(Menuingredientgp menuingredientgp){
-		return MenuingredientgpMapper.updateByPrimaryKey(menuingredientgp);
+		return menuingredientgpMapper.selectByPrimaryKey(menuingredientgpKey);
 	}
 	public int updateByPrimaryKeySelective(Menuingredientgp menuingredientgp){
-		return MenuingredientgpMapper.updateByPrimaryKeySelective(menuingredientgp);
+		return menuingredientgpMapper.updateByPrimaryKeySelective(menuingredientgp);
+	}
+	public int updateByPrimaryKey(Menuingredientgp menuingredientgp){
+		return menuingredientgpMapper.updateByPrimaryKey(menuingredientgp);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("UserService")
+@Service("userService")
 public class UserService implements IUserService {
 	@Resource
-	private UserMapper UserMapper;
+	private UserMapper userMapper;
 
 	public int insert(User user){
-		return UserMapper.insert(user);
+		return userMapper.insert(user);
 	}
 	public int insertSelective(User user){
-		return UserMapper.insertSelective(user);
+		return userMapper.insertSelective(user);
 	}
 	public int deleteByPrimaryKey(UserKey userKey){
-		return UserMapper.deleteByPrimaryKey(userKey);
+		return userMapper.deleteByPrimaryKey(userKey);
 	}
 	public User selectByPrimaryKey(UserKey userKey){
-		return UserMapper.selectByPrimaryKey(userKey);
-	}
-	public int updateByPrimaryKey(User user){
-		return UserMapper.updateByPrimaryKey(user);
+		return userMapper.selectByPrimaryKey(userKey);
 	}
 	public int updateByPrimaryKeySelective(User user){
-		return UserMapper.updateByPrimaryKeySelective(user);
+		return userMapper.updateByPrimaryKeySelective(user);
+	}
+	public int updateByPrimaryKey(User user){
+		return userMapper.updateByPrimaryKey(user);
 	}
 
 

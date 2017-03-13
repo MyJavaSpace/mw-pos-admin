@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("DelivererService")
+@Service("delivererService")
 public class DelivererService implements IDelivererService {
 	@Resource
-	private DelivererMapper DelivererMapper;
+	private DelivererMapper delivererMapper;
 
 	public int insert(Deliverer deliverer){
-		return DelivererMapper.insert(deliverer);
+		return delivererMapper.insert(deliverer);
 	}
 	public int insertSelective(Deliverer deliverer){
-		return DelivererMapper.insertSelective(deliverer);
+		return delivererMapper.insertSelective(deliverer);
 	}
 	public int deleteByPrimaryKey(DelivererKey delivererKey){
-		return DelivererMapper.deleteByPrimaryKey(delivererKey);
+		return delivererMapper.deleteByPrimaryKey(delivererKey);
 	}
 	public Deliverer selectByPrimaryKey(DelivererKey delivererKey){
-		return DelivererMapper.selectByPrimaryKey(delivererKey);
-	}
-	public int updateByPrimaryKey(Deliverer deliverer){
-		return DelivererMapper.updateByPrimaryKey(deliverer);
+		return delivererMapper.selectByPrimaryKey(delivererKey);
 	}
 	public int updateByPrimaryKeySelective(Deliverer deliverer){
-		return DelivererMapper.updateByPrimaryKeySelective(deliverer);
+		return delivererMapper.updateByPrimaryKeySelective(deliverer);
+	}
+	public int updateByPrimaryKey(Deliverer deliverer){
+		return delivererMapper.updateByPrimaryKey(deliverer);
 	}
 
 

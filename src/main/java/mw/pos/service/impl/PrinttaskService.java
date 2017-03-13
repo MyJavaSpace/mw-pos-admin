@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("PrinttaskService")
+@Service("printtaskService")
 public class PrinttaskService implements IPrinttaskService {
 	@Resource
-	private PrinttaskMapper PrinttaskMapper;
+	private PrinttaskMapper printtaskMapper;
 
 	public int insert(PrinttaskWithBLOBs printtaskWithBLOBs){
-		return PrinttaskMapper.insert(printtaskWithBLOBs);
+		return printtaskMapper.insert(printtaskWithBLOBs);
 	}
 	public int insertSelective(PrinttaskWithBLOBs printtaskWithBLOBs){
-		return PrinttaskMapper.insertSelective(printtaskWithBLOBs);
+		return printtaskMapper.insertSelective(printtaskWithBLOBs);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return PrinttaskMapper.deleteByPrimaryKey(integer);
+		return printtaskMapper.deleteByPrimaryKey(integer);
 	}
 	public PrinttaskWithBLOBs selectByPrimaryKey(Integer integer){
-		return PrinttaskMapper.selectByPrimaryKey(integer);
-	}
-	public int updateByPrimaryKey(Printtask printtask){
-		return PrinttaskMapper.updateByPrimaryKey(printtask);
+		return printtaskMapper.selectByPrimaryKey(integer);
 	}
 	public int updateByPrimaryKeySelective(PrinttaskWithBLOBs printtaskWithBLOBs){
-		return PrinttaskMapper.updateByPrimaryKeySelective(printtaskWithBLOBs);
+		return printtaskMapper.updateByPrimaryKeySelective(printtaskWithBLOBs);
+	}
+	public int updateByPrimaryKey(Printtask printtask){
+		return printtaskMapper.updateByPrimaryKey(printtask);
 	}
 	public int updateByPrimaryKeyWithBLOBs(PrinttaskWithBLOBs printtaskWithBLOBs){
-		return PrinttaskMapper.updateByPrimaryKeyWithBLOBs(printtaskWithBLOBs);
+		return printtaskMapper.updateByPrimaryKeyWithBLOBs(printtaskWithBLOBs);
 	}
 
 

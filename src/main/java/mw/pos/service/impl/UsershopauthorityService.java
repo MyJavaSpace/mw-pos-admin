@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("UsershopauthorityService")
+@Service("usershopauthorityService")
 public class UsershopauthorityService implements IUsershopauthorityService {
 	@Resource
-	private UsershopauthorityMapper UsershopauthorityMapper;
+	private UsershopauthorityMapper usershopauthorityMapper;
 
 	public int insert(Usershopauthority usershopauthority){
-		return UsershopauthorityMapper.insert(usershopauthority);
+		return usershopauthorityMapper.insert(usershopauthority);
 	}
 	public int insertSelective(Usershopauthority usershopauthority){
-		return UsershopauthorityMapper.insertSelective(usershopauthority);
+		return usershopauthorityMapper.insertSelective(usershopauthority);
 	}
 	public int deleteByPrimaryKey(UsershopauthorityKey usershopauthorityKey){
-		return UsershopauthorityMapper.deleteByPrimaryKey(usershopauthorityKey);
+		return usershopauthorityMapper.deleteByPrimaryKey(usershopauthorityKey);
 	}
 	public Usershopauthority selectByPrimaryKey(UsershopauthorityKey usershopauthorityKey){
-		return UsershopauthorityMapper.selectByPrimaryKey(usershopauthorityKey);
-	}
-	public int updateByPrimaryKey(Usershopauthority usershopauthority){
-		return UsershopauthorityMapper.updateByPrimaryKey(usershopauthority);
+		return usershopauthorityMapper.selectByPrimaryKey(usershopauthorityKey);
 	}
 	public int updateByPrimaryKeySelective(Usershopauthority usershopauthority){
-		return UsershopauthorityMapper.updateByPrimaryKeySelective(usershopauthority);
+		return usershopauthorityMapper.updateByPrimaryKeySelective(usershopauthority);
+	}
+	public int updateByPrimaryKey(Usershopauthority usershopauthority){
+		return usershopauthorityMapper.updateByPrimaryKey(usershopauthority);
 	}
 
 

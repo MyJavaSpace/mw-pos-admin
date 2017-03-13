@@ -66,7 +66,7 @@ public class ExceptionResolverCustom implements HandlerExceptionResolver {
 			resultInfo = new ResultInfo();
 			resultInfo.setStatus(false);
 			// resultInfo.setType(ResultInfo.TYPE_RESULT_FAIL);
-			resultInfo.setMessage("未知错误！");
+			resultInfo.setMessage(ex.getMessage());
 		}
 		return  resultInfo;
 

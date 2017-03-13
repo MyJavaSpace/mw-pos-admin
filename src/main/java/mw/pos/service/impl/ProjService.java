@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("ProjService")
+@Service("projService")
 public class ProjService implements IProjService {
 	@Resource
-	private ProjMapper ProjMapper;
+	private ProjMapper projMapper;
 
 	public int insert(Proj proj){
-		return ProjMapper.insert(proj);
+		return projMapper.insert(proj);
 	}
 	public int insertSelective(Proj proj){
-		return ProjMapper.insertSelective(proj);
+		return projMapper.insertSelective(proj);
 	}
 	public int deleteByPrimaryKey(String string){
-		return ProjMapper.deleteByPrimaryKey(string);
+		return projMapper.deleteByPrimaryKey(string);
 	}
 	public Proj selectByPrimaryKey(String string){
-		return ProjMapper.selectByPrimaryKey(string);
-	}
-	public int updateByPrimaryKey(Proj proj){
-		return ProjMapper.updateByPrimaryKey(proj);
+		return projMapper.selectByPrimaryKey(string);
 	}
 	public int updateByPrimaryKeySelective(Proj proj){
-		return ProjMapper.updateByPrimaryKeySelective(proj);
+		return projMapper.updateByPrimaryKeySelective(proj);
+	}
+	public int updateByPrimaryKey(Proj proj){
+		return projMapper.updateByPrimaryKey(proj);
 	}
 
 

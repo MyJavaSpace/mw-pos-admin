@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("AuthorityService")
+@Service("authorityService")
 public class AuthorityService implements IAuthorityService {
 	@Resource
-	private AuthorityMapper AuthorityMapper;
+	private AuthorityMapper authorityMapper;
 
 	public int insert(Authority authority){
-		return AuthorityMapper.insert(authority);
+		return authorityMapper.insert(authority);
 	}
 	public int insertSelective(Authority authority){
-		return AuthorityMapper.insertSelective(authority);
+		return authorityMapper.insertSelective(authority);
 	}
 	public int deleteByPrimaryKey(AuthorityKey authorityKey){
-		return AuthorityMapper.deleteByPrimaryKey(authorityKey);
+		return authorityMapper.deleteByPrimaryKey(authorityKey);
 	}
 	public Authority selectByPrimaryKey(AuthorityKey authorityKey){
-		return AuthorityMapper.selectByPrimaryKey(authorityKey);
-	}
-	public int updateByPrimaryKey(Authority authority){
-		return AuthorityMapper.updateByPrimaryKey(authority);
+		return authorityMapper.selectByPrimaryKey(authorityKey);
 	}
 	public int updateByPrimaryKeySelective(Authority authority){
-		return AuthorityMapper.updateByPrimaryKeySelective(authority);
+		return authorityMapper.updateByPrimaryKeySelective(authority);
+	}
+	public int updateByPrimaryKey(Authority authority){
+		return authorityMapper.updateByPrimaryKey(authority);
 	}
 
 

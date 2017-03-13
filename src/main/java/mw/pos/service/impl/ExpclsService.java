@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("ExpclsService")
+@Service("expclsService")
 public class ExpclsService implements IExpclsService {
 	@Resource
-	private ExpclsMapper ExpclsMapper;
+	private ExpclsMapper expclsMapper;
 
 	public int insert(Expcls expcls){
-		return ExpclsMapper.insert(expcls);
+		return expclsMapper.insert(expcls);
 	}
 	public int insertSelective(Expcls expcls){
-		return ExpclsMapper.insertSelective(expcls);
+		return expclsMapper.insertSelective(expcls);
 	}
 	public int deleteByPrimaryKey(ExpclsKey expclsKey){
-		return ExpclsMapper.deleteByPrimaryKey(expclsKey);
+		return expclsMapper.deleteByPrimaryKey(expclsKey);
 	}
 	public Expcls selectByPrimaryKey(ExpclsKey expclsKey){
-		return ExpclsMapper.selectByPrimaryKey(expclsKey);
-	}
-	public int updateByPrimaryKey(Expcls expcls){
-		return ExpclsMapper.updateByPrimaryKey(expcls);
+		return expclsMapper.selectByPrimaryKey(expclsKey);
 	}
 	public int updateByPrimaryKeySelective(Expcls expcls){
-		return ExpclsMapper.updateByPrimaryKeySelective(expcls);
+		return expclsMapper.updateByPrimaryKeySelective(expcls);
+	}
+	public int updateByPrimaryKey(Expcls expcls){
+		return expclsMapper.updateByPrimaryKey(expcls);
 	}
 
 

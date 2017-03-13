@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("RevenuetypeService")
+@Service("revenuetypeService")
 public class RevenuetypeService implements IRevenuetypeService {
 	@Resource
-	private RevenuetypeMapper RevenuetypeMapper;
+	private RevenuetypeMapper revenuetypeMapper;
 
 	public int insert(Revenuetype revenuetype){
-		return RevenuetypeMapper.insert(revenuetype);
+		return revenuetypeMapper.insert(revenuetype);
 	}
 	public int insertSelective(Revenuetype revenuetype){
-		return RevenuetypeMapper.insertSelective(revenuetype);
+		return revenuetypeMapper.insertSelective(revenuetype);
 	}
 	public int deleteByPrimaryKey(RevenuetypeKey revenuetypeKey){
-		return RevenuetypeMapper.deleteByPrimaryKey(revenuetypeKey);
+		return revenuetypeMapper.deleteByPrimaryKey(revenuetypeKey);
 	}
 	public Revenuetype selectByPrimaryKey(RevenuetypeKey revenuetypeKey){
-		return RevenuetypeMapper.selectByPrimaryKey(revenuetypeKey);
-	}
-	public int updateByPrimaryKey(Revenuetype revenuetype){
-		return RevenuetypeMapper.updateByPrimaryKey(revenuetype);
+		return revenuetypeMapper.selectByPrimaryKey(revenuetypeKey);
 	}
 	public int updateByPrimaryKeySelective(Revenuetype revenuetype){
-		return RevenuetypeMapper.updateByPrimaryKeySelective(revenuetype);
+		return revenuetypeMapper.updateByPrimaryKeySelective(revenuetype);
+	}
+	public int updateByPrimaryKey(Revenuetype revenuetype){
+		return revenuetypeMapper.updateByPrimaryKey(revenuetype);
 	}
 
 

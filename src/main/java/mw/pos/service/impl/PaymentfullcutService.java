@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("PaymentfullcutService")
+@Service("paymentfullcutService")
 public class PaymentfullcutService implements IPaymentfullcutService {
 	@Resource
-	private PaymentfullcutMapper PaymentfullcutMapper;
+	private PaymentfullcutMapper paymentfullcutMapper;
 
 	public int insert(Paymentfullcut paymentfullcut){
-		return PaymentfullcutMapper.insert(paymentfullcut);
+		return paymentfullcutMapper.insert(paymentfullcut);
 	}
 	public int insertSelective(Paymentfullcut paymentfullcut){
-		return PaymentfullcutMapper.insertSelective(paymentfullcut);
+		return paymentfullcutMapper.insertSelective(paymentfullcut);
 	}
 	public int deleteByPrimaryKey(PaymentfullcutKey paymentfullcutKey){
-		return PaymentfullcutMapper.deleteByPrimaryKey(paymentfullcutKey);
+		return paymentfullcutMapper.deleteByPrimaryKey(paymentfullcutKey);
 	}
 	public Paymentfullcut selectByPrimaryKey(PaymentfullcutKey paymentfullcutKey){
-		return PaymentfullcutMapper.selectByPrimaryKey(paymentfullcutKey);
-	}
-	public int updateByPrimaryKey(Paymentfullcut paymentfullcut){
-		return PaymentfullcutMapper.updateByPrimaryKey(paymentfullcut);
+		return paymentfullcutMapper.selectByPrimaryKey(paymentfullcutKey);
 	}
 	public int updateByPrimaryKeySelective(Paymentfullcut paymentfullcut){
-		return PaymentfullcutMapper.updateByPrimaryKeySelective(paymentfullcut);
+		return paymentfullcutMapper.updateByPrimaryKeySelective(paymentfullcut);
+	}
+	public int updateByPrimaryKey(Paymentfullcut paymentfullcut){
+		return paymentfullcutMapper.updateByPrimaryKey(paymentfullcut);
 	}
 
 

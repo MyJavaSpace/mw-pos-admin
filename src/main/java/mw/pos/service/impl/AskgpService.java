@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("AskgpService")
+@Service("askgpService")
 public class AskgpService implements IAskgpService {
 	@Resource
-	private AskgpMapper AskgpMapper;
+	private AskgpMapper askgpMapper;
 
 	public int insert(Askgp askgp){
-		return AskgpMapper.insert(askgp);
+		return askgpMapper.insert(askgp);
 	}
 	public int insertSelective(Askgp askgp){
-		return AskgpMapper.insertSelective(askgp);
+		return askgpMapper.insertSelective(askgp);
 	}
 	public int deleteByPrimaryKey(AskgpKey askgpKey){
-		return AskgpMapper.deleteByPrimaryKey(askgpKey);
+		return askgpMapper.deleteByPrimaryKey(askgpKey);
 	}
 	public Askgp selectByPrimaryKey(AskgpKey askgpKey){
-		return AskgpMapper.selectByPrimaryKey(askgpKey);
-	}
-	public int updateByPrimaryKey(Askgp askgp){
-		return AskgpMapper.updateByPrimaryKey(askgp);
+		return askgpMapper.selectByPrimaryKey(askgpKey);
 	}
 	public int updateByPrimaryKeySelective(Askgp askgp){
-		return AskgpMapper.updateByPrimaryKeySelective(askgp);
+		return askgpMapper.updateByPrimaryKeySelective(askgp);
+	}
+	public int updateByPrimaryKey(Askgp askgp){
+		return askgpMapper.updateByPrimaryKey(askgp);
 	}
 
 

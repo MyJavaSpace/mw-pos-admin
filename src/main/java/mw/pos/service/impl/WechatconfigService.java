@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("WechatconfigService")
+@Service("wechatconfigService")
 public class WechatconfigService implements IWechatconfigService {
 	@Resource
-	private WechatconfigMapper WechatconfigMapper;
+	private WechatconfigMapper wechatconfigMapper;
 
 	public int insert(Wechatconfig wechatconfig){
-		return WechatconfigMapper.insert(wechatconfig);
+		return wechatconfigMapper.insert(wechatconfig);
 	}
 	public int insertSelective(Wechatconfig wechatconfig){
-		return WechatconfigMapper.insertSelective(wechatconfig);
+		return wechatconfigMapper.insertSelective(wechatconfig);
 	}
 	public int deleteByPrimaryKey(String string){
-		return WechatconfigMapper.deleteByPrimaryKey(string);
+		return wechatconfigMapper.deleteByPrimaryKey(string);
 	}
 	public Wechatconfig selectByPrimaryKey(String string){
-		return WechatconfigMapper.selectByPrimaryKey(string);
-	}
-	public int updateByPrimaryKey(Wechatconfig wechatconfig){
-		return WechatconfigMapper.updateByPrimaryKey(wechatconfig);
+		return wechatconfigMapper.selectByPrimaryKey(string);
 	}
 	public int updateByPrimaryKeySelective(Wechatconfig wechatconfig){
-		return WechatconfigMapper.updateByPrimaryKeySelective(wechatconfig);
+		return wechatconfigMapper.updateByPrimaryKeySelective(wechatconfig);
+	}
+	public int updateByPrimaryKey(Wechatconfig wechatconfig){
+		return wechatconfigMapper.updateByPrimaryKey(wechatconfig);
 	}
 
 

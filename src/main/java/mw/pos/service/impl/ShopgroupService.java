@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("ShopgroupService")
+@Service("shopgroupService")
 public class ShopgroupService implements IShopgroupService {
 	@Resource
-	private ShopgroupMapper ShopgroupMapper;
+	private ShopgroupMapper shopgroupMapper;
 
 	public int insert(ShopgroupWithBLOBs shopgroupWithBLOBs){
-		return ShopgroupMapper.insert(shopgroupWithBLOBs);
+		return shopgroupMapper.insert(shopgroupWithBLOBs);
 	}
 	public int insertSelective(ShopgroupWithBLOBs shopgroupWithBLOBs){
-		return ShopgroupMapper.insertSelective(shopgroupWithBLOBs);
+		return shopgroupMapper.insertSelective(shopgroupWithBLOBs);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return ShopgroupMapper.deleteByPrimaryKey(integer);
+		return shopgroupMapper.deleteByPrimaryKey(integer);
 	}
 	public ShopgroupWithBLOBs selectByPrimaryKey(Integer integer){
-		return ShopgroupMapper.selectByPrimaryKey(integer);
-	}
-	public int updateByPrimaryKey(Shopgroup shopgroup){
-		return ShopgroupMapper.updateByPrimaryKey(shopgroup);
+		return shopgroupMapper.selectByPrimaryKey(integer);
 	}
 	public int updateByPrimaryKeySelective(ShopgroupWithBLOBs shopgroupWithBLOBs){
-		return ShopgroupMapper.updateByPrimaryKeySelective(shopgroupWithBLOBs);
+		return shopgroupMapper.updateByPrimaryKeySelective(shopgroupWithBLOBs);
+	}
+	public int updateByPrimaryKey(Shopgroup shopgroup){
+		return shopgroupMapper.updateByPrimaryKey(shopgroup);
 	}
 	public int updateByPrimaryKeyWithBLOBs(ShopgroupWithBLOBs shopgroupWithBLOBs){
-		return ShopgroupMapper.updateByPrimaryKeyWithBLOBs(shopgroupWithBLOBs);
+		return shopgroupMapper.updateByPrimaryKeyWithBLOBs(shopgroupWithBLOBs);
 	}
 
 

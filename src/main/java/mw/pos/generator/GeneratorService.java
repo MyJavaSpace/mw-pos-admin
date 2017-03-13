@@ -39,7 +39,7 @@ public class GeneratorService implements IGeneratorCode {
 
 		for (String string : lstClass) {
 			String classCode = tempCode;
-			String serviceName = string.replace("com.pos.dao.", "").replace("Mapper", "");
+			String serviceName = Common.toLowerCaseFirstOne(string.replace("com.pos.dao.", "").replace("Mapper", ""));
 			String ServiceName = Common.toUpperCaseFirstOne(serviceName);
 			classCode = classCode.replace("{serviceName}", serviceName).replace("{ServiceName}", ServiceName);
 

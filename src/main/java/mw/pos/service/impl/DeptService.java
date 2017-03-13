@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("DeptService")
+@Service("deptService")
 public class DeptService implements IDeptService {
 	@Resource
-	private DeptMapper DeptMapper;
+	private DeptMapper deptMapper;
 
 	public int insert(Dept dept){
-		return DeptMapper.insert(dept);
+		return deptMapper.insert(dept);
 	}
 	public int insertSelective(Dept dept){
-		return DeptMapper.insertSelective(dept);
+		return deptMapper.insertSelective(dept);
 	}
 	public int deleteByPrimaryKey(DeptKey deptKey){
-		return DeptMapper.deleteByPrimaryKey(deptKey);
+		return deptMapper.deleteByPrimaryKey(deptKey);
 	}
 	public Dept selectByPrimaryKey(DeptKey deptKey){
-		return DeptMapper.selectByPrimaryKey(deptKey);
-	}
-	public int updateByPrimaryKey(Dept dept){
-		return DeptMapper.updateByPrimaryKey(dept);
+		return deptMapper.selectByPrimaryKey(deptKey);
 	}
 	public int updateByPrimaryKeySelective(Dept dept){
-		return DeptMapper.updateByPrimaryKeySelective(dept);
+		return deptMapper.updateByPrimaryKeySelective(dept);
+	}
+	public int updateByPrimaryKey(Dept dept){
+		return deptMapper.updateByPrimaryKey(dept);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("UserauthdataService")
+@Service("userauthdataService")
 public class UserauthdataService implements IUserauthdataService {
 	@Resource
-	private UserauthdataMapper UserauthdataMapper;
+	private UserauthdataMapper userauthdataMapper;
 
 	public int insert(Userauthdata userauthdata){
-		return UserauthdataMapper.insert(userauthdata);
+		return userauthdataMapper.insert(userauthdata);
 	}
 	public int insertSelective(Userauthdata userauthdata){
-		return UserauthdataMapper.insertSelective(userauthdata);
+		return userauthdataMapper.insertSelective(userauthdata);
 	}
 	public int deleteByPrimaryKey(UserauthdataKey userauthdataKey){
-		return UserauthdataMapper.deleteByPrimaryKey(userauthdataKey);
+		return userauthdataMapper.deleteByPrimaryKey(userauthdataKey);
 	}
 	public Userauthdata selectByPrimaryKey(UserauthdataKey userauthdataKey){
-		return UserauthdataMapper.selectByPrimaryKey(userauthdataKey);
-	}
-	public int updateByPrimaryKey(Userauthdata userauthdata){
-		return UserauthdataMapper.updateByPrimaryKey(userauthdata);
+		return userauthdataMapper.selectByPrimaryKey(userauthdataKey);
 	}
 	public int updateByPrimaryKeySelective(Userauthdata userauthdata){
-		return UserauthdataMapper.updateByPrimaryKeySelective(userauthdata);
+		return userauthdataMapper.updateByPrimaryKeySelective(userauthdata);
+	}
+	public int updateByPrimaryKey(Userauthdata userauthdata){
+		return userauthdataMapper.updateByPrimaryKey(userauthdata);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("MareaService")
+@Service("mareaService")
 public class MareaService implements IMareaService {
 	@Resource
-	private MareaMapper MareaMapper;
+	private MareaMapper mareaMapper;
 
 	public int insert(Marea marea){
-		return MareaMapper.insert(marea);
+		return mareaMapper.insert(marea);
 	}
 	public int insertSelective(Marea marea){
-		return MareaMapper.insertSelective(marea);
+		return mareaMapper.insertSelective(marea);
 	}
 	public int deleteByPrimaryKey(MareaKey mareaKey){
-		return MareaMapper.deleteByPrimaryKey(mareaKey);
+		return mareaMapper.deleteByPrimaryKey(mareaKey);
 	}
 	public Marea selectByPrimaryKey(MareaKey mareaKey){
-		return MareaMapper.selectByPrimaryKey(mareaKey);
-	}
-	public int updateByPrimaryKey(Marea marea){
-		return MareaMapper.updateByPrimaryKey(marea);
+		return mareaMapper.selectByPrimaryKey(mareaKey);
 	}
 	public int updateByPrimaryKeySelective(Marea marea){
-		return MareaMapper.updateByPrimaryKeySelective(marea);
+		return mareaMapper.updateByPrimaryKeySelective(marea);
+	}
+	public int updateByPrimaryKey(Marea marea){
+		return mareaMapper.updateByPrimaryKey(marea);
 	}
 
 

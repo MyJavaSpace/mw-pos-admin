@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("InterfacemanageService")
+@Service("interfacemanageService")
 public class InterfacemanageService implements IInterfacemanageService {
 	@Resource
-	private InterfacemanageMapper InterfacemanageMapper;
+	private InterfacemanageMapper interfacemanageMapper;
 
 	public int insert(Interfacemanage interfacemanage){
-		return InterfacemanageMapper.insert(interfacemanage);
+		return interfacemanageMapper.insert(interfacemanage);
 	}
 	public int insertSelective(Interfacemanage interfacemanage){
-		return InterfacemanageMapper.insertSelective(interfacemanage);
+		return interfacemanageMapper.insertSelective(interfacemanage);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return InterfacemanageMapper.deleteByPrimaryKey(integer);
+		return interfacemanageMapper.deleteByPrimaryKey(integer);
 	}
 	public Interfacemanage selectByPrimaryKey(Integer integer){
-		return InterfacemanageMapper.selectByPrimaryKey(integer);
-	}
-	public int updateByPrimaryKey(Interfacemanage interfacemanage){
-		return InterfacemanageMapper.updateByPrimaryKey(interfacemanage);
+		return interfacemanageMapper.selectByPrimaryKey(integer);
 	}
 	public int updateByPrimaryKeySelective(Interfacemanage interfacemanage){
-		return InterfacemanageMapper.updateByPrimaryKeySelective(interfacemanage);
+		return interfacemanageMapper.updateByPrimaryKeySelective(interfacemanage);
+	}
+	public int updateByPrimaryKey(Interfacemanage interfacemanage){
+		return interfacemanageMapper.updateByPrimaryKey(interfacemanage);
 	}
 
 
