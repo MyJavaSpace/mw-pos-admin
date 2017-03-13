@@ -5,10 +5,13 @@ import javax.annotation.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.support.RequestContext;
 
 import com.alibaba.fastjson.JSON;
 import com.pos.entity.*;
@@ -44,23 +47,52 @@ public class AddrController {
 		return resultInfo;
 	}
 
-	@RequestMapping(value = "selectbyprimarykey")
-	public ResponseEntity<Addr> selectByPrimaryKey(@RequestBody AddrKey tbaddrKey) {
-		return new ResponseEntity<Addr>(addrService.selectByPrimaryKey(tbaddrKey), HttpStatus.OK);
+	@RequestMapping(value = "selectbyprimarykey",method = RequestMethod.GET)
+ 	@ResponseBody
+	public ResultInfo<Addr> selectByPrimaryKey(AddrKey tbaddrKey) {
+
+		/* AddrKey tbaddrKey =new AddrKey();
+		 tbaddrKey.setFscityid("2");
+		 tbaddrKey.setFsdistrictid("2");
+		 tbaddrKey.setFsprovinceid("2");*/
+		ResultInfo<Addr> resultInfo = new ResultInfo<Addr>();
+		resultInfo.setData(addrService.selectByPrimaryKey(tbaddrKey));
+		resultInfo.setStatus(true);
+		resultInfo.setMessage(ConfigUtil.getSuccess());
+		return resultInfo;
 	}
 
 	@RequestMapping(value = "updatebyprimarykeyselective", method = RequestMethod.PUT)
-	public Integer updateByPrimaryKeySelective(@RequestBody Addr tbaddr) {
-		return addrService.updateByPrimaryKeySelective(tbaddr);
+	public ResultInfo<Integer> updateByPrimaryKeySelective(@RequestBody Addr tbaddr) {
+		ResultInfo<Integer> resultInfo = new ResultInfo<>();
+		resultInfo.setData(addrService.updateByPrimaryKeySelective(tbaddr));
+		if (resultInfo.getData() > 0) {
+			resultInfo.setStatus(true);
+			resultInfo.setMessage(ConfigUtil.getSuccess());
+		}
+		return resultInfo;
 	}
 
 	@RequestMapping(value = "updatebyprimarykey", method = RequestMethod.PUT)
-	public Integer updateByPrimaryKey(@RequestBody Addr tbaddr) {
-		return addrService.updateByPrimaryKey(tbaddr);
+	public ResultInfo<Integer> updateByPrimaryKey(@RequestBody Addr tbaddr) {
+		ResultInfo<Integer> resultInfo = new ResultInfo<>();
+		resultInfo.setData(addrService.updateByPrimaryKey(tbaddr));
+		if (resultInfo.getData() > 0) {
+			resultInfo.setStatus(true);
+			resultInfo.setMessage(ConfigUtil.getSuccess());
+		}
+		return resultInfo;
+		 
 	}
 
-	@RequestMapping(value = "deletebyprimarykey", method = RequestMethod.DELETE)
-	public Integer deleteByPrimaryKey(AddrKey tbaddrKey) {
-		return addrService.deleteByPrimaryKey(tbaddrKey);
-	}
+	/*@RequestMapping(value = "deletebyprimarykey", method = RequestMethod.DELETE)
+	public ResultInfo<Integer> deleteByPrimaryKey(AddrKey tbaddrKey) {
+		ResultInfo<Integer> resultInfo = new ResultInfo<>();
+		resultInfo.setData(addrService.deleteByPrimaryKey(tbaddrKey));
+		if (resultInfo.getData() > 0) {
+			resultInfo.setStatus(true);
+			resultInfo.setMessage(ConfigUtil.getSuccess());
+		}
+		return resultInfo;
+	}*/
 }
