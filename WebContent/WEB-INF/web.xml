@@ -133,4 +133,9 @@
     <welcome-file-list>
         <welcome-file>hellomvc.shtml</welcome-file>
     </welcome-file-list>
+    
+    <error-page>
+    <error-code>404</error-code>
+    <location>/page404.shtml</location>
+  </error-page>
 </web-app>

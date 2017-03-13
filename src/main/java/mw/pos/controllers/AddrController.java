@@ -36,6 +36,7 @@ public class AddrController {
 		}
 		return resultInfo;
 	}
+
 	@RequestMapping(value = "insertselective", method = RequestMethod.POST)
 	public ResultInfo<Integer> insertSelective(@RequestBody Addr tbaddr) {
 		ResultInfo<Integer> resultInfo = new ResultInfo<>();
@@ -47,14 +48,9 @@ public class AddrController {
 		return resultInfo;
 	}
 
-	@RequestMapping(value = "selectbyprimarykey",method = RequestMethod.GET)
- 	@ResponseBody
+	@RequestMapping(value = "selectbyprimarykey", method = RequestMethod.GET)
+	@ResponseBody
 	public ResultInfo<Addr> selectByPrimaryKey(AddrKey tbaddrKey) {
-
-		/* AddrKey tbaddrKey =new AddrKey();
-		 tbaddrKey.setFscityid("2");
-		 tbaddrKey.setFsdistrictid("2");
-		 tbaddrKey.setFsprovinceid("2");*/
 		ResultInfo<Addr> resultInfo = new ResultInfo<Addr>();
 		resultInfo.setData(addrService.selectByPrimaryKey(tbaddrKey));
 		resultInfo.setStatus(true);
@@ -82,17 +78,16 @@ public class AddrController {
 			resultInfo.setMessage(ConfigUtil.getSuccess());
 		}
 		return resultInfo;
-		 
+
 	}
 
-	/*@RequestMapping(value = "deletebyprimarykey", method = RequestMethod.DELETE)
-	public ResultInfo<Integer> deleteByPrimaryKey(AddrKey tbaddrKey) {
-		ResultInfo<Integer> resultInfo = new ResultInfo<>();
-		resultInfo.setData(addrService.deleteByPrimaryKey(tbaddrKey));
-		if (resultInfo.getData() > 0) {
-			resultInfo.setStatus(true);
-			resultInfo.setMessage(ConfigUtil.getSuccess());
-		}
-		return resultInfo;
-	}*/
+	/*
+	 * @RequestMapping(value = "deletebyprimarykey", method =
+	 * RequestMethod.DELETE) public ResultInfo<Integer>
+	 * deleteByPrimaryKey(AddrKey tbaddrKey) { ResultInfo<Integer> resultInfo =
+	 * new ResultInfo<>();
+	 * resultInfo.setData(addrService.deleteByPrimaryKey(tbaddrKey)); if
+	 * (resultInfo.getData() > 0) { resultInfo.setStatus(true);
+	 * resultInfo.setMessage(ConfigUtil.getSuccess()); } return resultInfo; }
+	 */
 }
