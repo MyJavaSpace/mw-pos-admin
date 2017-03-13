@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("custsurService")
+@Service("CustsurService")
 public class CustsurService implements ICustsurService {
 	@Resource
-	private custsurMapper custsurMapper;
+	private CustsurMapper CustsurMapper;
 
-	public int insert(custsur custsur){
-		return custsurMapper.insert(custsur);
+	public int insert(Custsur custsur){
+		return CustsurMapper.insert(custsur);
 	}
-	public int insertSelective(custsur custsur){
-		return custsurMapper.insertSelective(custsur);
+	public int insertSelective(Custsur custsur){
+		return CustsurMapper.insertSelective(custsur);
 	}
-	public custsur selectByPrimaryKey(custsurKey custsurKey){
-		return custsurMapper.selectByPrimaryKey(custsurKey);
+	public int deleteByPrimaryKey(CustsurKey custsurKey){
+		return CustsurMapper.deleteByPrimaryKey(custsurKey);
 	}
-	public int deleteByPrimaryKey(custsurKey custsurKey){
-		return custsurMapper.deleteByPrimaryKey(custsurKey);
+	public Custsur selectByPrimaryKey(CustsurKey custsurKey){
+		return CustsurMapper.selectByPrimaryKey(custsurKey);
 	}
-	public int updateByPrimaryKeySelective(custsur custsur){
-		return custsurMapper.updateByPrimaryKeySelective(custsur);
+	public int updateByPrimaryKey(Custsur custsur){
+		return CustsurMapper.updateByPrimaryKey(custsur);
 	}
-	public int updateByPrimaryKey(custsur custsur){
-		return custsurMapper.updateByPrimaryKey(custsur);
+	public int updateByPrimaryKeySelective(Custsur custsur){
+		return CustsurMapper.updateByPrimaryKeySelective(custsur);
 	}
 
 

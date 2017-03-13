@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("cutmoneyService")
+@Service("CutmoneyService")
 public class CutmoneyService implements ICutmoneyService {
 	@Resource
-	private cutmoneyMapper cutmoneyMapper;
+	private CutmoneyMapper CutmoneyMapper;
 
-	public int insert(cutmoney cutmoney){
-		return cutmoneyMapper.insert(cutmoney);
+	public int insert(Cutmoney cutmoney){
+		return CutmoneyMapper.insert(cutmoney);
 	}
-	public int insertSelective(cutmoney cutmoney){
-		return cutmoneyMapper.insertSelective(cutmoney);
+	public int insertSelective(Cutmoney cutmoney){
+		return CutmoneyMapper.insertSelective(cutmoney);
 	}
-	public cutmoney selectByPrimaryKey(cutmoneyKey cutmoneyKey){
-		return cutmoneyMapper.selectByPrimaryKey(cutmoneyKey);
+	public int deleteByPrimaryKey(CutmoneyKey cutmoneyKey){
+		return CutmoneyMapper.deleteByPrimaryKey(cutmoneyKey);
 	}
-	public int deleteByPrimaryKey(cutmoneyKey cutmoneyKey){
-		return cutmoneyMapper.deleteByPrimaryKey(cutmoneyKey);
+	public Cutmoney selectByPrimaryKey(CutmoneyKey cutmoneyKey){
+		return CutmoneyMapper.selectByPrimaryKey(cutmoneyKey);
 	}
-	public int updateByPrimaryKeySelective(cutmoney cutmoney){
-		return cutmoneyMapper.updateByPrimaryKeySelective(cutmoney);
+	public int updateByPrimaryKey(Cutmoney cutmoney){
+		return CutmoneyMapper.updateByPrimaryKey(cutmoney);
 	}
-	public int updateByPrimaryKey(cutmoney cutmoney){
-		return cutmoneyMapper.updateByPrimaryKey(cutmoney);
+	public int updateByPrimaryKeySelective(Cutmoney cutmoney){
+		return CutmoneyMapper.updateByPrimaryKeySelective(cutmoney);
 	}
 
 

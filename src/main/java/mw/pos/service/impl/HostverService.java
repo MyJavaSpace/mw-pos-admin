@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("hostverService")
+@Service("HostverService")
 public class HostverService implements IHostverService {
 	@Resource
-	private hostverMapper hostverMapper;
+	private HostverMapper HostverMapper;
 
-	public int insert(hostver hostver){
-		return hostverMapper.insert(hostver);
+	public int insert(Hostver hostver){
+		return HostverMapper.insert(hostver);
 	}
-	public int insertSelective(hostver hostver){
-		return hostverMapper.insertSelective(hostver);
+	public int insertSelective(Hostver hostver){
+		return HostverMapper.insertSelective(hostver);
 	}
-	public hostver selectByPrimaryKey(hostverKey hostverKey){
-		return hostverMapper.selectByPrimaryKey(hostverKey);
+	public int deleteByPrimaryKey(HostverKey hostverKey){
+		return HostverMapper.deleteByPrimaryKey(hostverKey);
 	}
-	public int deleteByPrimaryKey(hostverKey hostverKey){
-		return hostverMapper.deleteByPrimaryKey(hostverKey);
+	public Hostver selectByPrimaryKey(HostverKey hostverKey){
+		return HostverMapper.selectByPrimaryKey(hostverKey);
 	}
-	public int updateByPrimaryKeySelective(hostver hostver){
-		return hostverMapper.updateByPrimaryKeySelective(hostver);
+	public int updateByPrimaryKey(Hostver hostver){
+		return HostverMapper.updateByPrimaryKey(hostver);
 	}
-	public int updateByPrimaryKey(hostver hostver){
-		return hostverMapper.updateByPrimaryKey(hostver);
+	public int updateByPrimaryKeySelective(Hostver hostver){
+		return HostverMapper.updateByPrimaryKeySelective(hostver);
 	}
 
 

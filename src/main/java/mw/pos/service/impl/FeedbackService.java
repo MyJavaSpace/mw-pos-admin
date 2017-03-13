@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("feedbackService")
+@Service("FeedbackService")
 public class FeedbackService implements IFeedbackService {
 	@Resource
-	private feedbackMapper feedbackMapper;
+	private FeedbackMapper FeedbackMapper;
 
-	public int insert(feedback feedback){
-		return feedbackMapper.insert(feedback);
+	public int insert(Feedback feedback){
+		return FeedbackMapper.insert(feedback);
 	}
-	public int insertSelective(feedback feedback){
-		return feedbackMapper.insertSelective(feedback);
-	}
-	public feedback selectByPrimaryKey(Integer integer){
-		return feedbackMapper.selectByPrimaryKey(integer);
+	public int insertSelective(Feedback feedback){
+		return FeedbackMapper.insertSelective(feedback);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return feedbackMapper.deleteByPrimaryKey(integer);
+		return FeedbackMapper.deleteByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKeySelective(feedback feedback){
-		return feedbackMapper.updateByPrimaryKeySelective(feedback);
+	public Feedback selectByPrimaryKey(Integer integer){
+		return FeedbackMapper.selectByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKey(feedback feedback){
-		return feedbackMapper.updateByPrimaryKey(feedback);
+	public int updateByPrimaryKey(Feedback feedback){
+		return FeedbackMapper.updateByPrimaryKey(feedback);
+	}
+	public int updateByPrimaryKeySelective(Feedback feedback){
+		return FeedbackMapper.updateByPrimaryKeySelective(feedback);
 	}
 
 

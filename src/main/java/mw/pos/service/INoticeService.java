@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface INoticeService {
-	int insert(notice notice);
-	notice selectByPrimaryKey(Integer integer);
-	int updateByPrimaryKeySelective(notice notice);
+	int insert(Notice notice);
 	int deleteByPrimaryKey(Integer integer);
-	int updateByPrimaryKey(notice notice);
-	int insertSelective(notice notice);
+	int updateByPrimaryKey(Notice notice);
+	Notice selectByPrimaryKey(Integer integer);
+	int insertSelective(Notice notice);
+	int updateByPrimaryKeySelective(Notice notice);
 
 }

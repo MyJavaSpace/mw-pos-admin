@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("hostexternalService")
+@Service("HostexternalService")
 public class HostexternalService implements IHostexternalService {
 	@Resource
-	private hostexternalMapper hostexternalMapper;
+	private HostexternalMapper HostexternalMapper;
 
-	public int insert(hostexternal hostexternal){
-		return hostexternalMapper.insert(hostexternal);
+	public int insert(Hostexternal hostexternal){
+		return HostexternalMapper.insert(hostexternal);
 	}
-	public int insertSelective(hostexternal hostexternal){
-		return hostexternalMapper.insertSelective(hostexternal);
+	public int insertSelective(Hostexternal hostexternal){
+		return HostexternalMapper.insertSelective(hostexternal);
 	}
-	public hostexternal selectByPrimaryKey(hostexternalKey hostexternalKey){
-		return hostexternalMapper.selectByPrimaryKey(hostexternalKey);
+	public int deleteByPrimaryKey(HostexternalKey hostexternalKey){
+		return HostexternalMapper.deleteByPrimaryKey(hostexternalKey);
 	}
-	public int deleteByPrimaryKey(hostexternalKey hostexternalKey){
-		return hostexternalMapper.deleteByPrimaryKey(hostexternalKey);
+	public Hostexternal selectByPrimaryKey(HostexternalKey hostexternalKey){
+		return HostexternalMapper.selectByPrimaryKey(hostexternalKey);
 	}
-	public int updateByPrimaryKeySelective(hostexternal hostexternal){
-		return hostexternalMapper.updateByPrimaryKeySelective(hostexternal);
+	public int updateByPrimaryKey(Hostexternal hostexternal){
+		return HostexternalMapper.updateByPrimaryKey(hostexternal);
 	}
-	public int updateByPrimaryKey(hostexternal hostexternal){
-		return hostexternalMapper.updateByPrimaryKey(hostexternal);
+	public int updateByPrimaryKeySelective(Hostexternal hostexternal){
+		return HostexternalMapper.updateByPrimaryKeySelective(hostexternal);
 	}
-	public int updateByPrimaryKeyWithBLOBs(hostexternal hostexternal){
-		return hostexternalMapper.updateByPrimaryKeyWithBLOBs(hostexternal);
+	public int updateByPrimaryKeyWithBLOBs(Hostexternal hostexternal){
+		return HostexternalMapper.updateByPrimaryKeyWithBLOBs(hostexternal);
 	}
 
 

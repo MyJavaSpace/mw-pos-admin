@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IMenuclsService {
-	int insert(menucls menucls);
-	menucls selectByPrimaryKey(menuclsKey menuclsKey);
-	int updateByPrimaryKeySelective(menucls menucls);
-	int deleteByPrimaryKey(menuclsKey menuclsKey);
-	int updateByPrimaryKey(menucls menucls);
-	int insertSelective(menucls menucls);
+	int insert(Menucls menucls);
+	int deleteByPrimaryKey(MenuclsKey menuclsKey);
+	int updateByPrimaryKey(Menucls menucls);
+	Menucls selectByPrimaryKey(MenuclsKey menuclsKey);
+	int insertSelective(Menucls menucls);
+	int updateByPrimaryKeySelective(Menucls menucls);
 
 }

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("paramvalueService")
+@Service("ParamvalueService")
 public class ParamvalueService implements IParamvalueService {
 	@Resource
-	private paramvalueMapper paramvalueMapper;
+	private ParamvalueMapper ParamvalueMapper;
 
-	public int insert(paramvalue paramvalue){
-		return paramvalueMapper.insert(paramvalue);
+	public int insert(Paramvalue paramvalue){
+		return ParamvalueMapper.insert(paramvalue);
 	}
-	public int insertSelective(paramvalue paramvalue){
-		return paramvalueMapper.insertSelective(paramvalue);
+	public int insertSelective(Paramvalue paramvalue){
+		return ParamvalueMapper.insertSelective(paramvalue);
 	}
-	public paramvalue selectByPrimaryKey(paramvalueKey paramvalueKey){
-		return paramvalueMapper.selectByPrimaryKey(paramvalueKey);
+	public int deleteByPrimaryKey(ParamvalueKey paramvalueKey){
+		return ParamvalueMapper.deleteByPrimaryKey(paramvalueKey);
 	}
-	public int deleteByPrimaryKey(paramvalueKey paramvalueKey){
-		return paramvalueMapper.deleteByPrimaryKey(paramvalueKey);
+	public Paramvalue selectByPrimaryKey(ParamvalueKey paramvalueKey){
+		return ParamvalueMapper.selectByPrimaryKey(paramvalueKey);
 	}
-	public int updateByPrimaryKeySelective(paramvalue paramvalue){
-		return paramvalueMapper.updateByPrimaryKeySelective(paramvalue);
+	public int updateByPrimaryKey(Paramvalue paramvalue){
+		return ParamvalueMapper.updateByPrimaryKey(paramvalue);
 	}
-	public int updateByPrimaryKey(paramvalue paramvalue){
-		return paramvalueMapper.updateByPrimaryKey(paramvalue);
+	public int updateByPrimaryKeySelective(Paramvalue paramvalue){
+		return ParamvalueMapper.updateByPrimaryKeySelective(paramvalue);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("sellorderService")
+@Service("SellorderService")
 public class SellorderService implements ISellorderService {
 	@Resource
-	private sellorderMapper sellorderMapper;
+	private SellorderMapper SellorderMapper;
 
-	public int insert(sellorder sellorder){
-		return sellorderMapper.insert(sellorder);
+	public int insert(Sellorder sellorder){
+		return SellorderMapper.insert(sellorder);
 	}
-	public int insertSelective(sellorder sellorder){
-		return sellorderMapper.insertSelective(sellorder);
+	public int insertSelective(Sellorder sellorder){
+		return SellorderMapper.insertSelective(sellorder);
 	}
-	public sellorder selectByPrimaryKey(sellorderKey sellorderKey){
-		return sellorderMapper.selectByPrimaryKey(sellorderKey);
+	public int deleteByPrimaryKey(SellorderKey sellorderKey){
+		return SellorderMapper.deleteByPrimaryKey(sellorderKey);
 	}
-	public int deleteByPrimaryKey(sellorderKey sellorderKey){
-		return sellorderMapper.deleteByPrimaryKey(sellorderKey);
+	public Sellorder selectByPrimaryKey(SellorderKey sellorderKey){
+		return SellorderMapper.selectByPrimaryKey(sellorderKey);
 	}
-	public int updateByPrimaryKeySelective(sellorder sellorder){
-		return sellorderMapper.updateByPrimaryKeySelective(sellorder);
+	public int updateByPrimaryKey(Sellorder sellorder){
+		return SellorderMapper.updateByPrimaryKey(sellorder);
 	}
-	public int updateByPrimaryKey(sellorder sellorder){
-		return sellorderMapper.updateByPrimaryKey(sellorder);
+	public int updateByPrimaryKeySelective(Sellorder sellorder){
+		return SellorderMapper.updateByPrimaryKeySelective(sellorder);
 	}
 
 

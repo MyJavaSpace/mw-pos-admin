@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("askService")
+@Service("AskService")
 public class AskService implements IAskService {
 	@Resource
-	private askMapper askMapper;
+	private AskMapper AskMapper;
 
-	public int insert(ask ask){
-		return askMapper.insert(ask);
+	public int insert(Ask ask){
+		return AskMapper.insert(ask);
 	}
-	public int insertSelective(ask ask){
-		return askMapper.insertSelective(ask);
+	public int insertSelective(Ask ask){
+		return AskMapper.insertSelective(ask);
 	}
-	public ask selectByPrimaryKey(askKey askKey){
-		return askMapper.selectByPrimaryKey(askKey);
+	public int deleteByPrimaryKey(AskKey askKey){
+		return AskMapper.deleteByPrimaryKey(askKey);
 	}
-	public int deleteByPrimaryKey(askKey askKey){
-		return askMapper.deleteByPrimaryKey(askKey);
+	public Ask selectByPrimaryKey(AskKey askKey){
+		return AskMapper.selectByPrimaryKey(askKey);
 	}
-	public int updateByPrimaryKeySelective(ask ask){
-		return askMapper.updateByPrimaryKeySelective(ask);
+	public int updateByPrimaryKey(Ask ask){
+		return AskMapper.updateByPrimaryKey(ask);
 	}
-	public int updateByPrimaryKey(ask ask){
-		return askMapper.updateByPrimaryKey(ask);
+	public int updateByPrimaryKeySelective(Ask ask){
+		return AskMapper.updateByPrimaryKeySelective(ask);
 	}
 
 

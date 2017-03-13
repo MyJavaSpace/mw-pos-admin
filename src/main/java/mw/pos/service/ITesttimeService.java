@@ -3,7 +3,7 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface ITesttimeService {
-	int insert(testtime testtime);
-	int insertSelective(testtime testtime);
+	int insert(Testtime testtime);
+	int insertSelective(Testtime testtime);
 
 }

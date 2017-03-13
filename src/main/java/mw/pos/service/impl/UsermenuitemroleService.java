@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("usermenuitemroleService")
+@Service("UsermenuitemroleService")
 public class UsermenuitemroleService implements IUsermenuitemroleService {
 	@Resource
-	private usermenuitemroleMapper usermenuitemroleMapper;
+	private UsermenuitemroleMapper UsermenuitemroleMapper;
 
-	public int insert(usermenuitemrole usermenuitemrole){
-		return usermenuitemroleMapper.insert(usermenuitemrole);
+	public int insert(Usermenuitemrole usermenuitemrole){
+		return UsermenuitemroleMapper.insert(usermenuitemrole);
 	}
-	public int insertSelective(usermenuitemrole usermenuitemrole){
-		return usermenuitemroleMapper.insertSelective(usermenuitemrole);
+	public int insertSelective(Usermenuitemrole usermenuitemrole){
+		return UsermenuitemroleMapper.insertSelective(usermenuitemrole);
 	}
-	public usermenuitemrole selectByPrimaryKey(usermenuitemroleKey usermenuitemroleKey){
-		return usermenuitemroleMapper.selectByPrimaryKey(usermenuitemroleKey);
+	public int deleteByPrimaryKey(UsermenuitemroleKey usermenuitemroleKey){
+		return UsermenuitemroleMapper.deleteByPrimaryKey(usermenuitemroleKey);
 	}
-	public int deleteByPrimaryKey(usermenuitemroleKey usermenuitemroleKey){
-		return usermenuitemroleMapper.deleteByPrimaryKey(usermenuitemroleKey);
+	public Usermenuitemrole selectByPrimaryKey(UsermenuitemroleKey usermenuitemroleKey){
+		return UsermenuitemroleMapper.selectByPrimaryKey(usermenuitemroleKey);
 	}
-	public int updateByPrimaryKeySelective(usermenuitemrole usermenuitemrole){
-		return usermenuitemroleMapper.updateByPrimaryKeySelective(usermenuitemrole);
+	public int updateByPrimaryKey(Usermenuitemrole usermenuitemrole){
+		return UsermenuitemroleMapper.updateByPrimaryKey(usermenuitemrole);
 	}
-	public int updateByPrimaryKey(usermenuitemrole usermenuitemrole){
-		return usermenuitemroleMapper.updateByPrimaryKey(usermenuitemrole);
+	public int updateByPrimaryKeySelective(Usermenuitemrole usermenuitemrole){
+		return UsermenuitemroleMapper.updateByPrimaryKeySelective(usermenuitemrole);
 	}
 
 

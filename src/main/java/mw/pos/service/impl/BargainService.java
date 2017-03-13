@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("bargainService")
+@Service("BargainService")
 public class BargainService implements IBargainService {
 	@Resource
-	private bargainMapper bargainMapper;
+	private BargainMapper BargainMapper;
 
-	public int insert(bargain bargain){
-		return bargainMapper.insert(bargain);
+	public int insert(Bargain bargain){
+		return BargainMapper.insert(bargain);
 	}
-	public int insertSelective(bargain bargain){
-		return bargainMapper.insertSelective(bargain);
+	public int insertSelective(Bargain bargain){
+		return BargainMapper.insertSelective(bargain);
 	}
-	public bargain selectByPrimaryKey(bargainKey bargainKey){
-		return bargainMapper.selectByPrimaryKey(bargainKey);
+	public int deleteByPrimaryKey(BargainKey bargainKey){
+		return BargainMapper.deleteByPrimaryKey(bargainKey);
 	}
-	public int deleteByPrimaryKey(bargainKey bargainKey){
-		return bargainMapper.deleteByPrimaryKey(bargainKey);
+	public Bargain selectByPrimaryKey(BargainKey bargainKey){
+		return BargainMapper.selectByPrimaryKey(bargainKey);
 	}
-	public int updateByPrimaryKeySelective(bargain bargain){
-		return bargainMapper.updateByPrimaryKeySelective(bargain);
+	public int updateByPrimaryKey(Bargain bargain){
+		return BargainMapper.updateByPrimaryKey(bargain);
 	}
-	public int updateByPrimaryKey(bargain bargain){
-		return bargainMapper.updateByPrimaryKey(bargain);
+	public int updateByPrimaryKeySelective(Bargain bargain){
+		return BargainMapper.updateByPrimaryKeySelective(bargain);
 	}
 
 

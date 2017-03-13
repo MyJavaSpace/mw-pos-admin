@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("interfacemanageService")
+@Service("InterfacemanageService")
 public class InterfacemanageService implements IInterfacemanageService {
 	@Resource
-	private interfacemanageMapper interfacemanageMapper;
+	private InterfacemanageMapper InterfacemanageMapper;
 
-	public int insert(interfacemanage interfacemanage){
-		return interfacemanageMapper.insert(interfacemanage);
+	public int insert(Interfacemanage interfacemanage){
+		return InterfacemanageMapper.insert(interfacemanage);
 	}
-	public int insertSelective(interfacemanage interfacemanage){
-		return interfacemanageMapper.insertSelective(interfacemanage);
-	}
-	public interfacemanage selectByPrimaryKey(Integer integer){
-		return interfacemanageMapper.selectByPrimaryKey(integer);
+	public int insertSelective(Interfacemanage interfacemanage){
+		return InterfacemanageMapper.insertSelective(interfacemanage);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return interfacemanageMapper.deleteByPrimaryKey(integer);
+		return InterfacemanageMapper.deleteByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKeySelective(interfacemanage interfacemanage){
-		return interfacemanageMapper.updateByPrimaryKeySelective(interfacemanage);
+	public Interfacemanage selectByPrimaryKey(Integer integer){
+		return InterfacemanageMapper.selectByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKey(interfacemanage interfacemanage){
-		return interfacemanageMapper.updateByPrimaryKey(interfacemanage);
+	public int updateByPrimaryKey(Interfacemanage interfacemanage){
+		return InterfacemanageMapper.updateByPrimaryKey(interfacemanage);
+	}
+	public int updateByPrimaryKeySelective(Interfacemanage interfacemanage){
+		return InterfacemanageMapper.updateByPrimaryKeySelective(interfacemanage);
 	}
 
 

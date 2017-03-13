@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("printprojectgpService")
+@Service("PrintprojectgpService")
 public class PrintprojectgpService implements IPrintprojectgpService {
 	@Resource
-	private printprojectgpMapper printprojectgpMapper;
+	private PrintprojectgpMapper PrintprojectgpMapper;
 
-	public int insert(printprojectgp printprojectgp){
-		return printprojectgpMapper.insert(printprojectgp);
+	public int insert(Printprojectgp printprojectgp){
+		return PrintprojectgpMapper.insert(printprojectgp);
 	}
-	public int insertSelective(printprojectgp printprojectgp){
-		return printprojectgpMapper.insertSelective(printprojectgp);
+	public int insertSelective(Printprojectgp printprojectgp){
+		return PrintprojectgpMapper.insertSelective(printprojectgp);
 	}
-	public printprojectgp selectByPrimaryKey(printprojectgpKey printprojectgpKey){
-		return printprojectgpMapper.selectByPrimaryKey(printprojectgpKey);
+	public int deleteByPrimaryKey(PrintprojectgpKey printprojectgpKey){
+		return PrintprojectgpMapper.deleteByPrimaryKey(printprojectgpKey);
 	}
-	public int deleteByPrimaryKey(printprojectgpKey printprojectgpKey){
-		return printprojectgpMapper.deleteByPrimaryKey(printprojectgpKey);
+	public Printprojectgp selectByPrimaryKey(PrintprojectgpKey printprojectgpKey){
+		return PrintprojectgpMapper.selectByPrimaryKey(printprojectgpKey);
 	}
-	public int updateByPrimaryKeySelective(printprojectgp printprojectgp){
-		return printprojectgpMapper.updateByPrimaryKeySelective(printprojectgp);
+	public int updateByPrimaryKey(Printprojectgp printprojectgp){
+		return PrintprojectgpMapper.updateByPrimaryKey(printprojectgp);
 	}
-	public int updateByPrimaryKey(printprojectgp printprojectgp){
-		return printprojectgpMapper.updateByPrimaryKey(printprojectgp);
+	public int updateByPrimaryKeySelective(Printprojectgp printprojectgp){
+		return PrintprojectgpMapper.updateByPrimaryKeySelective(printprojectgp);
 	}
 
 

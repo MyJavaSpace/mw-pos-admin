@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("paymentdetailService")
+@Service("PaymentdetailService")
 public class PaymentdetailService implements IPaymentdetailService {
 	@Resource
-	private paymentdetailMapper paymentdetailMapper;
+	private PaymentdetailMapper PaymentdetailMapper;
 
-	public int insert(paymentdetailWithBLOBs paymentdetailWithBLOBs){
-		return paymentdetailMapper.insert(paymentdetailWithBLOBs);
+	public int insert(PaymentdetailWithBLOBs paymentdetailWithBLOBs){
+		return PaymentdetailMapper.insert(paymentdetailWithBLOBs);
 	}
-	public int insertSelective(paymentdetailWithBLOBs paymentdetailWithBLOBs){
-		return paymentdetailMapper.insertSelective(paymentdetailWithBLOBs);
+	public int insertSelective(PaymentdetailWithBLOBs paymentdetailWithBLOBs){
+		return PaymentdetailMapper.insertSelective(paymentdetailWithBLOBs);
 	}
-	public paymentdetailWithBLOBs selectByPrimaryKey(paymentdetailKey paymentdetailKey){
-		return paymentdetailMapper.selectByPrimaryKey(paymentdetailKey);
+	public int deleteByPrimaryKey(PaymentdetailKey paymentdetailKey){
+		return PaymentdetailMapper.deleteByPrimaryKey(paymentdetailKey);
 	}
-	public int deleteByPrimaryKey(paymentdetailKey paymentdetailKey){
-		return paymentdetailMapper.deleteByPrimaryKey(paymentdetailKey);
+	public PaymentdetailWithBLOBs selectByPrimaryKey(PaymentdetailKey paymentdetailKey){
+		return PaymentdetailMapper.selectByPrimaryKey(paymentdetailKey);
 	}
-	public int updateByPrimaryKeySelective(paymentdetailWithBLOBs paymentdetailWithBLOBs){
-		return paymentdetailMapper.updateByPrimaryKeySelective(paymentdetailWithBLOBs);
+	public int updateByPrimaryKey(Paymentdetail paymentdetail){
+		return PaymentdetailMapper.updateByPrimaryKey(paymentdetail);
 	}
-	public int updateByPrimaryKey(paymentdetail paymentdetail){
-		return paymentdetailMapper.updateByPrimaryKey(paymentdetail);
+	public int updateByPrimaryKeySelective(PaymentdetailWithBLOBs paymentdetailWithBLOBs){
+		return PaymentdetailMapper.updateByPrimaryKeySelective(paymentdetailWithBLOBs);
 	}
-	public int updateByPrimaryKeyWithBLOBs(paymentdetailWithBLOBs paymentdetailWithBLOBs){
-		return paymentdetailMapper.updateByPrimaryKeyWithBLOBs(paymentdetailWithBLOBs);
+	public int updateByPrimaryKeyWithBLOBs(PaymentdetailWithBLOBs paymentdetailWithBLOBs){
+		return PaymentdetailMapper.updateByPrimaryKeyWithBLOBs(paymentdetailWithBLOBs);
 	}
 
 

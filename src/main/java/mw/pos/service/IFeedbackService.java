@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IFeedbackService {
-	int insert(feedback feedback);
-	feedback selectByPrimaryKey(Integer integer);
-	int updateByPrimaryKeySelective(feedback feedback);
+	int insert(Feedback feedback);
 	int deleteByPrimaryKey(Integer integer);
-	int updateByPrimaryKey(feedback feedback);
-	int insertSelective(feedback feedback);
+	int updateByPrimaryKey(Feedback feedback);
+	Feedback selectByPrimaryKey(Integer integer);
+	int insertSelective(Feedback feedback);
+	int updateByPrimaryKeySelective(Feedback feedback);
 
 }

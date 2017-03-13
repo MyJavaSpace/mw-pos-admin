@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IHostService {
-	int insert(host host);
-	host selectByPrimaryKey(hostKey hostKey);
-	int updateByPrimaryKeySelective(host host);
-	int deleteByPrimaryKey(hostKey hostKey);
-	int updateByPrimaryKey(host host);
-	int insertSelective(host host);
+	int insert(Host host);
+	int deleteByPrimaryKey(HostKey hostKey);
+	int updateByPrimaryKey(Host host);
+	Host selectByPrimaryKey(HostKey hostKey);
+	int insertSelective(Host host);
+	int updateByPrimaryKeySelective(Host host);
 
 }

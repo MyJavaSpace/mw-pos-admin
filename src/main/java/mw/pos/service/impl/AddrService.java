@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("addrService")
+@Service("AddrService")
 public class AddrService implements IAddrService {
 	@Resource
-	private addrMapper addrMapper;
+	private AddrMapper AddrMapper;
 
-	public int insert(addr addr){
-		return addrMapper.insert(addr);
+	public int insert(Addr addr){
+		return AddrMapper.insert(addr);
 	}
-	public int insertSelective(addr addr){
-		return addrMapper.insertSelective(addr);
+	public int insertSelective(Addr addr){
+		return AddrMapper.insertSelective(addr);
 	}
-	public addr selectByPrimaryKey(addrKey addrKey){
-		return addrMapper.selectByPrimaryKey(addrKey);
+	public int deleteByPrimaryKey(AddrKey addrKey){
+		return AddrMapper.deleteByPrimaryKey(addrKey);
 	}
-	public int deleteByPrimaryKey(addrKey addrKey){
-		return addrMapper.deleteByPrimaryKey(addrKey);
+	public Addr selectByPrimaryKey(AddrKey addrKey){
+		return AddrMapper.selectByPrimaryKey(addrKey);
 	}
-	public int updateByPrimaryKeySelective(addr addr){
-		return addrMapper.updateByPrimaryKeySelective(addr);
+	public int updateByPrimaryKey(Addr addr){
+		return AddrMapper.updateByPrimaryKey(addr);
 	}
-	public int updateByPrimaryKey(addr addr){
-		return addrMapper.updateByPrimaryKey(addr);
+	public int updateByPrimaryKeySelective(Addr addr){
+		return AddrMapper.updateByPrimaryKeySelective(addr);
 	}
 
 

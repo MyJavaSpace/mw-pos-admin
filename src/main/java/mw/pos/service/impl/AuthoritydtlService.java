@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("authoritydtlService")
+@Service("AuthoritydtlService")
 public class AuthoritydtlService implements IAuthoritydtlService {
 	@Resource
-	private authoritydtlMapper authoritydtlMapper;
+	private AuthoritydtlMapper AuthoritydtlMapper;
 
-	public int insert(authoritydtl authoritydtl){
-		return authoritydtlMapper.insert(authoritydtl);
+	public int insert(Authoritydtl authoritydtl){
+		return AuthoritydtlMapper.insert(authoritydtl);
 	}
-	public int insertSelective(authoritydtl authoritydtl){
-		return authoritydtlMapper.insertSelective(authoritydtl);
+	public int insertSelective(Authoritydtl authoritydtl){
+		return AuthoritydtlMapper.insertSelective(authoritydtl);
 	}
-	public authoritydtl selectByPrimaryKey(authoritydtlKey authoritydtlKey){
-		return authoritydtlMapper.selectByPrimaryKey(authoritydtlKey);
+	public int deleteByPrimaryKey(AuthoritydtlKey authoritydtlKey){
+		return AuthoritydtlMapper.deleteByPrimaryKey(authoritydtlKey);
 	}
-	public int deleteByPrimaryKey(authoritydtlKey authoritydtlKey){
-		return authoritydtlMapper.deleteByPrimaryKey(authoritydtlKey);
+	public Authoritydtl selectByPrimaryKey(AuthoritydtlKey authoritydtlKey){
+		return AuthoritydtlMapper.selectByPrimaryKey(authoritydtlKey);
 	}
-	public int updateByPrimaryKeySelective(authoritydtl authoritydtl){
-		return authoritydtlMapper.updateByPrimaryKeySelective(authoritydtl);
+	public int updateByPrimaryKey(Authoritydtl authoritydtl){
+		return AuthoritydtlMapper.updateByPrimaryKey(authoritydtl);
 	}
-	public int updateByPrimaryKey(authoritydtl authoritydtl){
-		return authoritydtlMapper.updateByPrimaryKey(authoritydtl);
+	public int updateByPrimaryKeySelective(Authoritydtl authoritydtl){
+		return AuthoritydtlMapper.updateByPrimaryKeySelective(authoritydtl);
 	}
 
 

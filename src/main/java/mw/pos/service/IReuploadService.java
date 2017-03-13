@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IReuploadService {
-	int insert(reupload reupload);
-	reupload selectByPrimaryKey(String string);
-	int updateByPrimaryKeySelective(reupload reupload);
+	int insert(Reupload reupload);
 	int deleteByPrimaryKey(String string);
-	int updateByPrimaryKey(reupload reupload);
-	int insertSelective(reupload reupload);
+	int updateByPrimaryKey(Reupload reupload);
+	Reupload selectByPrimaryKey(String string);
+	int insertSelective(Reupload reupload);
+	int updateByPrimaryKeySelective(Reupload reupload);
 
 }

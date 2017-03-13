@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IReporttempletService {
-	int insert(reporttemplet reporttemplet);
-	reporttemplet selectByPrimaryKey(reporttempletKey reporttempletKey);
-	int updateByPrimaryKeySelective(reporttemplet reporttemplet);
-	int deleteByPrimaryKey(reporttempletKey reporttempletKey);
-	int updateByPrimaryKey(reporttemplet reporttemplet);
-	int insertSelective(reporttemplet reporttemplet);
+	int insert(Reporttemplet reporttemplet);
+	int deleteByPrimaryKey(ReporttempletKey reporttempletKey);
+	int updateByPrimaryKey(Reporttemplet reporttemplet);
+	Reporttemplet selectByPrimaryKey(ReporttempletKey reporttempletKey);
+	int insertSelective(Reporttemplet reporttemplet);
+	int updateByPrimaryKeySelective(Reporttemplet reporttemplet);
 
 }

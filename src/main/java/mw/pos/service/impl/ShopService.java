@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("shopService")
+@Service("ShopService")
 public class ShopService implements IShopService {
 	@Resource
-	private shopMapper shopMapper;
+	private ShopMapper ShopMapper;
 
-	public int insert(shop shop){
-		return shopMapper.insert(shop);
+	public int insert(Shop shop){
+		return ShopMapper.insert(shop);
 	}
-	public int insertSelective(shop shop){
-		return shopMapper.insertSelective(shop);
-	}
-	public shop selectByPrimaryKey(String string){
-		return shopMapper.selectByPrimaryKey(string);
+	public int insertSelective(Shop shop){
+		return ShopMapper.insertSelective(shop);
 	}
 	public int deleteByPrimaryKey(String string){
-		return shopMapper.deleteByPrimaryKey(string);
+		return ShopMapper.deleteByPrimaryKey(string);
 	}
-	public int updateByPrimaryKeySelective(shop shop){
-		return shopMapper.updateByPrimaryKeySelective(shop);
+	public Shop selectByPrimaryKey(String string){
+		return ShopMapper.selectByPrimaryKey(string);
 	}
-	public int updateByPrimaryKey(shop shop){
-		return shopMapper.updateByPrimaryKey(shop);
+	public int updateByPrimaryKey(Shop shop){
+		return ShopMapper.updateByPrimaryKey(shop);
+	}
+	public int updateByPrimaryKeySelective(Shop shop){
+		return ShopMapper.updateByPrimaryKeySelective(shop);
 	}
 
 

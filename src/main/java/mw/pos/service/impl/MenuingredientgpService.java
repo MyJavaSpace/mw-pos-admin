@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("menuingredientgpService")
+@Service("MenuingredientgpService")
 public class MenuingredientgpService implements IMenuingredientgpService {
 	@Resource
-	private menuingredientgpMapper menuingredientgpMapper;
+	private MenuingredientgpMapper MenuingredientgpMapper;
 
-	public int insert(menuingredientgp menuingredientgp){
-		return menuingredientgpMapper.insert(menuingredientgp);
+	public int insert(Menuingredientgp menuingredientgp){
+		return MenuingredientgpMapper.insert(menuingredientgp);
 	}
-	public int insertSelective(menuingredientgp menuingredientgp){
-		return menuingredientgpMapper.insertSelective(menuingredientgp);
+	public int insertSelective(Menuingredientgp menuingredientgp){
+		return MenuingredientgpMapper.insertSelective(menuingredientgp);
 	}
-	public menuingredientgp selectByPrimaryKey(menuingredientgpKey menuingredientgpKey){
-		return menuingredientgpMapper.selectByPrimaryKey(menuingredientgpKey);
+	public int deleteByPrimaryKey(MenuingredientgpKey menuingredientgpKey){
+		return MenuingredientgpMapper.deleteByPrimaryKey(menuingredientgpKey);
 	}
-	public int deleteByPrimaryKey(menuingredientgpKey menuingredientgpKey){
-		return menuingredientgpMapper.deleteByPrimaryKey(menuingredientgpKey);
+	public Menuingredientgp selectByPrimaryKey(MenuingredientgpKey menuingredientgpKey){
+		return MenuingredientgpMapper.selectByPrimaryKey(menuingredientgpKey);
 	}
-	public int updateByPrimaryKeySelective(menuingredientgp menuingredientgp){
-		return menuingredientgpMapper.updateByPrimaryKeySelective(menuingredientgp);
+	public int updateByPrimaryKey(Menuingredientgp menuingredientgp){
+		return MenuingredientgpMapper.updateByPrimaryKey(menuingredientgp);
 	}
-	public int updateByPrimaryKey(menuingredientgp menuingredientgp){
-		return menuingredientgpMapper.updateByPrimaryKey(menuingredientgp);
+	public int updateByPrimaryKeySelective(Menuingredientgp menuingredientgp){
+		return MenuingredientgpMapper.updateByPrimaryKeySelective(menuingredientgp);
 	}
 
 

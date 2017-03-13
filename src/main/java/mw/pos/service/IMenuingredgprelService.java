@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IMenuingredgprelService {
-	int insert(menuingredgprel menuingredgprel);
-	menuingredgprel selectByPrimaryKey(menuingredgprelKey menuingredgprelKey);
-	int updateByPrimaryKeySelective(menuingredgprel menuingredgprel);
-	int deleteByPrimaryKey(menuingredgprelKey menuingredgprelKey);
-	int updateByPrimaryKey(menuingredgprel menuingredgprel);
-	int insertSelective(menuingredgprel menuingredgprel);
+	int insert(Menuingredgprel menuingredgprel);
+	int deleteByPrimaryKey(MenuingredgprelKey menuingredgprelKey);
+	int updateByPrimaryKey(Menuingredgprel menuingredgprel);
+	Menuingredgprel selectByPrimaryKey(MenuingredgprelKey menuingredgprelKey);
+	int insertSelective(Menuingredgprel menuingredgprel);
+	int updateByPrimaryKeySelective(Menuingredgprel menuingredgprel);
 
 }

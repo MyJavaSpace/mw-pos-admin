@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IInterfacemanageService {
-	int insert(interfacemanage interfacemanage);
-	interfacemanage selectByPrimaryKey(Integer integer);
-	int updateByPrimaryKeySelective(interfacemanage interfacemanage);
+	int insert(Interfacemanage interfacemanage);
 	int deleteByPrimaryKey(Integer integer);
-	int updateByPrimaryKey(interfacemanage interfacemanage);
-	int insertSelective(interfacemanage interfacemanage);
+	int updateByPrimaryKey(Interfacemanage interfacemanage);
+	Interfacemanage selectByPrimaryKey(Integer integer);
+	int insertSelective(Interfacemanage interfacemanage);
+	int updateByPrimaryKeySelective(Interfacemanage interfacemanage);
 
 }

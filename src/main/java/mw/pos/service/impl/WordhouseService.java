@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("wordhouseService")
+@Service("WordhouseService")
 public class WordhouseService implements IWordhouseService {
 	@Resource
-	private wordhouseMapper wordhouseMapper;
+	private WordhouseMapper WordhouseMapper;
 
-	public int insert(wordhouse wordhouse){
-		return wordhouseMapper.insert(wordhouse);
+	public int insert(Wordhouse wordhouse){
+		return WordhouseMapper.insert(wordhouse);
 	}
-	public int insertSelective(wordhouse wordhouse){
-		return wordhouseMapper.insertSelective(wordhouse);
+	public int insertSelective(Wordhouse wordhouse){
+		return WordhouseMapper.insertSelective(wordhouse);
 	}
-	public wordhouse selectByPrimaryKey(wordhouseKey wordhouseKey){
-		return wordhouseMapper.selectByPrimaryKey(wordhouseKey);
+	public int deleteByPrimaryKey(WordhouseKey wordhouseKey){
+		return WordhouseMapper.deleteByPrimaryKey(wordhouseKey);
 	}
-	public int deleteByPrimaryKey(wordhouseKey wordhouseKey){
-		return wordhouseMapper.deleteByPrimaryKey(wordhouseKey);
+	public Wordhouse selectByPrimaryKey(WordhouseKey wordhouseKey){
+		return WordhouseMapper.selectByPrimaryKey(wordhouseKey);
 	}
-	public int updateByPrimaryKeySelective(wordhouse wordhouse){
-		return wordhouseMapper.updateByPrimaryKeySelective(wordhouse);
+	public int updateByPrimaryKey(Wordhouse wordhouse){
+		return WordhouseMapper.updateByPrimaryKey(wordhouse);
 	}
-	public int updateByPrimaryKey(wordhouse wordhouse){
-		return wordhouseMapper.updateByPrimaryKey(wordhouse);
+	public int updateByPrimaryKeySelective(Wordhouse wordhouse){
+		return WordhouseMapper.updateByPrimaryKeySelective(wordhouse);
 	}
 
 

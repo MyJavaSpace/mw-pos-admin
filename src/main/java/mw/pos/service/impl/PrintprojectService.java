@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("printprojectService")
+@Service("PrintprojectService")
 public class PrintprojectService implements IPrintprojectService {
 	@Resource
-	private printprojectMapper printprojectMapper;
+	private PrintprojectMapper PrintprojectMapper;
 
-	public int insert(printproject printproject){
-		return printprojectMapper.insert(printproject);
+	public int insert(Printproject printproject){
+		return PrintprojectMapper.insert(printproject);
 	}
-	public int insertSelective(printproject printproject){
-		return printprojectMapper.insertSelective(printproject);
-	}
-	public printproject selectByPrimaryKey(Integer integer){
-		return printprojectMapper.selectByPrimaryKey(integer);
+	public int insertSelective(Printproject printproject){
+		return PrintprojectMapper.insertSelective(printproject);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return printprojectMapper.deleteByPrimaryKey(integer);
+		return PrintprojectMapper.deleteByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKeySelective(printproject printproject){
-		return printprojectMapper.updateByPrimaryKeySelective(printproject);
+	public Printproject selectByPrimaryKey(Integer integer){
+		return PrintprojectMapper.selectByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKey(printproject printproject){
-		return printprojectMapper.updateByPrimaryKey(printproject);
+	public int updateByPrimaryKey(Printproject printproject){
+		return PrintprojectMapper.updateByPrimaryKey(printproject);
+	}
+	public int updateByPrimaryKeySelective(Printproject printproject){
+		return PrintprojectMapper.updateByPrimaryKeySelective(printproject);
 	}
 
 

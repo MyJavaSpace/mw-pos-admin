@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IShiftService {
-	int insert(shift shift);
-	shift selectByPrimaryKey(shiftKey shiftKey);
-	int updateByPrimaryKeySelective(shift shift);
-	int deleteByPrimaryKey(shiftKey shiftKey);
-	int updateByPrimaryKey(shift shift);
-	int insertSelective(shift shift);
+	int insert(Shift shift);
+	int deleteByPrimaryKey(ShiftKey shiftKey);
+	int updateByPrimaryKey(Shift shift);
+	Shift selectByPrimaryKey(ShiftKey shiftKey);
+	int insertSelective(Shift shift);
+	int updateByPrimaryKeySelective(Shift shift);
 
 }

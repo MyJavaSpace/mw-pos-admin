@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface ICreditaccountService {
-	int insert(creditaccount creditaccount);
-	creditaccount selectByPrimaryKey(creditaccountKey creditaccountKey);
-	int updateByPrimaryKeySelective(creditaccount creditaccount);
-	int deleteByPrimaryKey(creditaccountKey creditaccountKey);
-	int updateByPrimaryKey(creditaccount creditaccount);
-	int insertSelective(creditaccount creditaccount);
+	int insert(Creditaccount creditaccount);
+	int deleteByPrimaryKey(CreditaccountKey creditaccountKey);
+	int updateByPrimaryKey(Creditaccount creditaccount);
+	Creditaccount selectByPrimaryKey(CreditaccountKey creditaccountKey);
+	int insertSelective(Creditaccount creditaccount);
+	int updateByPrimaryKeySelective(Creditaccount creditaccount);
 
 }

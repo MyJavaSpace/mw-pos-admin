@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("roleService")
+@Service("RoleService")
 public class RoleService implements IRoleService {
 	@Resource
-	private roleMapper roleMapper;
+	private RoleMapper RoleMapper;
 
-	public int insert(role role){
-		return roleMapper.insert(role);
+	public int insert(Role role){
+		return RoleMapper.insert(role);
 	}
-	public int insertSelective(role role){
-		return roleMapper.insertSelective(role);
+	public int insertSelective(Role role){
+		return RoleMapper.insertSelective(role);
 	}
-	public role selectByPrimaryKey(roleKey roleKey){
-		return roleMapper.selectByPrimaryKey(roleKey);
+	public int deleteByPrimaryKey(RoleKey roleKey){
+		return RoleMapper.deleteByPrimaryKey(roleKey);
 	}
-	public int deleteByPrimaryKey(roleKey roleKey){
-		return roleMapper.deleteByPrimaryKey(roleKey);
+	public Role selectByPrimaryKey(RoleKey roleKey){
+		return RoleMapper.selectByPrimaryKey(roleKey);
 	}
-	public int updateByPrimaryKeySelective(role role){
-		return roleMapper.updateByPrimaryKeySelective(role);
+	public int updateByPrimaryKey(Role role){
+		return RoleMapper.updateByPrimaryKey(role);
 	}
-	public int updateByPrimaryKey(role role){
-		return roleMapper.updateByPrimaryKey(role);
+	public int updateByPrimaryKeySelective(Role role){
+		return RoleMapper.updateByPrimaryKeySelective(role);
 	}
 
 

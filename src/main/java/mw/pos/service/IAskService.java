@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IAskService {
-	int insert(ask ask);
-	ask selectByPrimaryKey(askKey askKey);
-	int updateByPrimaryKeySelective(ask ask);
-	int deleteByPrimaryKey(askKey askKey);
-	int updateByPrimaryKey(ask ask);
-	int insertSelective(ask ask);
+	int insert(Ask ask);
+	int deleteByPrimaryKey(AskKey askKey);
+	int updateByPrimaryKey(Ask ask);
+	Ask selectByPrimaryKey(AskKey askKey);
+	int insertSelective(Ask ask);
+	int updateByPrimaryKeySelective(Ask ask);
 
 }

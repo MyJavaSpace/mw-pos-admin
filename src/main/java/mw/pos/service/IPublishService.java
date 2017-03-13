@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IPublishService {
-	int insert(publish publish);
-	publish selectByPrimaryKey(publishKey publishKey);
-	int updateByPrimaryKeySelective(publish publish);
-	int deleteByPrimaryKey(publishKey publishKey);
-	int updateByPrimaryKey(publish publish);
-	int insertSelective(publish publish);
+	int insert(Publish publish);
+	int deleteByPrimaryKey(PublishKey publishKey);
+	int updateByPrimaryKey(Publish publish);
+	Publish selectByPrimaryKey(PublishKey publishKey);
+	int insertSelective(Publish publish);
+	int updateByPrimaryKeySelective(Publish publish);
 
 }

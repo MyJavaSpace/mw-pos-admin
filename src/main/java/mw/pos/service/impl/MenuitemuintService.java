@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("menuitemuintService")
+@Service("MenuitemuintService")
 public class MenuitemuintService implements IMenuitemuintService {
 	@Resource
-	private menuitemuintMapper menuitemuintMapper;
+	private MenuitemuintMapper MenuitemuintMapper;
 
-	public int insert(menuitemuint menuitemuint){
-		return menuitemuintMapper.insert(menuitemuint);
+	public int insert(Menuitemuint menuitemuint){
+		return MenuitemuintMapper.insert(menuitemuint);
 	}
-	public int insertSelective(menuitemuint menuitemuint){
-		return menuitemuintMapper.insertSelective(menuitemuint);
-	}
-	public menuitemuint selectByPrimaryKey(Integer integer){
-		return menuitemuintMapper.selectByPrimaryKey(integer);
+	public int insertSelective(Menuitemuint menuitemuint){
+		return MenuitemuintMapper.insertSelective(menuitemuint);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return menuitemuintMapper.deleteByPrimaryKey(integer);
+		return MenuitemuintMapper.deleteByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKeySelective(menuitemuint menuitemuint){
-		return menuitemuintMapper.updateByPrimaryKeySelective(menuitemuint);
+	public Menuitemuint selectByPrimaryKey(Integer integer){
+		return MenuitemuintMapper.selectByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKey(menuitemuint menuitemuint){
-		return menuitemuintMapper.updateByPrimaryKey(menuitemuint);
+	public int updateByPrimaryKey(Menuitemuint menuitemuint){
+		return MenuitemuintMapper.updateByPrimaryKey(menuitemuint);
+	}
+	public int updateByPrimaryKeySelective(Menuitemuint menuitemuint){
+		return MenuitemuintMapper.updateByPrimaryKeySelective(menuitemuint);
 	}
 
 

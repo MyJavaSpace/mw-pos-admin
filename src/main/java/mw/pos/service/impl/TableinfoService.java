@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("tableinfoService")
+@Service("TableinfoService")
 public class TableinfoService implements ITableinfoService {
 	@Resource
-	private tableinfoMapper tableinfoMapper;
+	private TableinfoMapper TableinfoMapper;
 
-	public int insert(tableinfo tableinfo){
-		return tableinfoMapper.insert(tableinfo);
+	public int insert(Tableinfo tableinfo){
+		return TableinfoMapper.insert(tableinfo);
 	}
-	public int insertSelective(tableinfo tableinfo){
-		return tableinfoMapper.insertSelective(tableinfo);
+	public int insertSelective(Tableinfo tableinfo){
+		return TableinfoMapper.insertSelective(tableinfo);
 	}
-	public tableinfo selectByPrimaryKey(tableinfoKey tableinfoKey){
-		return tableinfoMapper.selectByPrimaryKey(tableinfoKey);
+	public int deleteByPrimaryKey(TableinfoKey tableinfoKey){
+		return TableinfoMapper.deleteByPrimaryKey(tableinfoKey);
 	}
-	public int deleteByPrimaryKey(tableinfoKey tableinfoKey){
-		return tableinfoMapper.deleteByPrimaryKey(tableinfoKey);
+	public Tableinfo selectByPrimaryKey(TableinfoKey tableinfoKey){
+		return TableinfoMapper.selectByPrimaryKey(tableinfoKey);
 	}
-	public int updateByPrimaryKeySelective(tableinfo tableinfo){
-		return tableinfoMapper.updateByPrimaryKeySelective(tableinfo);
+	public int updateByPrimaryKey(Tableinfo tableinfo){
+		return TableinfoMapper.updateByPrimaryKey(tableinfo);
 	}
-	public int updateByPrimaryKey(tableinfo tableinfo){
-		return tableinfoMapper.updateByPrimaryKey(tableinfo);
+	public int updateByPrimaryKeySelective(Tableinfo tableinfo){
+		return TableinfoMapper.updateByPrimaryKeySelective(tableinfo);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("usershopauthorityService")
+@Service("UsershopauthorityService")
 public class UsershopauthorityService implements IUsershopauthorityService {
 	@Resource
-	private usershopauthorityMapper usershopauthorityMapper;
+	private UsershopauthorityMapper UsershopauthorityMapper;
 
-	public int insert(usershopauthority usershopauthority){
-		return usershopauthorityMapper.insert(usershopauthority);
+	public int insert(Usershopauthority usershopauthority){
+		return UsershopauthorityMapper.insert(usershopauthority);
 	}
-	public int insertSelective(usershopauthority usershopauthority){
-		return usershopauthorityMapper.insertSelective(usershopauthority);
+	public int insertSelective(Usershopauthority usershopauthority){
+		return UsershopauthorityMapper.insertSelective(usershopauthority);
 	}
-	public usershopauthority selectByPrimaryKey(usershopauthorityKey usershopauthorityKey){
-		return usershopauthorityMapper.selectByPrimaryKey(usershopauthorityKey);
+	public int deleteByPrimaryKey(UsershopauthorityKey usershopauthorityKey){
+		return UsershopauthorityMapper.deleteByPrimaryKey(usershopauthorityKey);
 	}
-	public int deleteByPrimaryKey(usershopauthorityKey usershopauthorityKey){
-		return usershopauthorityMapper.deleteByPrimaryKey(usershopauthorityKey);
+	public Usershopauthority selectByPrimaryKey(UsershopauthorityKey usershopauthorityKey){
+		return UsershopauthorityMapper.selectByPrimaryKey(usershopauthorityKey);
 	}
-	public int updateByPrimaryKeySelective(usershopauthority usershopauthority){
-		return usershopauthorityMapper.updateByPrimaryKeySelective(usershopauthority);
+	public int updateByPrimaryKey(Usershopauthority usershopauthority){
+		return UsershopauthorityMapper.updateByPrimaryKey(usershopauthority);
 	}
-	public int updateByPrimaryKey(usershopauthority usershopauthority){
-		return usershopauthorityMapper.updateByPrimaryKey(usershopauthority);
+	public int updateByPrimaryKeySelective(Usershopauthority usershopauthority){
+		return UsershopauthorityMapper.updateByPrimaryKeySelective(usershopauthority);
 	}
 
 

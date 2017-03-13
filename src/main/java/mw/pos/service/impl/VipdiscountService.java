@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("vipdiscountService")
+@Service("VipdiscountService")
 public class VipdiscountService implements IVipdiscountService {
 	@Resource
-	private vipdiscountMapper vipdiscountMapper;
+	private VipdiscountMapper VipdiscountMapper;
 
-	public int insert(vipdiscount vipdiscount){
-		return vipdiscountMapper.insert(vipdiscount);
+	public int insert(Vipdiscount vipdiscount){
+		return VipdiscountMapper.insert(vipdiscount);
 	}
-	public int insertSelective(vipdiscount vipdiscount){
-		return vipdiscountMapper.insertSelective(vipdiscount);
+	public int insertSelective(Vipdiscount vipdiscount){
+		return VipdiscountMapper.insertSelective(vipdiscount);
 	}
-	public vipdiscount selectByPrimaryKey(vipdiscountKey vipdiscountKey){
-		return vipdiscountMapper.selectByPrimaryKey(vipdiscountKey);
+	public int deleteByPrimaryKey(VipdiscountKey vipdiscountKey){
+		return VipdiscountMapper.deleteByPrimaryKey(vipdiscountKey);
 	}
-	public int deleteByPrimaryKey(vipdiscountKey vipdiscountKey){
-		return vipdiscountMapper.deleteByPrimaryKey(vipdiscountKey);
+	public Vipdiscount selectByPrimaryKey(VipdiscountKey vipdiscountKey){
+		return VipdiscountMapper.selectByPrimaryKey(vipdiscountKey);
 	}
-	public int updateByPrimaryKeySelective(vipdiscount vipdiscount){
-		return vipdiscountMapper.updateByPrimaryKeySelective(vipdiscount);
+	public int updateByPrimaryKey(Vipdiscount vipdiscount){
+		return VipdiscountMapper.updateByPrimaryKey(vipdiscount);
 	}
-	public int updateByPrimaryKey(vipdiscount vipdiscount){
-		return vipdiscountMapper.updateByPrimaryKey(vipdiscount);
+	public int updateByPrimaryKeySelective(Vipdiscount vipdiscount){
+		return VipdiscountMapper.updateByPrimaryKeySelective(vipdiscount);
 	}
 
 

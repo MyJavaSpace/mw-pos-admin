@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("applicationService")
+@Service("ApplicationService")
 public class ApplicationService implements IApplicationService {
 	@Resource
-	private applicationMapper applicationMapper;
+	private ApplicationMapper ApplicationMapper;
 
-	public int insert(application application){
-		return applicationMapper.insert(application);
+	public int insert(Application application){
+		return ApplicationMapper.insert(application);
 	}
-	public int insertSelective(application application){
-		return applicationMapper.insertSelective(application);
+	public int insertSelective(Application application){
+		return ApplicationMapper.insertSelective(application);
 	}
-	public application selectByPrimaryKey(applicationKey applicationKey){
-		return applicationMapper.selectByPrimaryKey(applicationKey);
+	public int deleteByPrimaryKey(ApplicationKey applicationKey){
+		return ApplicationMapper.deleteByPrimaryKey(applicationKey);
 	}
-	public int deleteByPrimaryKey(applicationKey applicationKey){
-		return applicationMapper.deleteByPrimaryKey(applicationKey);
+	public Application selectByPrimaryKey(ApplicationKey applicationKey){
+		return ApplicationMapper.selectByPrimaryKey(applicationKey);
 	}
-	public int updateByPrimaryKeySelective(application application){
-		return applicationMapper.updateByPrimaryKeySelective(application);
+	public int updateByPrimaryKey(Application application){
+		return ApplicationMapper.updateByPrimaryKey(application);
 	}
-	public int updateByPrimaryKey(application application){
-		return applicationMapper.updateByPrimaryKey(application);
+	public int updateByPrimaryKeySelective(Application application){
+		return ApplicationMapper.updateByPrimaryKeySelective(application);
 	}
 
 

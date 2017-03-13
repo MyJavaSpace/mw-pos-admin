@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("progdtlService")
+@Service("ProgdtlService")
 public class ProgdtlService implements IProgdtlService {
 	@Resource
-	private progdtlMapper progdtlMapper;
+	private ProgdtlMapper ProgdtlMapper;
 
-	public int insert(progdtl progdtl){
-		return progdtlMapper.insert(progdtl);
+	public int insert(Progdtl progdtl){
+		return ProgdtlMapper.insert(progdtl);
 	}
-	public int insertSelective(progdtl progdtl){
-		return progdtlMapper.insertSelective(progdtl);
+	public int insertSelective(Progdtl progdtl){
+		return ProgdtlMapper.insertSelective(progdtl);
 	}
-	public progdtl selectByPrimaryKey(progdtlKey progdtlKey){
-		return progdtlMapper.selectByPrimaryKey(progdtlKey);
+	public int deleteByPrimaryKey(ProgdtlKey progdtlKey){
+		return ProgdtlMapper.deleteByPrimaryKey(progdtlKey);
 	}
-	public int deleteByPrimaryKey(progdtlKey progdtlKey){
-		return progdtlMapper.deleteByPrimaryKey(progdtlKey);
+	public Progdtl selectByPrimaryKey(ProgdtlKey progdtlKey){
+		return ProgdtlMapper.selectByPrimaryKey(progdtlKey);
 	}
-	public int updateByPrimaryKeySelective(progdtl progdtl){
-		return progdtlMapper.updateByPrimaryKeySelective(progdtl);
+	public int updateByPrimaryKey(Progdtl progdtl){
+		return ProgdtlMapper.updateByPrimaryKey(progdtl);
 	}
-	public int updateByPrimaryKey(progdtl progdtl){
-		return progdtlMapper.updateByPrimaryKey(progdtl);
+	public int updateByPrimaryKeySelective(Progdtl progdtl){
+		return ProgdtlMapper.updateByPrimaryKeySelective(progdtl);
 	}
 
 

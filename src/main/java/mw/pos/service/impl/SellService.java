@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("sellService")
+@Service("SellService")
 public class SellService implements ISellService {
 	@Resource
-	private sellMapper sellMapper;
+	private SellMapper SellMapper;
 
-	public int insert(sell sell){
-		return sellMapper.insert(sell);
+	public int insert(Sell sell){
+		return SellMapper.insert(sell);
 	}
-	public int insertSelective(sell sell){
-		return sellMapper.insertSelective(sell);
+	public int insertSelective(Sell sell){
+		return SellMapper.insertSelective(sell);
 	}
-	public sell selectByPrimaryKey(sellKey sellKey){
-		return sellMapper.selectByPrimaryKey(sellKey);
+	public int deleteByPrimaryKey(SellKey sellKey){
+		return SellMapper.deleteByPrimaryKey(sellKey);
 	}
-	public int deleteByPrimaryKey(sellKey sellKey){
-		return sellMapper.deleteByPrimaryKey(sellKey);
+	public Sell selectByPrimaryKey(SellKey sellKey){
+		return SellMapper.selectByPrimaryKey(sellKey);
 	}
-	public int updateByPrimaryKeySelective(sell sell){
-		return sellMapper.updateByPrimaryKeySelective(sell);
+	public int updateByPrimaryKey(Sell sell){
+		return SellMapper.updateByPrimaryKey(sell);
 	}
-	public int updateByPrimaryKey(sell sell){
-		return sellMapper.updateByPrimaryKey(sell);
+	public int updateByPrimaryKeySelective(Sell sell){
+		return SellMapper.updateByPrimaryKeySelective(sell);
 	}
 
 

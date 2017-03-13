@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IWebmenugroupService {
-	int insert(webmenugroup webmenugroup);
-	webmenugroup selectByPrimaryKey(Integer integer);
-	int updateByPrimaryKeySelective(webmenugroup webmenugroup);
+	int insert(Webmenugroup webmenugroup);
 	int deleteByPrimaryKey(Integer integer);
-	int updateByPrimaryKey(webmenugroup webmenugroup);
-	int insertSelective(webmenugroup webmenugroup);
+	int updateByPrimaryKey(Webmenugroup webmenugroup);
+	Webmenugroup selectByPrimaryKey(Integer integer);
+	int insertSelective(Webmenugroup webmenugroup);
+	int updateByPrimaryKeySelective(Webmenugroup webmenugroup);
 
 }

@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IBargainService {
-	int insert(bargain bargain);
-	bargain selectByPrimaryKey(bargainKey bargainKey);
-	int updateByPrimaryKeySelective(bargain bargain);
-	int deleteByPrimaryKey(bargainKey bargainKey);
-	int updateByPrimaryKey(bargain bargain);
-	int insertSelective(bargain bargain);
+	int insert(Bargain bargain);
+	int deleteByPrimaryKey(BargainKey bargainKey);
+	int updateByPrimaryKey(Bargain bargain);
+	Bargain selectByPrimaryKey(BargainKey bargainKey);
+	int insertSelective(Bargain bargain);
+	int updateByPrimaryKeySelective(Bargain bargain);
 
 }

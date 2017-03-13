@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("reportService")
+@Service("ReportService")
 public class ReportService implements IReportService {
 	@Resource
-	private reportMapper reportMapper;
+	private ReportMapper ReportMapper;
 
-	public int insert(report report){
-		return reportMapper.insert(report);
+	public int insert(Report report){
+		return ReportMapper.insert(report);
 	}
-	public int insertSelective(report report){
-		return reportMapper.insertSelective(report);
+	public int insertSelective(Report report){
+		return ReportMapper.insertSelective(report);
 	}
-	public report selectByPrimaryKey(reportKey reportKey){
-		return reportMapper.selectByPrimaryKey(reportKey);
+	public int deleteByPrimaryKey(ReportKey reportKey){
+		return ReportMapper.deleteByPrimaryKey(reportKey);
 	}
-	public int deleteByPrimaryKey(reportKey reportKey){
-		return reportMapper.deleteByPrimaryKey(reportKey);
+	public Report selectByPrimaryKey(ReportKey reportKey){
+		return ReportMapper.selectByPrimaryKey(reportKey);
 	}
-	public int updateByPrimaryKeySelective(report report){
-		return reportMapper.updateByPrimaryKeySelective(report);
+	public int updateByPrimaryKey(Report report){
+		return ReportMapper.updateByPrimaryKey(report);
 	}
-	public int updateByPrimaryKey(report report){
-		return reportMapper.updateByPrimaryKey(report);
+	public int updateByPrimaryKeySelective(Report report){
+		return ReportMapper.updateByPrimaryKeySelective(report);
 	}
 
 

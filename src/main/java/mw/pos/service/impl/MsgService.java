@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("msgService")
+@Service("MsgService")
 public class MsgService implements IMsgService {
 	@Resource
-	private msgMapper msgMapper;
+	private MsgMapper MsgMapper;
 
-	public int insert(msg msg){
-		return msgMapper.insert(msg);
+	public int insert(Msg msg){
+		return MsgMapper.insert(msg);
 	}
-	public int insertSelective(msg msg){
-		return msgMapper.insertSelective(msg);
-	}
-	public msg selectByPrimaryKey(Integer integer){
-		return msgMapper.selectByPrimaryKey(integer);
+	public int insertSelective(Msg msg){
+		return MsgMapper.insertSelective(msg);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return msgMapper.deleteByPrimaryKey(integer);
+		return MsgMapper.deleteByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKeySelective(msg msg){
-		return msgMapper.updateByPrimaryKeySelective(msg);
+	public Msg selectByPrimaryKey(Integer integer){
+		return MsgMapper.selectByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKey(msg msg){
-		return msgMapper.updateByPrimaryKey(msg);
+	public int updateByPrimaryKey(Msg msg){
+		return MsgMapper.updateByPrimaryKey(msg);
+	}
+	public int updateByPrimaryKeySelective(Msg msg){
+		return MsgMapper.updateByPrimaryKeySelective(msg);
 	}
 
 

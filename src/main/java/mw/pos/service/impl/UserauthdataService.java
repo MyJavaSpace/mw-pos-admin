@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("userauthdataService")
+@Service("UserauthdataService")
 public class UserauthdataService implements IUserauthdataService {
 	@Resource
-	private userauthdataMapper userauthdataMapper;
+	private UserauthdataMapper UserauthdataMapper;
 
-	public int insert(userauthdata userauthdata){
-		return userauthdataMapper.insert(userauthdata);
+	public int insert(Userauthdata userauthdata){
+		return UserauthdataMapper.insert(userauthdata);
 	}
-	public int insertSelective(userauthdata userauthdata){
-		return userauthdataMapper.insertSelective(userauthdata);
+	public int insertSelective(Userauthdata userauthdata){
+		return UserauthdataMapper.insertSelective(userauthdata);
 	}
-	public userauthdata selectByPrimaryKey(userauthdataKey userauthdataKey){
-		return userauthdataMapper.selectByPrimaryKey(userauthdataKey);
+	public int deleteByPrimaryKey(UserauthdataKey userauthdataKey){
+		return UserauthdataMapper.deleteByPrimaryKey(userauthdataKey);
 	}
-	public int deleteByPrimaryKey(userauthdataKey userauthdataKey){
-		return userauthdataMapper.deleteByPrimaryKey(userauthdataKey);
+	public Userauthdata selectByPrimaryKey(UserauthdataKey userauthdataKey){
+		return UserauthdataMapper.selectByPrimaryKey(userauthdataKey);
 	}
-	public int updateByPrimaryKeySelective(userauthdata userauthdata){
-		return userauthdataMapper.updateByPrimaryKeySelective(userauthdata);
+	public int updateByPrimaryKey(Userauthdata userauthdata){
+		return UserauthdataMapper.updateByPrimaryKey(userauthdata);
 	}
-	public int updateByPrimaryKey(userauthdata userauthdata){
-		return userauthdataMapper.updateByPrimaryKey(userauthdata);
+	public int updateByPrimaryKeySelective(Userauthdata userauthdata){
+		return UserauthdataMapper.updateByPrimaryKeySelective(userauthdata);
 	}
 
 

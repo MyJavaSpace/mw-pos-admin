@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface ITableinfoService {
-	int insert(tableinfo tableinfo);
-	tableinfo selectByPrimaryKey(tableinfoKey tableinfoKey);
-	int updateByPrimaryKeySelective(tableinfo tableinfo);
-	int deleteByPrimaryKey(tableinfoKey tableinfoKey);
-	int updateByPrimaryKey(tableinfo tableinfo);
-	int insertSelective(tableinfo tableinfo);
+	int insert(Tableinfo tableinfo);
+	int deleteByPrimaryKey(TableinfoKey tableinfoKey);
+	int updateByPrimaryKey(Tableinfo tableinfo);
+	Tableinfo selectByPrimaryKey(TableinfoKey tableinfoKey);
+	int insertSelective(Tableinfo tableinfo);
+	int updateByPrimaryKeySelective(Tableinfo tableinfo);
 
 }

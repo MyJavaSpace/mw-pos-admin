@@ -8,19 +8,19 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("custlinkService")
+@Service("CustlinkService")
 public class CustlinkService implements ICustlinkService {
 	@Resource
-	private custlinkMapper custlinkMapper;
+	private CustlinkMapper CustlinkMapper;
 
-	public int insert(custlinkKey custlinkKey){
-		return custlinkMapper.insert(custlinkKey);
+	public int insert(CustlinkKey custlinkKey){
+		return CustlinkMapper.insert(custlinkKey);
 	}
-	public int insertSelective(custlinkKey custlinkKey){
-		return custlinkMapper.insertSelective(custlinkKey);
+	public int insertSelective(CustlinkKey custlinkKey){
+		return CustlinkMapper.insertSelective(custlinkKey);
 	}
-	public int deleteByPrimaryKey(custlinkKey custlinkKey){
-		return custlinkMapper.deleteByPrimaryKey(custlinkKey);
+	public int deleteByPrimaryKey(CustlinkKey custlinkKey){
+		return CustlinkMapper.deleteByPrimaryKey(custlinkKey);
 	}
 
 

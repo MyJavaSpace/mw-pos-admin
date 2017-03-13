@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("fileverService")
+@Service("FileverService")
 public class FileverService implements IFileverService {
 	@Resource
-	private fileverMapper fileverMapper;
+	private FileverMapper FileverMapper;
 
-	public int insert(filever filever){
-		return fileverMapper.insert(filever);
+	public int insert(Filever filever){
+		return FileverMapper.insert(filever);
 	}
-	public int insertSelective(filever filever){
-		return fileverMapper.insertSelective(filever);
-	}
-	public filever selectByPrimaryKey(String string){
-		return fileverMapper.selectByPrimaryKey(string);
+	public int insertSelective(Filever filever){
+		return FileverMapper.insertSelective(filever);
 	}
 	public int deleteByPrimaryKey(String string){
-		return fileverMapper.deleteByPrimaryKey(string);
+		return FileverMapper.deleteByPrimaryKey(string);
 	}
-	public int updateByPrimaryKeySelective(filever filever){
-		return fileverMapper.updateByPrimaryKeySelective(filever);
+	public Filever selectByPrimaryKey(String string){
+		return FileverMapper.selectByPrimaryKey(string);
 	}
-	public int updateByPrimaryKey(filever filever){
-		return fileverMapper.updateByPrimaryKey(filever);
+	public int updateByPrimaryKey(Filever filever){
+		return FileverMapper.updateByPrimaryKey(filever);
+	}
+	public int updateByPrimaryKeySelective(Filever filever){
+		return FileverMapper.updateByPrimaryKeySelective(filever);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("shopgroupdtlService")
+@Service("ShopgroupdtlService")
 public class ShopgroupdtlService implements IShopgroupdtlService {
 	@Resource
-	private shopgroupdtlMapper shopgroupdtlMapper;
+	private ShopgroupdtlMapper ShopgroupdtlMapper;
 
-	public int insert(shopgroupdtl shopgroupdtl){
-		return shopgroupdtlMapper.insert(shopgroupdtl);
+	public int insert(Shopgroupdtl shopgroupdtl){
+		return ShopgroupdtlMapper.insert(shopgroupdtl);
 	}
-	public int insertSelective(shopgroupdtl shopgroupdtl){
-		return shopgroupdtlMapper.insertSelective(shopgroupdtl);
+	public int insertSelective(Shopgroupdtl shopgroupdtl){
+		return ShopgroupdtlMapper.insertSelective(shopgroupdtl);
 	}
-	public shopgroupdtl selectByPrimaryKey(shopgroupdtlKey shopgroupdtlKey){
-		return shopgroupdtlMapper.selectByPrimaryKey(shopgroupdtlKey);
+	public int deleteByPrimaryKey(ShopgroupdtlKey shopgroupdtlKey){
+		return ShopgroupdtlMapper.deleteByPrimaryKey(shopgroupdtlKey);
 	}
-	public int deleteByPrimaryKey(shopgroupdtlKey shopgroupdtlKey){
-		return shopgroupdtlMapper.deleteByPrimaryKey(shopgroupdtlKey);
+	public Shopgroupdtl selectByPrimaryKey(ShopgroupdtlKey shopgroupdtlKey){
+		return ShopgroupdtlMapper.selectByPrimaryKey(shopgroupdtlKey);
 	}
-	public int updateByPrimaryKeySelective(shopgroupdtl shopgroupdtl){
-		return shopgroupdtlMapper.updateByPrimaryKeySelective(shopgroupdtl);
+	public int updateByPrimaryKey(Shopgroupdtl shopgroupdtl){
+		return ShopgroupdtlMapper.updateByPrimaryKey(shopgroupdtl);
 	}
-	public int updateByPrimaryKey(shopgroupdtl shopgroupdtl){
-		return shopgroupdtlMapper.updateByPrimaryKey(shopgroupdtl);
+	public int updateByPrimaryKeySelective(Shopgroupdtl shopgroupdtl){
+		return ShopgroupdtlMapper.updateByPrimaryKeySelective(shopgroupdtl);
 	}
 
 

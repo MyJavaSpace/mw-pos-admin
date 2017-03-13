@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("bargainitemService")
+@Service("BargainitemService")
 public class BargainitemService implements IBargainitemService {
 	@Resource
-	private bargainitemMapper bargainitemMapper;
+	private BargainitemMapper BargainitemMapper;
 
-	public int insert(bargainitem bargainitem){
-		return bargainitemMapper.insert(bargainitem);
+	public int insert(Bargainitem bargainitem){
+		return BargainitemMapper.insert(bargainitem);
 	}
-	public int insertSelective(bargainitem bargainitem){
-		return bargainitemMapper.insertSelective(bargainitem);
+	public int insertSelective(Bargainitem bargainitem){
+		return BargainitemMapper.insertSelective(bargainitem);
 	}
-	public bargainitem selectByPrimaryKey(bargainitemKey bargainitemKey){
-		return bargainitemMapper.selectByPrimaryKey(bargainitemKey);
+	public int deleteByPrimaryKey(BargainitemKey bargainitemKey){
+		return BargainitemMapper.deleteByPrimaryKey(bargainitemKey);
 	}
-	public int deleteByPrimaryKey(bargainitemKey bargainitemKey){
-		return bargainitemMapper.deleteByPrimaryKey(bargainitemKey);
+	public Bargainitem selectByPrimaryKey(BargainitemKey bargainitemKey){
+		return BargainitemMapper.selectByPrimaryKey(bargainitemKey);
 	}
-	public int updateByPrimaryKeySelective(bargainitem bargainitem){
-		return bargainitemMapper.updateByPrimaryKeySelective(bargainitem);
+	public int updateByPrimaryKey(Bargainitem bargainitem){
+		return BargainitemMapper.updateByPrimaryKey(bargainitem);
 	}
-	public int updateByPrimaryKey(bargainitem bargainitem){
-		return bargainitemMapper.updateByPrimaryKey(bargainitem);
+	public int updateByPrimaryKeySelective(Bargainitem bargainitem){
+		return BargainitemMapper.updateByPrimaryKeySelective(bargainitem);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("discountitemService")
+@Service("DiscountitemService")
 public class DiscountitemService implements IDiscountitemService {
 	@Resource
-	private discountitemMapper discountitemMapper;
+	private DiscountitemMapper DiscountitemMapper;
 
-	public int insert(discountitem discountitem){
-		return discountitemMapper.insert(discountitem);
+	public int insert(Discountitem discountitem){
+		return DiscountitemMapper.insert(discountitem);
 	}
-	public int insertSelective(discountitem discountitem){
-		return discountitemMapper.insertSelective(discountitem);
+	public int insertSelective(Discountitem discountitem){
+		return DiscountitemMapper.insertSelective(discountitem);
 	}
-	public discountitem selectByPrimaryKey(discountitemKey discountitemKey){
-		return discountitemMapper.selectByPrimaryKey(discountitemKey);
+	public int deleteByPrimaryKey(DiscountitemKey discountitemKey){
+		return DiscountitemMapper.deleteByPrimaryKey(discountitemKey);
 	}
-	public int deleteByPrimaryKey(discountitemKey discountitemKey){
-		return discountitemMapper.deleteByPrimaryKey(discountitemKey);
+	public Discountitem selectByPrimaryKey(DiscountitemKey discountitemKey){
+		return DiscountitemMapper.selectByPrimaryKey(discountitemKey);
 	}
-	public int updateByPrimaryKeySelective(discountitem discountitem){
-		return discountitemMapper.updateByPrimaryKeySelective(discountitem);
+	public int updateByPrimaryKey(Discountitem discountitem){
+		return DiscountitemMapper.updateByPrimaryKey(discountitem);
 	}
-	public int updateByPrimaryKey(discountitem discountitem){
-		return discountitemMapper.updateByPrimaryKey(discountitem);
+	public int updateByPrimaryKeySelective(Discountitem discountitem){
+		return DiscountitemMapper.updateByPrimaryKeySelective(discountitem);
 	}
 
 

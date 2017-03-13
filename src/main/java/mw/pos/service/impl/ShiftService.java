@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("shiftService")
+@Service("ShiftService")
 public class ShiftService implements IShiftService {
 	@Resource
-	private shiftMapper shiftMapper;
+	private ShiftMapper ShiftMapper;
 
-	public int insert(shift shift){
-		return shiftMapper.insert(shift);
+	public int insert(Shift shift){
+		return ShiftMapper.insert(shift);
 	}
-	public int insertSelective(shift shift){
-		return shiftMapper.insertSelective(shift);
+	public int insertSelective(Shift shift){
+		return ShiftMapper.insertSelective(shift);
 	}
-	public shift selectByPrimaryKey(shiftKey shiftKey){
-		return shiftMapper.selectByPrimaryKey(shiftKey);
+	public int deleteByPrimaryKey(ShiftKey shiftKey){
+		return ShiftMapper.deleteByPrimaryKey(shiftKey);
 	}
-	public int deleteByPrimaryKey(shiftKey shiftKey){
-		return shiftMapper.deleteByPrimaryKey(shiftKey);
+	public Shift selectByPrimaryKey(ShiftKey shiftKey){
+		return ShiftMapper.selectByPrimaryKey(shiftKey);
 	}
-	public int updateByPrimaryKeySelective(shift shift){
-		return shiftMapper.updateByPrimaryKeySelective(shift);
+	public int updateByPrimaryKey(Shift shift){
+		return ShiftMapper.updateByPrimaryKey(shift);
 	}
-	public int updateByPrimaryKey(shift shift){
-		return shiftMapper.updateByPrimaryKey(shift);
+	public int updateByPrimaryKeySelective(Shift shift){
+		return ShiftMapper.updateByPrimaryKeySelective(shift);
 	}
 
 

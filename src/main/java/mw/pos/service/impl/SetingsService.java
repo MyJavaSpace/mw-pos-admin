@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("setingsService")
+@Service("SetingsService")
 public class SetingsService implements ISetingsService {
 	@Resource
-	private setingsMapper setingsMapper;
+	private SetingsMapper SetingsMapper;
 
-	public int insert(setings setings){
-		return setingsMapper.insert(setings);
+	public int insert(Setings setings){
+		return SetingsMapper.insert(setings);
 	}
-	public int insertSelective(setings setings){
-		return setingsMapper.insertSelective(setings);
-	}
-	public setings selectByPrimaryKey(String string){
-		return setingsMapper.selectByPrimaryKey(string);
+	public int insertSelective(Setings setings){
+		return SetingsMapper.insertSelective(setings);
 	}
 	public int deleteByPrimaryKey(String string){
-		return setingsMapper.deleteByPrimaryKey(string);
+		return SetingsMapper.deleteByPrimaryKey(string);
 	}
-	public int updateByPrimaryKeySelective(setings setings){
-		return setingsMapper.updateByPrimaryKeySelective(setings);
+	public Setings selectByPrimaryKey(String string){
+		return SetingsMapper.selectByPrimaryKey(string);
 	}
-	public int updateByPrimaryKey(setings setings){
-		return setingsMapper.updateByPrimaryKey(setings);
+	public int updateByPrimaryKey(Setings setings){
+		return SetingsMapper.updateByPrimaryKey(setings);
+	}
+	public int updateByPrimaryKeySelective(Setings setings){
+		return SetingsMapper.updateByPrimaryKeySelective(setings);
 	}
 
 

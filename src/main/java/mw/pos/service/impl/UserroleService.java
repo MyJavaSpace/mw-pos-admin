@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("userroleService")
+@Service("UserroleService")
 public class UserroleService implements IUserroleService {
 	@Resource
-	private userroleMapper userroleMapper;
+	private UserroleMapper UserroleMapper;
 
-	public int insert(userrole userrole){
-		return userroleMapper.insert(userrole);
+	public int insert(Userrole userrole){
+		return UserroleMapper.insert(userrole);
 	}
-	public int insertSelective(userrole userrole){
-		return userroleMapper.insertSelective(userrole);
+	public int insertSelective(Userrole userrole){
+		return UserroleMapper.insertSelective(userrole);
 	}
-	public userrole selectByPrimaryKey(userroleKey userroleKey){
-		return userroleMapper.selectByPrimaryKey(userroleKey);
+	public int deleteByPrimaryKey(UserroleKey userroleKey){
+		return UserroleMapper.deleteByPrimaryKey(userroleKey);
 	}
-	public int deleteByPrimaryKey(userroleKey userroleKey){
-		return userroleMapper.deleteByPrimaryKey(userroleKey);
+	public Userrole selectByPrimaryKey(UserroleKey userroleKey){
+		return UserroleMapper.selectByPrimaryKey(userroleKey);
 	}
-	public int updateByPrimaryKeySelective(userrole userrole){
-		return userroleMapper.updateByPrimaryKeySelective(userrole);
+	public int updateByPrimaryKey(Userrole userrole){
+		return UserroleMapper.updateByPrimaryKey(userrole);
 	}
-	public int updateByPrimaryKey(userrole userrole){
-		return userroleMapper.updateByPrimaryKey(userrole);
+	public int updateByPrimaryKeySelective(Userrole userrole){
+		return UserroleMapper.updateByPrimaryKeySelective(userrole);
 	}
 
 

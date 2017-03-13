@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IExpclsService {
-	int insert(expcls expcls);
-	expcls selectByPrimaryKey(expclsKey expclsKey);
-	int updateByPrimaryKeySelective(expcls expcls);
-	int deleteByPrimaryKey(expclsKey expclsKey);
-	int updateByPrimaryKey(expcls expcls);
-	int insertSelective(expcls expcls);
+	int insert(Expcls expcls);
+	int deleteByPrimaryKey(ExpclsKey expclsKey);
+	int updateByPrimaryKey(Expcls expcls);
+	Expcls selectByPrimaryKey(ExpclsKey expclsKey);
+	int insertSelective(Expcls expcls);
+	int updateByPrimaryKeySelective(Expcls expcls);
 
 }

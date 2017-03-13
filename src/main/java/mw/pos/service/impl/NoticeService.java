@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("noticeService")
+@Service("NoticeService")
 public class NoticeService implements INoticeService {
 	@Resource
-	private noticeMapper noticeMapper;
+	private NoticeMapper NoticeMapper;
 
-	public int insert(notice notice){
-		return noticeMapper.insert(notice);
+	public int insert(Notice notice){
+		return NoticeMapper.insert(notice);
 	}
-	public int insertSelective(notice notice){
-		return noticeMapper.insertSelective(notice);
-	}
-	public notice selectByPrimaryKey(Integer integer){
-		return noticeMapper.selectByPrimaryKey(integer);
+	public int insertSelective(Notice notice){
+		return NoticeMapper.insertSelective(notice);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return noticeMapper.deleteByPrimaryKey(integer);
+		return NoticeMapper.deleteByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKeySelective(notice notice){
-		return noticeMapper.updateByPrimaryKeySelective(notice);
+	public Notice selectByPrimaryKey(Integer integer){
+		return NoticeMapper.selectByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKey(notice notice){
-		return noticeMapper.updateByPrimaryKey(notice);
+	public int updateByPrimaryKey(Notice notice){
+		return NoticeMapper.updateByPrimaryKey(notice);
+	}
+	public int updateByPrimaryKeySelective(Notice notice){
+		return NoticeMapper.updateByPrimaryKeySelective(notice);
 	}
 
 

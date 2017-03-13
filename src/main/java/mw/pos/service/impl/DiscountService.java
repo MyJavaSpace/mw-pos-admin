@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("discountService")
+@Service("DiscountService")
 public class DiscountService implements IDiscountService {
 	@Resource
-	private discountMapper discountMapper;
+	private DiscountMapper DiscountMapper;
 
-	public int insert(discount discount){
-		return discountMapper.insert(discount);
+	public int insert(Discount discount){
+		return DiscountMapper.insert(discount);
 	}
-	public int insertSelective(discount discount){
-		return discountMapper.insertSelective(discount);
+	public int insertSelective(Discount discount){
+		return DiscountMapper.insertSelective(discount);
 	}
-	public discount selectByPrimaryKey(discountKey discountKey){
-		return discountMapper.selectByPrimaryKey(discountKey);
+	public int deleteByPrimaryKey(DiscountKey discountKey){
+		return DiscountMapper.deleteByPrimaryKey(discountKey);
 	}
-	public int deleteByPrimaryKey(discountKey discountKey){
-		return discountMapper.deleteByPrimaryKey(discountKey);
+	public Discount selectByPrimaryKey(DiscountKey discountKey){
+		return DiscountMapper.selectByPrimaryKey(discountKey);
 	}
-	public int updateByPrimaryKeySelective(discount discount){
-		return discountMapper.updateByPrimaryKeySelective(discount);
+	public int updateByPrimaryKey(Discount discount){
+		return DiscountMapper.updateByPrimaryKey(discount);
 	}
-	public int updateByPrimaryKey(discount discount){
-		return discountMapper.updateByPrimaryKey(discount);
+	public int updateByPrimaryKeySelective(Discount discount){
+		return DiscountMapper.updateByPrimaryKeySelective(discount);
 	}
 
 

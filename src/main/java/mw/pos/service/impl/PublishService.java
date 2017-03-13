@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("publishService")
+@Service("PublishService")
 public class PublishService implements IPublishService {
 	@Resource
-	private publishMapper publishMapper;
+	private PublishMapper PublishMapper;
 
-	public int insert(publish publish){
-		return publishMapper.insert(publish);
+	public int insert(Publish publish){
+		return PublishMapper.insert(publish);
 	}
-	public int insertSelective(publish publish){
-		return publishMapper.insertSelective(publish);
+	public int insertSelective(Publish publish){
+		return PublishMapper.insertSelective(publish);
 	}
-	public publish selectByPrimaryKey(publishKey publishKey){
-		return publishMapper.selectByPrimaryKey(publishKey);
+	public int deleteByPrimaryKey(PublishKey publishKey){
+		return PublishMapper.deleteByPrimaryKey(publishKey);
 	}
-	public int deleteByPrimaryKey(publishKey publishKey){
-		return publishMapper.deleteByPrimaryKey(publishKey);
+	public Publish selectByPrimaryKey(PublishKey publishKey){
+		return PublishMapper.selectByPrimaryKey(publishKey);
 	}
-	public int updateByPrimaryKeySelective(publish publish){
-		return publishMapper.updateByPrimaryKeySelective(publish);
+	public int updateByPrimaryKey(Publish publish){
+		return PublishMapper.updateByPrimaryKey(publish);
 	}
-	public int updateByPrimaryKey(publish publish){
-		return publishMapper.updateByPrimaryKey(publish);
+	public int updateByPrimaryKeySelective(Publish publish){
+		return PublishMapper.updateByPrimaryKeySelective(publish);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("paymentfullcutService")
+@Service("PaymentfullcutService")
 public class PaymentfullcutService implements IPaymentfullcutService {
 	@Resource
-	private paymentfullcutMapper paymentfullcutMapper;
+	private PaymentfullcutMapper PaymentfullcutMapper;
 
-	public int insert(paymentfullcut paymentfullcut){
-		return paymentfullcutMapper.insert(paymentfullcut);
+	public int insert(Paymentfullcut paymentfullcut){
+		return PaymentfullcutMapper.insert(paymentfullcut);
 	}
-	public int insertSelective(paymentfullcut paymentfullcut){
-		return paymentfullcutMapper.insertSelective(paymentfullcut);
+	public int insertSelective(Paymentfullcut paymentfullcut){
+		return PaymentfullcutMapper.insertSelective(paymentfullcut);
 	}
-	public paymentfullcut selectByPrimaryKey(paymentfullcutKey paymentfullcutKey){
-		return paymentfullcutMapper.selectByPrimaryKey(paymentfullcutKey);
+	public int deleteByPrimaryKey(PaymentfullcutKey paymentfullcutKey){
+		return PaymentfullcutMapper.deleteByPrimaryKey(paymentfullcutKey);
 	}
-	public int deleteByPrimaryKey(paymentfullcutKey paymentfullcutKey){
-		return paymentfullcutMapper.deleteByPrimaryKey(paymentfullcutKey);
+	public Paymentfullcut selectByPrimaryKey(PaymentfullcutKey paymentfullcutKey){
+		return PaymentfullcutMapper.selectByPrimaryKey(paymentfullcutKey);
 	}
-	public int updateByPrimaryKeySelective(paymentfullcut paymentfullcut){
-		return paymentfullcutMapper.updateByPrimaryKeySelective(paymentfullcut);
+	public int updateByPrimaryKey(Paymentfullcut paymentfullcut){
+		return PaymentfullcutMapper.updateByPrimaryKey(paymentfullcut);
 	}
-	public int updateByPrimaryKey(paymentfullcut paymentfullcut){
-		return paymentfullcutMapper.updateByPrimaryKey(paymentfullcut);
+	public int updateByPrimaryKeySelective(Paymentfullcut paymentfullcut){
+		return PaymentfullcutMapper.updateByPrimaryKeySelective(paymentfullcut);
 	}
 
 

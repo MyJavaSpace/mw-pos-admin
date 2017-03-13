@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IShopgroupdtlService {
-	int insert(shopgroupdtl shopgroupdtl);
-	shopgroupdtl selectByPrimaryKey(shopgroupdtlKey shopgroupdtlKey);
-	int updateByPrimaryKeySelective(shopgroupdtl shopgroupdtl);
-	int deleteByPrimaryKey(shopgroupdtlKey shopgroupdtlKey);
-	int updateByPrimaryKey(shopgroupdtl shopgroupdtl);
-	int insertSelective(shopgroupdtl shopgroupdtl);
+	int insert(Shopgroupdtl shopgroupdtl);
+	int deleteByPrimaryKey(ShopgroupdtlKey shopgroupdtlKey);
+	int updateByPrimaryKey(Shopgroupdtl shopgroupdtl);
+	Shopgroupdtl selectByPrimaryKey(ShopgroupdtlKey shopgroupdtlKey);
+	int insertSelective(Shopgroupdtl shopgroupdtl);
+	int updateByPrimaryKeySelective(Shopgroupdtl shopgroupdtl);
 
 }

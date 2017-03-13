@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface ICustService {
-	int insert(cust cust);
-	cust selectByPrimaryKey(String string);
-	int updateByPrimaryKeySelective(cust cust);
+	int insert(Cust cust);
 	int deleteByPrimaryKey(String string);
-	int updateByPrimaryKey(cust cust);
-	int insertSelective(cust cust);
+	int updateByPrimaryKey(Cust cust);
+	Cust selectByPrimaryKey(String string);
+	int insertSelective(Cust cust);
+	int updateByPrimaryKeySelective(Cust cust);
 
 }

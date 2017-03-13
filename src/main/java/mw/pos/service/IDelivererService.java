@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IDelivererService {
-	int insert(deliverer deliverer);
-	deliverer selectByPrimaryKey(delivererKey delivererKey);
-	int updateByPrimaryKeySelective(deliverer deliverer);
-	int deleteByPrimaryKey(delivererKey delivererKey);
-	int updateByPrimaryKey(deliverer deliverer);
-	int insertSelective(deliverer deliverer);
+	int insert(Deliverer deliverer);
+	int deleteByPrimaryKey(DelivererKey delivererKey);
+	int updateByPrimaryKey(Deliverer deliverer);
+	Deliverer selectByPrimaryKey(DelivererKey delivererKey);
+	int insertSelective(Deliverer deliverer);
+	int updateByPrimaryKeySelective(Deliverer deliverer);
 
 }

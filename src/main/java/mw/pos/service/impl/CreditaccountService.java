@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("creditaccountService")
+@Service("CreditaccountService")
 public class CreditaccountService implements ICreditaccountService {
 	@Resource
-	private creditaccountMapper creditaccountMapper;
+	private CreditaccountMapper CreditaccountMapper;
 
-	public int insert(creditaccount creditaccount){
-		return creditaccountMapper.insert(creditaccount);
+	public int insert(Creditaccount creditaccount){
+		return CreditaccountMapper.insert(creditaccount);
 	}
-	public int insertSelective(creditaccount creditaccount){
-		return creditaccountMapper.insertSelective(creditaccount);
+	public int insertSelective(Creditaccount creditaccount){
+		return CreditaccountMapper.insertSelective(creditaccount);
 	}
-	public creditaccount selectByPrimaryKey(creditaccountKey creditaccountKey){
-		return creditaccountMapper.selectByPrimaryKey(creditaccountKey);
+	public int deleteByPrimaryKey(CreditaccountKey creditaccountKey){
+		return CreditaccountMapper.deleteByPrimaryKey(creditaccountKey);
 	}
-	public int deleteByPrimaryKey(creditaccountKey creditaccountKey){
-		return creditaccountMapper.deleteByPrimaryKey(creditaccountKey);
+	public Creditaccount selectByPrimaryKey(CreditaccountKey creditaccountKey){
+		return CreditaccountMapper.selectByPrimaryKey(creditaccountKey);
 	}
-	public int updateByPrimaryKeySelective(creditaccount creditaccount){
-		return creditaccountMapper.updateByPrimaryKeySelective(creditaccount);
+	public int updateByPrimaryKey(Creditaccount creditaccount){
+		return CreditaccountMapper.updateByPrimaryKey(creditaccount);
 	}
-	public int updateByPrimaryKey(creditaccount creditaccount){
-		return creditaccountMapper.updateByPrimaryKey(creditaccount);
+	public int updateByPrimaryKeySelective(Creditaccount creditaccount){
+		return CreditaccountMapper.updateByPrimaryKeySelective(creditaccount);
 	}
 
 

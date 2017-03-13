@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("buygiftitemService")
+@Service("BuygiftitemService")
 public class BuygiftitemService implements IBuygiftitemService {
 	@Resource
-	private buygiftitemMapper buygiftitemMapper;
+	private BuygiftitemMapper BuygiftitemMapper;
 
-	public int insert(buygiftitem buygiftitem){
-		return buygiftitemMapper.insert(buygiftitem);
+	public int insert(Buygiftitem buygiftitem){
+		return BuygiftitemMapper.insert(buygiftitem);
 	}
-	public int insertSelective(buygiftitem buygiftitem){
-		return buygiftitemMapper.insertSelective(buygiftitem);
+	public int insertSelective(Buygiftitem buygiftitem){
+		return BuygiftitemMapper.insertSelective(buygiftitem);
 	}
-	public buygiftitem selectByPrimaryKey(buygiftitemKey buygiftitemKey){
-		return buygiftitemMapper.selectByPrimaryKey(buygiftitemKey);
+	public int deleteByPrimaryKey(BuygiftitemKey buygiftitemKey){
+		return BuygiftitemMapper.deleteByPrimaryKey(buygiftitemKey);
 	}
-	public int deleteByPrimaryKey(buygiftitemKey buygiftitemKey){
-		return buygiftitemMapper.deleteByPrimaryKey(buygiftitemKey);
+	public Buygiftitem selectByPrimaryKey(BuygiftitemKey buygiftitemKey){
+		return BuygiftitemMapper.selectByPrimaryKey(buygiftitemKey);
 	}
-	public int updateByPrimaryKeySelective(buygiftitem buygiftitem){
-		return buygiftitemMapper.updateByPrimaryKeySelective(buygiftitem);
+	public int updateByPrimaryKey(Buygiftitem buygiftitem){
+		return BuygiftitemMapper.updateByPrimaryKey(buygiftitem);
 	}
-	public int updateByPrimaryKey(buygiftitem buygiftitem){
-		return buygiftitemMapper.updateByPrimaryKey(buygiftitem);
+	public int updateByPrimaryKeySelective(Buygiftitem buygiftitem){
+		return BuygiftitemMapper.updateByPrimaryKeySelective(buygiftitem);
 	}
 
 

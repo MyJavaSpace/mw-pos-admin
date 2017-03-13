@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("seqnoService")
+@Service("SeqnoService")
 public class SeqnoService implements ISeqnoService {
 	@Resource
-	private seqnoMapper seqnoMapper;
+	private SeqnoMapper SeqnoMapper;
 
-	public int insert(seqno seqno){
-		return seqnoMapper.insert(seqno);
+	public int insert(Seqno seqno){
+		return SeqnoMapper.insert(seqno);
 	}
-	public int insertSelective(seqno seqno){
-		return seqnoMapper.insertSelective(seqno);
+	public int insertSelective(Seqno seqno){
+		return SeqnoMapper.insertSelective(seqno);
 	}
-	public seqno selectByPrimaryKey(seqnoKey seqnoKey){
-		return seqnoMapper.selectByPrimaryKey(seqnoKey);
+	public int deleteByPrimaryKey(SeqnoKey seqnoKey){
+		return SeqnoMapper.deleteByPrimaryKey(seqnoKey);
 	}
-	public int deleteByPrimaryKey(seqnoKey seqnoKey){
-		return seqnoMapper.deleteByPrimaryKey(seqnoKey);
+	public Seqno selectByPrimaryKey(SeqnoKey seqnoKey){
+		return SeqnoMapper.selectByPrimaryKey(seqnoKey);
 	}
-	public int updateByPrimaryKeySelective(seqno seqno){
-		return seqnoMapper.updateByPrimaryKeySelective(seqno);
+	public int updateByPrimaryKey(Seqno seqno){
+		return SeqnoMapper.updateByPrimaryKey(seqno);
 	}
-	public int updateByPrimaryKey(seqno seqno){
-		return seqnoMapper.updateByPrimaryKey(seqno);
+	public int updateByPrimaryKeySelective(Seqno seqno){
+		return SeqnoMapper.updateByPrimaryKeySelective(seqno);
 	}
 
 

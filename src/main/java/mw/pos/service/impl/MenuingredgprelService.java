@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("menuingredgprelService")
+@Service("MenuingredgprelService")
 public class MenuingredgprelService implements IMenuingredgprelService {
 	@Resource
-	private menuingredgprelMapper menuingredgprelMapper;
+	private MenuingredgprelMapper MenuingredgprelMapper;
 
-	public int insert(menuingredgprel menuingredgprel){
-		return menuingredgprelMapper.insert(menuingredgprel);
+	public int insert(Menuingredgprel menuingredgprel){
+		return MenuingredgprelMapper.insert(menuingredgprel);
 	}
-	public int insertSelective(menuingredgprel menuingredgprel){
-		return menuingredgprelMapper.insertSelective(menuingredgprel);
+	public int insertSelective(Menuingredgprel menuingredgprel){
+		return MenuingredgprelMapper.insertSelective(menuingredgprel);
 	}
-	public menuingredgprel selectByPrimaryKey(menuingredgprelKey menuingredgprelKey){
-		return menuingredgprelMapper.selectByPrimaryKey(menuingredgprelKey);
+	public int deleteByPrimaryKey(MenuingredgprelKey menuingredgprelKey){
+		return MenuingredgprelMapper.deleteByPrimaryKey(menuingredgprelKey);
 	}
-	public int deleteByPrimaryKey(menuingredgprelKey menuingredgprelKey){
-		return menuingredgprelMapper.deleteByPrimaryKey(menuingredgprelKey);
+	public Menuingredgprel selectByPrimaryKey(MenuingredgprelKey menuingredgprelKey){
+		return MenuingredgprelMapper.selectByPrimaryKey(menuingredgprelKey);
 	}
-	public int updateByPrimaryKeySelective(menuingredgprel menuingredgprel){
-		return menuingredgprelMapper.updateByPrimaryKeySelective(menuingredgprel);
+	public int updateByPrimaryKey(Menuingredgprel menuingredgprel){
+		return MenuingredgprelMapper.updateByPrimaryKey(menuingredgprel);
 	}
-	public int updateByPrimaryKey(menuingredgprel menuingredgprel){
-		return menuingredgprelMapper.updateByPrimaryKey(menuingredgprel);
+	public int updateByPrimaryKeySelective(Menuingredgprel menuingredgprel){
+		return MenuingredgprelMapper.updateByPrimaryKeySelective(menuingredgprel);
 	}
 
 

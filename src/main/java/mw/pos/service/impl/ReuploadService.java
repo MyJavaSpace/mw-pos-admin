@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("reuploadService")
+@Service("ReuploadService")
 public class ReuploadService implements IReuploadService {
 	@Resource
-	private reuploadMapper reuploadMapper;
+	private ReuploadMapper ReuploadMapper;
 
-	public int insert(reupload reupload){
-		return reuploadMapper.insert(reupload);
+	public int insert(Reupload reupload){
+		return ReuploadMapper.insert(reupload);
 	}
-	public int insertSelective(reupload reupload){
-		return reuploadMapper.insertSelective(reupload);
-	}
-	public reupload selectByPrimaryKey(String string){
-		return reuploadMapper.selectByPrimaryKey(string);
+	public int insertSelective(Reupload reupload){
+		return ReuploadMapper.insertSelective(reupload);
 	}
 	public int deleteByPrimaryKey(String string){
-		return reuploadMapper.deleteByPrimaryKey(string);
+		return ReuploadMapper.deleteByPrimaryKey(string);
 	}
-	public int updateByPrimaryKeySelective(reupload reupload){
-		return reuploadMapper.updateByPrimaryKeySelective(reupload);
+	public Reupload selectByPrimaryKey(String string){
+		return ReuploadMapper.selectByPrimaryKey(string);
 	}
-	public int updateByPrimaryKey(reupload reupload){
-		return reuploadMapper.updateByPrimaryKey(reupload);
+	public int updateByPrimaryKey(Reupload reupload){
+		return ReuploadMapper.updateByPrimaryKey(reupload);
+	}
+	public int updateByPrimaryKeySelective(Reupload reupload){
+		return ReuploadMapper.updateByPrimaryKeySelective(reupload);
 	}
 
 

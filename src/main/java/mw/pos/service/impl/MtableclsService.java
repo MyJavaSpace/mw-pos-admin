@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("mtableclsService")
+@Service("MtableclsService")
 public class MtableclsService implements IMtableclsService {
 	@Resource
-	private mtableclsMapper mtableclsMapper;
+	private MtableclsMapper MtableclsMapper;
 
-	public int insert(mtablecls mtablecls){
-		return mtableclsMapper.insert(mtablecls);
+	public int insert(Mtablecls mtablecls){
+		return MtableclsMapper.insert(mtablecls);
 	}
-	public int insertSelective(mtablecls mtablecls){
-		return mtableclsMapper.insertSelective(mtablecls);
+	public int insertSelective(Mtablecls mtablecls){
+		return MtableclsMapper.insertSelective(mtablecls);
 	}
-	public mtablecls selectByPrimaryKey(mtableclsKey mtableclsKey){
-		return mtableclsMapper.selectByPrimaryKey(mtableclsKey);
+	public int deleteByPrimaryKey(MtableclsKey mtableclsKey){
+		return MtableclsMapper.deleteByPrimaryKey(mtableclsKey);
 	}
-	public int deleteByPrimaryKey(mtableclsKey mtableclsKey){
-		return mtableclsMapper.deleteByPrimaryKey(mtableclsKey);
+	public Mtablecls selectByPrimaryKey(MtableclsKey mtableclsKey){
+		return MtableclsMapper.selectByPrimaryKey(mtableclsKey);
 	}
-	public int updateByPrimaryKeySelective(mtablecls mtablecls){
-		return mtableclsMapper.updateByPrimaryKeySelective(mtablecls);
+	public int updateByPrimaryKey(Mtablecls mtablecls){
+		return MtableclsMapper.updateByPrimaryKey(mtablecls);
 	}
-	public int updateByPrimaryKey(mtablecls mtablecls){
-		return mtableclsMapper.updateByPrimaryKey(mtablecls);
+	public int updateByPrimaryKeySelective(Mtablecls mtablecls){
+		return MtableclsMapper.updateByPrimaryKeySelective(mtablecls);
 	}
 
 

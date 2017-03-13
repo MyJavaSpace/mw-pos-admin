@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("delivererService")
+@Service("DelivererService")
 public class DelivererService implements IDelivererService {
 	@Resource
-	private delivererMapper delivererMapper;
+	private DelivererMapper DelivererMapper;
 
-	public int insert(deliverer deliverer){
-		return delivererMapper.insert(deliverer);
+	public int insert(Deliverer deliverer){
+		return DelivererMapper.insert(deliverer);
 	}
-	public int insertSelective(deliverer deliverer){
-		return delivererMapper.insertSelective(deliverer);
+	public int insertSelective(Deliverer deliverer){
+		return DelivererMapper.insertSelective(deliverer);
 	}
-	public deliverer selectByPrimaryKey(delivererKey delivererKey){
-		return delivererMapper.selectByPrimaryKey(delivererKey);
+	public int deleteByPrimaryKey(DelivererKey delivererKey){
+		return DelivererMapper.deleteByPrimaryKey(delivererKey);
 	}
-	public int deleteByPrimaryKey(delivererKey delivererKey){
-		return delivererMapper.deleteByPrimaryKey(delivererKey);
+	public Deliverer selectByPrimaryKey(DelivererKey delivererKey){
+		return DelivererMapper.selectByPrimaryKey(delivererKey);
 	}
-	public int updateByPrimaryKeySelective(deliverer deliverer){
-		return delivererMapper.updateByPrimaryKeySelective(deliverer);
+	public int updateByPrimaryKey(Deliverer deliverer){
+		return DelivererMapper.updateByPrimaryKey(deliverer);
 	}
-	public int updateByPrimaryKey(deliverer deliverer){
-		return delivererMapper.updateByPrimaryKey(deliverer);
+	public int updateByPrimaryKeySelective(Deliverer deliverer){
+		return DelivererMapper.updateByPrimaryKeySelective(deliverer);
 	}
 
 

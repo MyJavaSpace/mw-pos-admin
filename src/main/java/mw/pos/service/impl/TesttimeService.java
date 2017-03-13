@@ -8,16 +8,16 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("testtimeService")
+@Service("TesttimeService")
 public class TesttimeService implements ITesttimeService {
 	@Resource
-	private testtimeMapper testtimeMapper;
+	private TesttimeMapper TesttimeMapper;
 
-	public int insert(testtime testtime){
-		return testtimeMapper.insert(testtime);
+	public int insert(Testtime testtime){
+		return TesttimeMapper.insert(testtime);
 	}
-	public int insertSelective(testtime testtime){
-		return testtimeMapper.insertSelective(testtime);
+	public int insertSelective(Testtime testtime){
+		return TesttimeMapper.insertSelective(testtime);
 	}
 
 

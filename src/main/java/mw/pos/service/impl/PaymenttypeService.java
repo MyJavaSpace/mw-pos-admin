@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("paymenttypeService")
+@Service("PaymenttypeService")
 public class PaymenttypeService implements IPaymenttypeService {
 	@Resource
-	private paymenttypeMapper paymenttypeMapper;
+	private PaymenttypeMapper PaymenttypeMapper;
 
-	public int insert(paymenttype paymenttype){
-		return paymenttypeMapper.insert(paymenttype);
+	public int insert(Paymenttype paymenttype){
+		return PaymenttypeMapper.insert(paymenttype);
 	}
-	public int insertSelective(paymenttype paymenttype){
-		return paymenttypeMapper.insertSelective(paymenttype);
+	public int insertSelective(Paymenttype paymenttype){
+		return PaymenttypeMapper.insertSelective(paymenttype);
 	}
-	public paymenttype selectByPrimaryKey(paymenttypeKey paymenttypeKey){
-		return paymenttypeMapper.selectByPrimaryKey(paymenttypeKey);
+	public int deleteByPrimaryKey(PaymenttypeKey paymenttypeKey){
+		return PaymenttypeMapper.deleteByPrimaryKey(paymenttypeKey);
 	}
-	public int deleteByPrimaryKey(paymenttypeKey paymenttypeKey){
-		return paymenttypeMapper.deleteByPrimaryKey(paymenttypeKey);
+	public Paymenttype selectByPrimaryKey(PaymenttypeKey paymenttypeKey){
+		return PaymenttypeMapper.selectByPrimaryKey(paymenttypeKey);
 	}
-	public int updateByPrimaryKeySelective(paymenttype paymenttype){
-		return paymenttypeMapper.updateByPrimaryKeySelective(paymenttype);
+	public int updateByPrimaryKey(Paymenttype paymenttype){
+		return PaymenttypeMapper.updateByPrimaryKey(paymenttype);
 	}
-	public int updateByPrimaryKey(paymenttype paymenttype){
-		return paymenttypeMapper.updateByPrimaryKey(paymenttype);
+	public int updateByPrimaryKeySelective(Paymenttype paymenttype){
+		return PaymenttypeMapper.updateByPrimaryKeySelective(paymenttype);
 	}
 
 

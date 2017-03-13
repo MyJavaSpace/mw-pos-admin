@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IAuthorityService {
-	int insert(authority authority);
-	authority selectByPrimaryKey(authorityKey authorityKey);
-	int updateByPrimaryKeySelective(authority authority);
-	int deleteByPrimaryKey(authorityKey authorityKey);
-	int updateByPrimaryKey(authority authority);
-	int insertSelective(authority authority);
+	int insert(Authority authority);
+	int deleteByPrimaryKey(AuthorityKey authorityKey);
+	int updateByPrimaryKey(Authority authority);
+	Authority selectByPrimaryKey(AuthorityKey authorityKey);
+	int insertSelective(Authority authority);
+	int updateByPrimaryKeySelective(Authority authority);
 
 }

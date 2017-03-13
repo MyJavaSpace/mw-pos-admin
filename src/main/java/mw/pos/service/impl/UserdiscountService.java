@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("userdiscountService")
+@Service("UserdiscountService")
 public class UserdiscountService implements IUserdiscountService {
 	@Resource
-	private userdiscountMapper userdiscountMapper;
+	private UserdiscountMapper UserdiscountMapper;
 
-	public int insert(userdiscount userdiscount){
-		return userdiscountMapper.insert(userdiscount);
+	public int insert(Userdiscount userdiscount){
+		return UserdiscountMapper.insert(userdiscount);
 	}
-	public int insertSelective(userdiscount userdiscount){
-		return userdiscountMapper.insertSelective(userdiscount);
+	public int insertSelective(Userdiscount userdiscount){
+		return UserdiscountMapper.insertSelective(userdiscount);
 	}
-	public userdiscount selectByPrimaryKey(userdiscountKey userdiscountKey){
-		return userdiscountMapper.selectByPrimaryKey(userdiscountKey);
+	public int deleteByPrimaryKey(UserdiscountKey userdiscountKey){
+		return UserdiscountMapper.deleteByPrimaryKey(userdiscountKey);
 	}
-	public int deleteByPrimaryKey(userdiscountKey userdiscountKey){
-		return userdiscountMapper.deleteByPrimaryKey(userdiscountKey);
+	public Userdiscount selectByPrimaryKey(UserdiscountKey userdiscountKey){
+		return UserdiscountMapper.selectByPrimaryKey(userdiscountKey);
 	}
-	public int updateByPrimaryKeySelective(userdiscount userdiscount){
-		return userdiscountMapper.updateByPrimaryKeySelective(userdiscount);
+	public int updateByPrimaryKey(Userdiscount userdiscount){
+		return UserdiscountMapper.updateByPrimaryKey(userdiscount);
 	}
-	public int updateByPrimaryKey(userdiscount userdiscount){
-		return userdiscountMapper.updateByPrimaryKey(userdiscount);
+	public int updateByPrimaryKeySelective(Userdiscount userdiscount){
+		return UserdiscountMapper.updateByPrimaryKeySelective(userdiscount);
 	}
 
 

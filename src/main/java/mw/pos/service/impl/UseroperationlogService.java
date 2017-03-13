@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("useroperationlogService")
+@Service("UseroperationlogService")
 public class UseroperationlogService implements IUseroperationlogService {
 	@Resource
-	private useroperationlogMapper useroperationlogMapper;
+	private UseroperationlogMapper UseroperationlogMapper;
 
-	public int insert(useroperationlog useroperationlog){
-		return useroperationlogMapper.insert(useroperationlog);
+	public int insert(Useroperationlog useroperationlog){
+		return UseroperationlogMapper.insert(useroperationlog);
 	}
-	public int insertSelective(useroperationlog useroperationlog){
-		return useroperationlogMapper.insertSelective(useroperationlog);
-	}
-	public useroperationlog selectByPrimaryKey(String string){
-		return useroperationlogMapper.selectByPrimaryKey(string);
+	public int insertSelective(Useroperationlog useroperationlog){
+		return UseroperationlogMapper.insertSelective(useroperationlog);
 	}
 	public int deleteByPrimaryKey(String string){
-		return useroperationlogMapper.deleteByPrimaryKey(string);
+		return UseroperationlogMapper.deleteByPrimaryKey(string);
 	}
-	public int updateByPrimaryKeySelective(useroperationlog useroperationlog){
-		return useroperationlogMapper.updateByPrimaryKeySelective(useroperationlog);
+	public Useroperationlog selectByPrimaryKey(String string){
+		return UseroperationlogMapper.selectByPrimaryKey(string);
 	}
-	public int updateByPrimaryKey(useroperationlog useroperationlog){
-		return useroperationlogMapper.updateByPrimaryKey(useroperationlog);
+	public int updateByPrimaryKey(Useroperationlog useroperationlog){
+		return UseroperationlogMapper.updateByPrimaryKey(useroperationlog);
+	}
+	public int updateByPrimaryKeySelective(Useroperationlog useroperationlog){
+		return UseroperationlogMapper.updateByPrimaryKeySelective(useroperationlog);
 	}
 
 

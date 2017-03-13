@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface ICookbookmenuService {
-	int insert(cookbookmenu cookbookmenu);
-	cookbookmenu selectByPrimaryKey(cookbookmenuKey cookbookmenuKey);
-	int updateByPrimaryKeySelective(cookbookmenu cookbookmenu);
-	int deleteByPrimaryKey(cookbookmenuKey cookbookmenuKey);
-	int updateByPrimaryKey(cookbookmenu cookbookmenu);
-	int insertSelective(cookbookmenu cookbookmenu);
+	int insert(Cookbookmenu cookbookmenu);
+	int deleteByPrimaryKey(CookbookmenuKey cookbookmenuKey);
+	int updateByPrimaryKey(Cookbookmenu cookbookmenu);
+	Cookbookmenu selectByPrimaryKey(CookbookmenuKey cookbookmenuKey);
+	int insertSelective(Cookbookmenu cookbookmenu);
+	int updateByPrimaryKeySelective(Cookbookmenu cookbookmenu);
 
 }

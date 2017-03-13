@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("printtaskService")
+@Service("PrinttaskService")
 public class PrinttaskService implements IPrinttaskService {
 	@Resource
-	private printtaskMapper printtaskMapper;
+	private PrinttaskMapper PrinttaskMapper;
 
-	public int insert(printtaskWithBLOBs printtaskWithBLOBs){
-		return printtaskMapper.insert(printtaskWithBLOBs);
+	public int insert(PrinttaskWithBLOBs printtaskWithBLOBs){
+		return PrinttaskMapper.insert(printtaskWithBLOBs);
 	}
-	public int insertSelective(printtaskWithBLOBs printtaskWithBLOBs){
-		return printtaskMapper.insertSelective(printtaskWithBLOBs);
-	}
-	public printtaskWithBLOBs selectByPrimaryKey(Integer integer){
-		return printtaskMapper.selectByPrimaryKey(integer);
+	public int insertSelective(PrinttaskWithBLOBs printtaskWithBLOBs){
+		return PrinttaskMapper.insertSelective(printtaskWithBLOBs);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return printtaskMapper.deleteByPrimaryKey(integer);
+		return PrinttaskMapper.deleteByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKeySelective(printtaskWithBLOBs printtaskWithBLOBs){
-		return printtaskMapper.updateByPrimaryKeySelective(printtaskWithBLOBs);
+	public PrinttaskWithBLOBs selectByPrimaryKey(Integer integer){
+		return PrinttaskMapper.selectByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKey(printtask printtask){
-		return printtaskMapper.updateByPrimaryKey(printtask);
+	public int updateByPrimaryKey(Printtask printtask){
+		return PrinttaskMapper.updateByPrimaryKey(printtask);
 	}
-	public int updateByPrimaryKeyWithBLOBs(printtaskWithBLOBs printtaskWithBLOBs){
-		return printtaskMapper.updateByPrimaryKeyWithBLOBs(printtaskWithBLOBs);
+	public int updateByPrimaryKeySelective(PrinttaskWithBLOBs printtaskWithBLOBs){
+		return PrinttaskMapper.updateByPrimaryKeySelective(printtaskWithBLOBs);
+	}
+	public int updateByPrimaryKeyWithBLOBs(PrinttaskWithBLOBs printtaskWithBLOBs){
+		return PrinttaskMapper.updateByPrimaryKeyWithBLOBs(printtaskWithBLOBs);
 	}
 
 

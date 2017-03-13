@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("tradeService")
+@Service("TradeService")
 public class TradeService implements ITradeService {
 	@Resource
-	private tradeMapper tradeMapper;
+	private TradeMapper TradeMapper;
 
-	public int insert(trade trade){
-		return tradeMapper.insert(trade);
+	public int insert(Trade trade){
+		return TradeMapper.insert(trade);
 	}
-	public int insertSelective(trade trade){
-		return tradeMapper.insertSelective(trade);
+	public int insertSelective(Trade trade){
+		return TradeMapper.insertSelective(trade);
 	}
-	public trade selectByPrimaryKey(tradeKey tradeKey){
-		return tradeMapper.selectByPrimaryKey(tradeKey);
+	public int deleteByPrimaryKey(TradeKey tradeKey){
+		return TradeMapper.deleteByPrimaryKey(tradeKey);
 	}
-	public int deleteByPrimaryKey(tradeKey tradeKey){
-		return tradeMapper.deleteByPrimaryKey(tradeKey);
+	public Trade selectByPrimaryKey(TradeKey tradeKey){
+		return TradeMapper.selectByPrimaryKey(tradeKey);
 	}
-	public int updateByPrimaryKeySelective(trade trade){
-		return tradeMapper.updateByPrimaryKeySelective(trade);
+	public int updateByPrimaryKey(Trade trade){
+		return TradeMapper.updateByPrimaryKey(trade);
 	}
-	public int updateByPrimaryKey(trade trade){
-		return tradeMapper.updateByPrimaryKey(trade);
+	public int updateByPrimaryKeySelective(Trade trade){
+		return TradeMapper.updateByPrimaryKeySelective(trade);
 	}
 
 

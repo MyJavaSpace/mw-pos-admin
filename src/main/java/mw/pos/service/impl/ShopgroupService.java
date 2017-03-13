@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("shopgroupService")
+@Service("ShopgroupService")
 public class ShopgroupService implements IShopgroupService {
 	@Resource
-	private shopgroupMapper shopgroupMapper;
+	private ShopgroupMapper ShopgroupMapper;
 
-	public int insert(shopgroupWithBLOBs shopgroupWithBLOBs){
-		return shopgroupMapper.insert(shopgroupWithBLOBs);
+	public int insert(ShopgroupWithBLOBs shopgroupWithBLOBs){
+		return ShopgroupMapper.insert(shopgroupWithBLOBs);
 	}
-	public int insertSelective(shopgroupWithBLOBs shopgroupWithBLOBs){
-		return shopgroupMapper.insertSelective(shopgroupWithBLOBs);
-	}
-	public shopgroupWithBLOBs selectByPrimaryKey(Integer integer){
-		return shopgroupMapper.selectByPrimaryKey(integer);
+	public int insertSelective(ShopgroupWithBLOBs shopgroupWithBLOBs){
+		return ShopgroupMapper.insertSelective(shopgroupWithBLOBs);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return shopgroupMapper.deleteByPrimaryKey(integer);
+		return ShopgroupMapper.deleteByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKeySelective(shopgroupWithBLOBs shopgroupWithBLOBs){
-		return shopgroupMapper.updateByPrimaryKeySelective(shopgroupWithBLOBs);
+	public ShopgroupWithBLOBs selectByPrimaryKey(Integer integer){
+		return ShopgroupMapper.selectByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKey(shopgroup shopgroup){
-		return shopgroupMapper.updateByPrimaryKey(shopgroup);
+	public int updateByPrimaryKey(Shopgroup shopgroup){
+		return ShopgroupMapper.updateByPrimaryKey(shopgroup);
 	}
-	public int updateByPrimaryKeyWithBLOBs(shopgroupWithBLOBs shopgroupWithBLOBs){
-		return shopgroupMapper.updateByPrimaryKeyWithBLOBs(shopgroupWithBLOBs);
+	public int updateByPrimaryKeySelective(ShopgroupWithBLOBs shopgroupWithBLOBs){
+		return ShopgroupMapper.updateByPrimaryKeySelective(shopgroupWithBLOBs);
+	}
+	public int updateByPrimaryKeyWithBLOBs(ShopgroupWithBLOBs shopgroupWithBLOBs){
+		return ShopgroupMapper.updateByPrimaryKeyWithBLOBs(shopgroupWithBLOBs);
 	}
 
 

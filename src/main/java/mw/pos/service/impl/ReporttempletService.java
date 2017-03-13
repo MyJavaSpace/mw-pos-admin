@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("reporttempletService")
+@Service("ReporttempletService")
 public class ReporttempletService implements IReporttempletService {
 	@Resource
-	private reporttempletMapper reporttempletMapper;
+	private ReporttempletMapper ReporttempletMapper;
 
-	public int insert(reporttemplet reporttemplet){
-		return reporttempletMapper.insert(reporttemplet);
+	public int insert(Reporttemplet reporttemplet){
+		return ReporttempletMapper.insert(reporttemplet);
 	}
-	public int insertSelective(reporttemplet reporttemplet){
-		return reporttempletMapper.insertSelective(reporttemplet);
+	public int insertSelective(Reporttemplet reporttemplet){
+		return ReporttempletMapper.insertSelective(reporttemplet);
 	}
-	public reporttemplet selectByPrimaryKey(reporttempletKey reporttempletKey){
-		return reporttempletMapper.selectByPrimaryKey(reporttempletKey);
+	public int deleteByPrimaryKey(ReporttempletKey reporttempletKey){
+		return ReporttempletMapper.deleteByPrimaryKey(reporttempletKey);
 	}
-	public int deleteByPrimaryKey(reporttempletKey reporttempletKey){
-		return reporttempletMapper.deleteByPrimaryKey(reporttempletKey);
+	public Reporttemplet selectByPrimaryKey(ReporttempletKey reporttempletKey){
+		return ReporttempletMapper.selectByPrimaryKey(reporttempletKey);
 	}
-	public int updateByPrimaryKeySelective(reporttemplet reporttemplet){
-		return reporttempletMapper.updateByPrimaryKeySelective(reporttemplet);
+	public int updateByPrimaryKey(Reporttemplet reporttemplet){
+		return ReporttempletMapper.updateByPrimaryKey(reporttemplet);
 	}
-	public int updateByPrimaryKey(reporttemplet reporttemplet){
-		return reporttempletMapper.updateByPrimaryKey(reporttemplet);
+	public int updateByPrimaryKeySelective(Reporttemplet reporttemplet){
+		return ReporttempletMapper.updateByPrimaryKeySelective(reporttemplet);
 	}
 
 

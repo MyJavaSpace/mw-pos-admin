@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("billsourceService")
+@Service("BillsourceService")
 public class BillsourceService implements IBillsourceService {
 	@Resource
-	private billsourceMapper billsourceMapper;
+	private BillsourceMapper BillsourceMapper;
 
-	public int insert(billsource billsource){
-		return billsourceMapper.insert(billsource);
+	public int insert(Billsource billsource){
+		return BillsourceMapper.insert(billsource);
 	}
-	public int insertSelective(billsource billsource){
-		return billsourceMapper.insertSelective(billsource);
+	public int insertSelective(Billsource billsource){
+		return BillsourceMapper.insertSelective(billsource);
 	}
-	public billsource selectByPrimaryKey(billsourceKey billsourceKey){
-		return billsourceMapper.selectByPrimaryKey(billsourceKey);
+	public int deleteByPrimaryKey(BillsourceKey billsourceKey){
+		return BillsourceMapper.deleteByPrimaryKey(billsourceKey);
 	}
-	public int deleteByPrimaryKey(billsourceKey billsourceKey){
-		return billsourceMapper.deleteByPrimaryKey(billsourceKey);
+	public Billsource selectByPrimaryKey(BillsourceKey billsourceKey){
+		return BillsourceMapper.selectByPrimaryKey(billsourceKey);
 	}
-	public int updateByPrimaryKeySelective(billsource billsource){
-		return billsourceMapper.updateByPrimaryKeySelective(billsource);
+	public int updateByPrimaryKey(Billsource billsource){
+		return BillsourceMapper.updateByPrimaryKey(billsource);
 	}
-	public int updateByPrimaryKey(billsource billsource){
-		return billsourceMapper.updateByPrimaryKey(billsource);
+	public int updateByPrimaryKeySelective(Billsource billsource){
+		return BillsourceMapper.updateByPrimaryKeySelective(billsource);
 	}
 
 

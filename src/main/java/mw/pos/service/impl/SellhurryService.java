@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("sellhurryService")
+@Service("SellhurryService")
 public class SellhurryService implements ISellhurryService {
 	@Resource
-	private sellhurryMapper sellhurryMapper;
+	private SellhurryMapper SellhurryMapper;
 
-	public int insert(sellhurry sellhurry){
-		return sellhurryMapper.insert(sellhurry);
+	public int insert(Sellhurry sellhurry){
+		return SellhurryMapper.insert(sellhurry);
 	}
-	public int insertSelective(sellhurry sellhurry){
-		return sellhurryMapper.insertSelective(sellhurry);
+	public int insertSelective(Sellhurry sellhurry){
+		return SellhurryMapper.insertSelective(sellhurry);
 	}
-	public sellhurry selectByPrimaryKey(sellhurryKey sellhurryKey){
-		return sellhurryMapper.selectByPrimaryKey(sellhurryKey);
+	public int deleteByPrimaryKey(SellhurryKey sellhurryKey){
+		return SellhurryMapper.deleteByPrimaryKey(sellhurryKey);
 	}
-	public int deleteByPrimaryKey(sellhurryKey sellhurryKey){
-		return sellhurryMapper.deleteByPrimaryKey(sellhurryKey);
+	public Sellhurry selectByPrimaryKey(SellhurryKey sellhurryKey){
+		return SellhurryMapper.selectByPrimaryKey(sellhurryKey);
 	}
-	public int updateByPrimaryKeySelective(sellhurry sellhurry){
-		return sellhurryMapper.updateByPrimaryKeySelective(sellhurry);
+	public int updateByPrimaryKey(Sellhurry sellhurry){
+		return SellhurryMapper.updateByPrimaryKey(sellhurry);
 	}
-	public int updateByPrimaryKey(sellhurry sellhurry){
-		return sellhurryMapper.updateByPrimaryKey(sellhurry);
+	public int updateByPrimaryKeySelective(Sellhurry sellhurry){
+		return SellhurryMapper.updateByPrimaryKeySelective(sellhurry);
 	}
 
 

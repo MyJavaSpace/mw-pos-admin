@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IMtableService {
-	int insert(mtable mtable);
-	mtable selectByPrimaryKey(mtableKey mtableKey);
-	int updateByPrimaryKeySelective(mtable mtable);
-	int deleteByPrimaryKey(mtableKey mtableKey);
-	int updateByPrimaryKey(mtable mtable);
-	int insertSelective(mtable mtable);
+	int insert(Mtable mtable);
+	int deleteByPrimaryKey(MtableKey mtableKey);
+	int updateByPrimaryKey(Mtable mtable);
+	Mtable selectByPrimaryKey(MtableKey mtableKey);
+	int insertSelective(Mtable mtable);
+	int updateByPrimaryKeySelective(Mtable mtable);
 
 }

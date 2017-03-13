@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("mtablesteService")
+@Service("MtablesteService")
 public class MtablesteService implements IMtablesteService {
 	@Resource
-	private mtablesteMapper mtablesteMapper;
+	private MtablesteMapper MtablesteMapper;
 
-	public int insert(mtableste mtableste){
-		return mtablesteMapper.insert(mtableste);
+	public int insert(Mtableste mtableste){
+		return MtablesteMapper.insert(mtableste);
 	}
-	public int insertSelective(mtableste mtableste){
-		return mtablesteMapper.insertSelective(mtableste);
+	public int insertSelective(Mtableste mtableste){
+		return MtablesteMapper.insertSelective(mtableste);
 	}
-	public mtableste selectByPrimaryKey(mtablesteKey mtablesteKey){
-		return mtablesteMapper.selectByPrimaryKey(mtablesteKey);
+	public int deleteByPrimaryKey(MtablesteKey mtablesteKey){
+		return MtablesteMapper.deleteByPrimaryKey(mtablesteKey);
 	}
-	public int deleteByPrimaryKey(mtablesteKey mtablesteKey){
-		return mtablesteMapper.deleteByPrimaryKey(mtablesteKey);
+	public Mtableste selectByPrimaryKey(MtablesteKey mtablesteKey){
+		return MtablesteMapper.selectByPrimaryKey(mtablesteKey);
 	}
-	public int updateByPrimaryKeySelective(mtableste mtableste){
-		return mtablesteMapper.updateByPrimaryKeySelective(mtableste);
+	public int updateByPrimaryKey(Mtableste mtableste){
+		return MtablesteMapper.updateByPrimaryKey(mtableste);
 	}
-	public int updateByPrimaryKey(mtableste mtableste){
-		return mtablesteMapper.updateByPrimaryKey(mtableste);
+	public int updateByPrimaryKeySelective(Mtableste mtableste){
+		return MtablesteMapper.updateByPrimaryKeySelective(mtableste);
 	}
 
 

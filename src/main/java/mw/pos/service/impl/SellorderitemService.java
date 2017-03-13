@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("sellorderitemService")
+@Service("SellorderitemService")
 public class SellorderitemService implements ISellorderitemService {
 	@Resource
-	private sellorderitemMapper sellorderitemMapper;
+	private SellorderitemMapper SellorderitemMapper;
 
-	public int insert(sellorderitemWithBLOBs sellorderitemWithBLOBs){
-		return sellorderitemMapper.insert(sellorderitemWithBLOBs);
+	public int insert(SellorderitemWithBLOBs sellorderitemWithBLOBs){
+		return SellorderitemMapper.insert(sellorderitemWithBLOBs);
 	}
-	public int insertSelective(sellorderitemWithBLOBs sellorderitemWithBLOBs){
-		return sellorderitemMapper.insertSelective(sellorderitemWithBLOBs);
+	public int insertSelective(SellorderitemWithBLOBs sellorderitemWithBLOBs){
+		return SellorderitemMapper.insertSelective(sellorderitemWithBLOBs);
 	}
-	public sellorderitemWithBLOBs selectByPrimaryKey(sellorderitemKey sellorderitemKey){
-		return sellorderitemMapper.selectByPrimaryKey(sellorderitemKey);
+	public int deleteByPrimaryKey(SellorderitemKey sellorderitemKey){
+		return SellorderitemMapper.deleteByPrimaryKey(sellorderitemKey);
 	}
-	public int deleteByPrimaryKey(sellorderitemKey sellorderitemKey){
-		return sellorderitemMapper.deleteByPrimaryKey(sellorderitemKey);
+	public SellorderitemWithBLOBs selectByPrimaryKey(SellorderitemKey sellorderitemKey){
+		return SellorderitemMapper.selectByPrimaryKey(sellorderitemKey);
 	}
-	public int updateByPrimaryKeySelective(sellorderitemWithBLOBs sellorderitemWithBLOBs){
-		return sellorderitemMapper.updateByPrimaryKeySelective(sellorderitemWithBLOBs);
+	public int updateByPrimaryKey(Sellorderitem sellorderitem){
+		return SellorderitemMapper.updateByPrimaryKey(sellorderitem);
 	}
-	public int updateByPrimaryKey(sellorderitem sellorderitem){
-		return sellorderitemMapper.updateByPrimaryKey(sellorderitem);
+	public int updateByPrimaryKeySelective(SellorderitemWithBLOBs sellorderitemWithBLOBs){
+		return SellorderitemMapper.updateByPrimaryKeySelective(sellorderitemWithBLOBs);
 	}
-	public int updateByPrimaryKeyWithBLOBs(sellorderitemWithBLOBs sellorderitemWithBLOBs){
-		return sellorderitemMapper.updateByPrimaryKeyWithBLOBs(sellorderitemWithBLOBs);
+	public int updateByPrimaryKeyWithBLOBs(SellorderitemWithBLOBs sellorderitemWithBLOBs){
+		return SellorderitemMapper.updateByPrimaryKeyWithBLOBs(sellorderitemWithBLOBs);
 	}
 
 

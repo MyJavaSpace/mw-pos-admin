@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("custtypeService")
+@Service("CusttypeService")
 public class CusttypeService implements ICusttypeService {
 	@Resource
-	private custtypeMapper custtypeMapper;
+	private CusttypeMapper CusttypeMapper;
 
-	public int insert(custtype custtype){
-		return custtypeMapper.insert(custtype);
+	public int insert(Custtype custtype){
+		return CusttypeMapper.insert(custtype);
 	}
-	public int insertSelective(custtype custtype){
-		return custtypeMapper.insertSelective(custtype);
+	public int insertSelective(Custtype custtype){
+		return CusttypeMapper.insertSelective(custtype);
 	}
-	public custtype selectByPrimaryKey(custtypeKey custtypeKey){
-		return custtypeMapper.selectByPrimaryKey(custtypeKey);
+	public int deleteByPrimaryKey(CusttypeKey custtypeKey){
+		return CusttypeMapper.deleteByPrimaryKey(custtypeKey);
 	}
-	public int deleteByPrimaryKey(custtypeKey custtypeKey){
-		return custtypeMapper.deleteByPrimaryKey(custtypeKey);
+	public Custtype selectByPrimaryKey(CusttypeKey custtypeKey){
+		return CusttypeMapper.selectByPrimaryKey(custtypeKey);
 	}
-	public int updateByPrimaryKeySelective(custtype custtype){
-		return custtypeMapper.updateByPrimaryKeySelective(custtype);
+	public int updateByPrimaryKey(Custtype custtype){
+		return CusttypeMapper.updateByPrimaryKey(custtype);
 	}
-	public int updateByPrimaryKey(custtype custtype){
-		return custtypeMapper.updateByPrimaryKey(custtype);
+	public int updateByPrimaryKeySelective(Custtype custtype){
+		return CusttypeMapper.updateByPrimaryKeySelective(custtype);
 	}
 
 

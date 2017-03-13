@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IShopService {
-	int insert(shop shop);
-	shop selectByPrimaryKey(String string);
-	int updateByPrimaryKeySelective(shop shop);
+	int insert(Shop shop);
 	int deleteByPrimaryKey(String string);
-	int updateByPrimaryKey(shop shop);
-	int insertSelective(shop shop);
+	int updateByPrimaryKey(Shop shop);
+	Shop selectByPrimaryKey(String string);
+	int insertSelective(Shop shop);
+	int updateByPrimaryKeySelective(Shop shop);
 
 }

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("reportconfigurationService")
+@Service("ReportconfigurationService")
 public class ReportconfigurationService implements IReportconfigurationService {
 	@Resource
-	private reportconfigurationMapper reportconfigurationMapper;
+	private ReportconfigurationMapper ReportconfigurationMapper;
 
-	public int insert(reportconfiguration reportconfiguration){
-		return reportconfigurationMapper.insert(reportconfiguration);
+	public int insert(Reportconfiguration reportconfiguration){
+		return ReportconfigurationMapper.insert(reportconfiguration);
 	}
-	public int insertSelective(reportconfiguration reportconfiguration){
-		return reportconfigurationMapper.insertSelective(reportconfiguration);
+	public int insertSelective(Reportconfiguration reportconfiguration){
+		return ReportconfigurationMapper.insertSelective(reportconfiguration);
 	}
-	public reportconfiguration selectByPrimaryKey(reportconfigurationKey reportconfigurationKey){
-		return reportconfigurationMapper.selectByPrimaryKey(reportconfigurationKey);
+	public int deleteByPrimaryKey(ReportconfigurationKey reportconfigurationKey){
+		return ReportconfigurationMapper.deleteByPrimaryKey(reportconfigurationKey);
 	}
-	public int deleteByPrimaryKey(reportconfigurationKey reportconfigurationKey){
-		return reportconfigurationMapper.deleteByPrimaryKey(reportconfigurationKey);
+	public Reportconfiguration selectByPrimaryKey(ReportconfigurationKey reportconfigurationKey){
+		return ReportconfigurationMapper.selectByPrimaryKey(reportconfigurationKey);
 	}
-	public int updateByPrimaryKeySelective(reportconfiguration reportconfiguration){
-		return reportconfigurationMapper.updateByPrimaryKeySelective(reportconfiguration);
+	public int updateByPrimaryKey(Reportconfiguration reportconfiguration){
+		return ReportconfigurationMapper.updateByPrimaryKey(reportconfiguration);
 	}
-	public int updateByPrimaryKey(reportconfiguration reportconfiguration){
-		return reportconfigurationMapper.updateByPrimaryKey(reportconfiguration);
+	public int updateByPrimaryKeySelective(Reportconfiguration reportconfiguration){
+		return ReportconfigurationMapper.updateByPrimaryKeySelective(reportconfiguration);
 	}
 
 

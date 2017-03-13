@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IWechatconfigService {
-	int insert(wechatconfig wechatconfig);
-	wechatconfig selectByPrimaryKey(String string);
-	int updateByPrimaryKeySelective(wechatconfig wechatconfig);
+	int insert(Wechatconfig wechatconfig);
 	int deleteByPrimaryKey(String string);
-	int updateByPrimaryKey(wechatconfig wechatconfig);
-	int insertSelective(wechatconfig wechatconfig);
+	int updateByPrimaryKey(Wechatconfig wechatconfig);
+	Wechatconfig selectByPrimaryKey(String string);
+	int insertSelective(Wechatconfig wechatconfig);
+	int updateByPrimaryKeySelective(Wechatconfig wechatconfig);
 
 }

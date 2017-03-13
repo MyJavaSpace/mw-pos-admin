@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IProgService {
-	int insert(prog prog);
-	prog selectByPrimaryKey(String string);
-	int updateByPrimaryKeySelective(prog prog);
+	int insert(Prog prog);
 	int deleteByPrimaryKey(String string);
-	int updateByPrimaryKey(prog prog);
-	int insertSelective(prog prog);
+	int updateByPrimaryKey(Prog prog);
+	Prog selectByPrimaryKey(String string);
+	int insertSelective(Prog prog);
+	int updateByPrimaryKeySelective(Prog prog);
 
 }

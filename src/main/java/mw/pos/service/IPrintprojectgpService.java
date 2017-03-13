@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IPrintprojectgpService {
-	int insert(printprojectgp printprojectgp);
-	printprojectgp selectByPrimaryKey(printprojectgpKey printprojectgpKey);
-	int updateByPrimaryKeySelective(printprojectgp printprojectgp);
-	int deleteByPrimaryKey(printprojectgpKey printprojectgpKey);
-	int updateByPrimaryKey(printprojectgp printprojectgp);
-	int insertSelective(printprojectgp printprojectgp);
+	int insert(Printprojectgp printprojectgp);
+	int deleteByPrimaryKey(PrintprojectgpKey printprojectgpKey);
+	int updateByPrimaryKey(Printprojectgp printprojectgp);
+	Printprojectgp selectByPrimaryKey(PrintprojectgpKey printprojectgpKey);
+	int insertSelective(Printprojectgp printprojectgp);
+	int updateByPrimaryKeySelective(Printprojectgp printprojectgp);
 
 }

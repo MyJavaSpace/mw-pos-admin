@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IRevenuetypeService {
-	int insert(revenuetype revenuetype);
-	revenuetype selectByPrimaryKey(revenuetypeKey revenuetypeKey);
-	int updateByPrimaryKeySelective(revenuetype revenuetype);
-	int deleteByPrimaryKey(revenuetypeKey revenuetypeKey);
-	int updateByPrimaryKey(revenuetype revenuetype);
-	int insertSelective(revenuetype revenuetype);
+	int insert(Revenuetype revenuetype);
+	int deleteByPrimaryKey(RevenuetypeKey revenuetypeKey);
+	int updateByPrimaryKey(Revenuetype revenuetype);
+	Revenuetype selectByPrimaryKey(RevenuetypeKey revenuetypeKey);
+	int insertSelective(Revenuetype revenuetype);
+	int updateByPrimaryKeySelective(Revenuetype revenuetype);
 
 }

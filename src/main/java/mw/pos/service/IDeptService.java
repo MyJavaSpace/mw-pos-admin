@@ -3,11 +3,11 @@ package mw.pos.service;
 import com.pos.entity.*;
 
 public interface IDeptService {
-	int insert(dept dept);
-	dept selectByPrimaryKey(deptKey deptKey);
-	int updateByPrimaryKeySelective(dept dept);
-	int deleteByPrimaryKey(deptKey deptKey);
-	int updateByPrimaryKey(dept dept);
-	int insertSelective(dept dept);
+	int insert(Dept dept);
+	int deleteByPrimaryKey(DeptKey deptKey);
+	int updateByPrimaryKey(Dept dept);
+	Dept selectByPrimaryKey(DeptKey deptKey);
+	int insertSelective(Dept dept);
+	int updateByPrimaryKeySelective(Dept dept);
 
 }

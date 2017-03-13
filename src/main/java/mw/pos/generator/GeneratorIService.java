@@ -19,6 +19,7 @@ public class GeneratorIService implements IGeneratorCode {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		new GeneratorIService().GeneratorCode();
+		System.out.println("done!GeneratorIService");
 	}
 	
 	@Override

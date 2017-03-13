@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("menuitemaskgpService")
+@Service("MenuitemaskgpService")
 public class MenuitemaskgpService implements IMenuitemaskgpService {
 	@Resource
-	private menuitemaskgpMapper menuitemaskgpMapper;
+	private MenuitemaskgpMapper MenuitemaskgpMapper;
 
-	public int insert(menuitemaskgp menuitemaskgp){
-		return menuitemaskgpMapper.insert(menuitemaskgp);
+	public int insert(Menuitemaskgp menuitemaskgp){
+		return MenuitemaskgpMapper.insert(menuitemaskgp);
 	}
-	public int insertSelective(menuitemaskgp menuitemaskgp){
-		return menuitemaskgpMapper.insertSelective(menuitemaskgp);
+	public int insertSelective(Menuitemaskgp menuitemaskgp){
+		return MenuitemaskgpMapper.insertSelective(menuitemaskgp);
 	}
-	public menuitemaskgp selectByPrimaryKey(menuitemaskgpKey menuitemaskgpKey){
-		return menuitemaskgpMapper.selectByPrimaryKey(menuitemaskgpKey);
+	public int deleteByPrimaryKey(MenuitemaskgpKey menuitemaskgpKey){
+		return MenuitemaskgpMapper.deleteByPrimaryKey(menuitemaskgpKey);
 	}
-	public int deleteByPrimaryKey(menuitemaskgpKey menuitemaskgpKey){
-		return menuitemaskgpMapper.deleteByPrimaryKey(menuitemaskgpKey);
+	public Menuitemaskgp selectByPrimaryKey(MenuitemaskgpKey menuitemaskgpKey){
+		return MenuitemaskgpMapper.selectByPrimaryKey(menuitemaskgpKey);
 	}
-	public int updateByPrimaryKeySelective(menuitemaskgp menuitemaskgp){
-		return menuitemaskgpMapper.updateByPrimaryKeySelective(menuitemaskgp);
+	public int updateByPrimaryKey(Menuitemaskgp menuitemaskgp){
+		return MenuitemaskgpMapper.updateByPrimaryKey(menuitemaskgp);
 	}
-	public int updateByPrimaryKey(menuitemaskgp menuitemaskgp){
-		return menuitemaskgpMapper.updateByPrimaryKey(menuitemaskgp);
+	public int updateByPrimaryKeySelective(Menuitemaskgp menuitemaskgp){
+		return MenuitemaskgpMapper.updateByPrimaryKeySelective(menuitemaskgp);
 	}
 
 

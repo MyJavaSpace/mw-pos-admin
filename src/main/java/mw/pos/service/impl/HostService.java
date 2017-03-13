@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("hostService")
+@Service("HostService")
 public class HostService implements IHostService {
 	@Resource
-	private hostMapper hostMapper;
+	private HostMapper HostMapper;
 
-	public int insert(host host){
-		return hostMapper.insert(host);
+	public int insert(Host host){
+		return HostMapper.insert(host);
 	}
-	public int insertSelective(host host){
-		return hostMapper.insertSelective(host);
+	public int insertSelective(Host host){
+		return HostMapper.insertSelective(host);
 	}
-	public host selectByPrimaryKey(hostKey hostKey){
-		return hostMapper.selectByPrimaryKey(hostKey);
+	public int deleteByPrimaryKey(HostKey hostKey){
+		return HostMapper.deleteByPrimaryKey(hostKey);
 	}
-	public int deleteByPrimaryKey(hostKey hostKey){
-		return hostMapper.deleteByPrimaryKey(hostKey);
+	public Host selectByPrimaryKey(HostKey hostKey){
+		return HostMapper.selectByPrimaryKey(hostKey);
 	}
-	public int updateByPrimaryKeySelective(host host){
-		return hostMapper.updateByPrimaryKeySelective(host);
+	public int updateByPrimaryKey(Host host){
+		return HostMapper.updateByPrimaryKey(host);
 	}
-	public int updateByPrimaryKey(host host){
-		return hostMapper.updateByPrimaryKey(host);
+	public int updateByPrimaryKeySelective(Host host){
+		return HostMapper.updateByPrimaryKeySelective(host);
 	}
 
 

@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("viplvlService")
+@Service("ViplvlService")
 public class ViplvlService implements IViplvlService {
 	@Resource
-	private viplvlMapper viplvlMapper;
+	private ViplvlMapper ViplvlMapper;
 
-	public int insert(viplvl viplvl){
-		return viplvlMapper.insert(viplvl);
+	public int insert(Viplvl viplvl){
+		return ViplvlMapper.insert(viplvl);
 	}
-	public int insertSelective(viplvl viplvl){
-		return viplvlMapper.insertSelective(viplvl);
+	public int insertSelective(Viplvl viplvl){
+		return ViplvlMapper.insertSelective(viplvl);
 	}
-	public viplvl selectByPrimaryKey(viplvlKey viplvlKey){
-		return viplvlMapper.selectByPrimaryKey(viplvlKey);
+	public int deleteByPrimaryKey(ViplvlKey viplvlKey){
+		return ViplvlMapper.deleteByPrimaryKey(viplvlKey);
 	}
-	public int deleteByPrimaryKey(viplvlKey viplvlKey){
-		return viplvlMapper.deleteByPrimaryKey(viplvlKey);
+	public Viplvl selectByPrimaryKey(ViplvlKey viplvlKey){
+		return ViplvlMapper.selectByPrimaryKey(viplvlKey);
 	}
-	public int updateByPrimaryKeySelective(viplvl viplvl){
-		return viplvlMapper.updateByPrimaryKeySelective(viplvl);
+	public int updateByPrimaryKey(Viplvl viplvl){
+		return ViplvlMapper.updateByPrimaryKey(viplvl);
 	}
-	public int updateByPrimaryKey(viplvl viplvl){
-		return viplvlMapper.updateByPrimaryKey(viplvl);
+	public int updateByPrimaryKeySelective(Viplvl viplvl){
+		return ViplvlMapper.updateByPrimaryKeySelective(viplvl);
 	}
 
 

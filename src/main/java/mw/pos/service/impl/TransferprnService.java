@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("transferprnService")
+@Service("TransferprnService")
 public class TransferprnService implements ITransferprnService {
 	@Resource
-	private transferprnMapper transferprnMapper;
+	private TransferprnMapper TransferprnMapper;
 
-	public int insert(transferprn transferprn){
-		return transferprnMapper.insert(transferprn);
+	public int insert(Transferprn transferprn){
+		return TransferprnMapper.insert(transferprn);
 	}
-	public int insertSelective(transferprn transferprn){
-		return transferprnMapper.insertSelective(transferprn);
+	public int insertSelective(Transferprn transferprn){
+		return TransferprnMapper.insertSelective(transferprn);
 	}
-	public transferprn selectByPrimaryKey(transferprnKey transferprnKey){
-		return transferprnMapper.selectByPrimaryKey(transferprnKey);
+	public int deleteByPrimaryKey(TransferprnKey transferprnKey){
+		return TransferprnMapper.deleteByPrimaryKey(transferprnKey);
 	}
-	public int deleteByPrimaryKey(transferprnKey transferprnKey){
-		return transferprnMapper.deleteByPrimaryKey(transferprnKey);
+	public Transferprn selectByPrimaryKey(TransferprnKey transferprnKey){
+		return TransferprnMapper.selectByPrimaryKey(transferprnKey);
 	}
-	public int updateByPrimaryKeySelective(transferprn transferprn){
-		return transferprnMapper.updateByPrimaryKeySelective(transferprn);
+	public int updateByPrimaryKey(Transferprn transferprn){
+		return TransferprnMapper.updateByPrimaryKey(transferprn);
 	}
-	public int updateByPrimaryKey(transferprn transferprn){
-		return transferprnMapper.updateByPrimaryKey(transferprn);
+	public int updateByPrimaryKeySelective(Transferprn transferprn){
+		return TransferprnMapper.updateByPrimaryKeySelective(transferprn);
 	}
 
 

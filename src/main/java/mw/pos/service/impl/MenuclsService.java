@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("menuclsService")
+@Service("MenuclsService")
 public class MenuclsService implements IMenuclsService {
 	@Resource
-	private menuclsMapper menuclsMapper;
+	private MenuclsMapper MenuclsMapper;
 
-	public int insert(menucls menucls){
-		return menuclsMapper.insert(menucls);
+	public int insert(Menucls menucls){
+		return MenuclsMapper.insert(menucls);
 	}
-	public int insertSelective(menucls menucls){
-		return menuclsMapper.insertSelective(menucls);
+	public int insertSelective(Menucls menucls){
+		return MenuclsMapper.insertSelective(menucls);
 	}
-	public menucls selectByPrimaryKey(menuclsKey menuclsKey){
-		return menuclsMapper.selectByPrimaryKey(menuclsKey);
+	public int deleteByPrimaryKey(MenuclsKey menuclsKey){
+		return MenuclsMapper.deleteByPrimaryKey(menuclsKey);
 	}
-	public int deleteByPrimaryKey(menuclsKey menuclsKey){
-		return menuclsMapper.deleteByPrimaryKey(menuclsKey);
+	public Menucls selectByPrimaryKey(MenuclsKey menuclsKey){
+		return MenuclsMapper.selectByPrimaryKey(menuclsKey);
 	}
-	public int updateByPrimaryKeySelective(menucls menucls){
-		return menuclsMapper.updateByPrimaryKeySelective(menucls);
+	public int updateByPrimaryKey(Menucls menucls){
+		return MenuclsMapper.updateByPrimaryKey(menucls);
 	}
-	public int updateByPrimaryKey(menucls menucls){
-		return menuclsMapper.updateByPrimaryKey(menucls);
+	public int updateByPrimaryKeySelective(Menucls menucls){
+		return MenuclsMapper.updateByPrimaryKeySelective(menucls);
 	}
 
 

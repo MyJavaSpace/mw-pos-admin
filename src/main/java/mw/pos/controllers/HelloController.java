@@ -12,15 +12,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSON;
-import com.pos.entity.user;
-import com.pos.entity.userKey;
+import com.pos.entity.*;
 
 //import mw.pos.service.IUserService;
 
 import mw.pos.aop.ISysLog;
 import mw.pos.handler.ExceptionResultInfo;
 import mw.pos.handler.ResultInfo;
-import mw.pos.service.IUserService;
+import mw.pos.service.*;
+ 
 
 @Controller
 @RequestMapping("/")
@@ -40,19 +40,19 @@ public class HelloController {
 		resultInfo.setMessage("异常测试");
 		// throw new ExceptionResultInfo(resultInfo);
 		// ModelAndView mv = new ModelAndView("hellomvc");//默认为forward模式
-		/*
-		 * Tbuser user = userService.getUserById(); model.addAttribute("res",
-		 * JSON.toJSONString(user));
-		 * 
-		 * logger.info(JSON.toJSONString(user));
-		 */
+		
+		 /* Tbuser user = userService.getUserById(); model.addAttribute("res",
+		 JSON.toJSONString(user));
+		  
+		  logger.info(JSON.toJSONString(user));*/
+		 
 		return resultInfo;
 	}
 
 	@ResponseBody
 	@RequestMapping(value = "getuser", method = RequestMethod.GET, produces = "text/html; charset=utf-8")
-	public user geTbuser() {
-		userKey userKey = new userKey();
+	public User geTbuser() {
+		UserKey userKey = new UserKey();
 		userKey.setFsshopguid("25854");
 		userKey.setFsstaffid("99999");
 		return userService.selectByPrimaryKey(userKey);

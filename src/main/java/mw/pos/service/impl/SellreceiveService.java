@@ -8,31 +8,31 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("sellreceiveService")
+@Service("SellreceiveService")
 public class SellreceiveService implements ISellreceiveService {
 	@Resource
-	private sellreceiveMapper sellreceiveMapper;
+	private SellreceiveMapper SellreceiveMapper;
 
-	public int insert(sellreceive sellreceive){
-		return sellreceiveMapper.insert(sellreceive);
+	public int insert(Sellreceive sellreceive){
+		return SellreceiveMapper.insert(sellreceive);
 	}
-	public int insertSelective(sellreceive sellreceive){
-		return sellreceiveMapper.insertSelective(sellreceive);
+	public int insertSelective(Sellreceive sellreceive){
+		return SellreceiveMapper.insertSelective(sellreceive);
 	}
-	public sellreceive selectByPrimaryKey(sellreceiveKey sellreceiveKey){
-		return sellreceiveMapper.selectByPrimaryKey(sellreceiveKey);
+	public int deleteByPrimaryKey(SellreceiveKey sellreceiveKey){
+		return SellreceiveMapper.deleteByPrimaryKey(sellreceiveKey);
 	}
-	public int deleteByPrimaryKey(sellreceiveKey sellreceiveKey){
-		return sellreceiveMapper.deleteByPrimaryKey(sellreceiveKey);
+	public Sellreceive selectByPrimaryKey(SellreceiveKey sellreceiveKey){
+		return SellreceiveMapper.selectByPrimaryKey(sellreceiveKey);
 	}
-	public int updateByPrimaryKeySelective(sellreceive sellreceive){
-		return sellreceiveMapper.updateByPrimaryKeySelective(sellreceive);
+	public int updateByPrimaryKey(Sellreceive sellreceive){
+		return SellreceiveMapper.updateByPrimaryKey(sellreceive);
 	}
-	public int updateByPrimaryKey(sellreceive sellreceive){
-		return sellreceiveMapper.updateByPrimaryKey(sellreceive);
+	public int updateByPrimaryKeySelective(Sellreceive sellreceive){
+		return SellreceiveMapper.updateByPrimaryKeySelective(sellreceive);
 	}
-	public int updateByPrimaryKeyWithBLOBs(sellreceive sellreceive){
-		return sellreceiveMapper.updateByPrimaryKeyWithBLOBs(sellreceive);
+	public int updateByPrimaryKeyWithBLOBs(Sellreceive sellreceive){
+		return SellreceiveMapper.updateByPrimaryKeyWithBLOBs(sellreceive);
 	}
 
 

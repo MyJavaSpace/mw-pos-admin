@@ -8,28 +8,28 @@ import com.pos.entity.*;
 import mw.pos.service.*;
 import com.pos.dao.*;
 
-@Service("openparamService")
+@Service("OpenparamService")
 public class OpenparamService implements IOpenparamService {
 	@Resource
-	private openparamMapper openparamMapper;
+	private OpenparamMapper OpenparamMapper;
 
-	public int insert(openparam openparam){
-		return openparamMapper.insert(openparam);
+	public int insert(Openparam openparam){
+		return OpenparamMapper.insert(openparam);
 	}
-	public int insertSelective(openparam openparam){
-		return openparamMapper.insertSelective(openparam);
-	}
-	public openparam selectByPrimaryKey(Integer integer){
-		return openparamMapper.selectByPrimaryKey(integer);
+	public int insertSelective(Openparam openparam){
+		return OpenparamMapper.insertSelective(openparam);
 	}
 	public int deleteByPrimaryKey(Integer integer){
-		return openparamMapper.deleteByPrimaryKey(integer);
+		return OpenparamMapper.deleteByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKeySelective(openparam openparam){
-		return openparamMapper.updateByPrimaryKeySelective(openparam);
+	public Openparam selectByPrimaryKey(Integer integer){
+		return OpenparamMapper.selectByPrimaryKey(integer);
 	}
-	public int updateByPrimaryKey(openparam openparam){
-		return openparamMapper.updateByPrimaryKey(openparam);
+	public int updateByPrimaryKey(Openparam openparam){
+		return OpenparamMapper.updateByPrimaryKey(openparam);
+	}
+	public int updateByPrimaryKeySelective(Openparam openparam){
+		return OpenparamMapper.updateByPrimaryKeySelective(openparam);
 	}
 
 
