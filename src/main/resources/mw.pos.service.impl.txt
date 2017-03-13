@@ -1,0 +1,18 @@
+package mw.pos.service.impl;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+import com.pos.entity.*;
+import mw.pos.service.*;
+import com.pos.dao.*;
+
+@Service("{serviceName}Service")
+public class {ServiceName}Service implements I{ServiceName}Service {
+	@Resource
+	private {serviceName}Mapper {serviceName}Mapper;
+
+{MethodName}
+
+}

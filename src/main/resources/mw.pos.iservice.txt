@@ -1,0 +1,7 @@
+package mw.pos.service;
+
+import com.pos.entity.*;
+
+public interface I{ServiceName}Service {
+{MethodName}
+}
