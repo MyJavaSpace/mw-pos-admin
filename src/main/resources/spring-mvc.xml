@@ -35,19 +35,16 @@
 		</property>
 	</bean>
 	<!-- 对模型视图名称的解析，即在模型视图名称添加前后缀 -->
-	 <bean
-		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="viewClass"
-			value="org.springframework.web.servlet.view.JstlView" />
-		<property name="prefix" value="/WEB-INF/"></property>
-		<property name="suffix" value=".jsp"></property>
-	</bean>
-	<!-- <bean id="viewResolver"
+	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> 
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" 
+		/> <property name="prefix" value="/WEB-INF/"></property> <property name="suffix" 
+		value=".jsp"></property> </bean> -->
+	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="defaultContentType" value="application/json" />
 		<property name="mediaTypes">
 			<map>
-				<entry key="html" value="text/html" />
+				<entry key="shtml" value="text/html" />
 				<entry key="json" value="application/json" />
 				<entry key="xml" value="application/xml" />
 			</map>
@@ -56,8 +53,10 @@
 			<list>
 				<bean
 					class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-					<property name="prefix" value="/WEB-INF/" />
-					<property name="suffix" value=".jsp" />
+					<property name="viewClass"
+						value="org.springframework.web.servlet.view.JstlView" />
+					<property name="prefix" value="/WEB-INF/"></property>
+					<property name="suffix" value=".jsp"></property>
 				</bean>
 			</list>
 		</property>
@@ -65,18 +64,16 @@
 			<list>
 				<bean
 					class="org.springframework.web.servlet.view.json.MappingJackson2JsonView">
-					 <property name="extractValueFromSingleKeyModel" value="true"/>   
-                    <property name="prettyPrint" value="true"/>  
+					<property name="extractValueFromSingleKeyModel" value="true" />
+					<property name="prettyPrint" value="true" />
 				</bean>
-				<bean class="org.springframework.web.servlet.view.xml.MarshallingView">
-					<property name="marshaller">
-						<bean class="org.springframework.oxm.xstream.XStreamMarshaller" />
-					</property>
-				</bean>
+				<!-- <bean class="org.springframework.web.servlet.view.xml.MarshallingView"> 
+					<property name="marshaller"> <bean class="org.springframework.oxm.xstream.XStreamMarshaller" 
+					/> </property> </bean> -->
 			</list>
 		</property>
-		 <property name="ignoreAcceptHeader" value="true" />
-	</bean> -->
+		<property name="ignoreAcceptHeader" value="true" />
+	</bean>
 	<mvc:annotation-driven>
 		<!-- 处理responseBody 里面日期类型 -->
 		<mvc:message-converters>
