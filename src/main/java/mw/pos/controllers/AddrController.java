@@ -22,7 +22,7 @@ public class AddrController {
 	@RequestMapping(value = "insert", method = RequestMethod.POST)
 	public ResultInfo<Integer> insert(@RequestBody Addr tbaddr) {
 		ResultInfo<Integer> resultInfo = new ResultInfo<>();
-		resultInfo.setData(addrService.insert(tbaddr));
+		resultInfo.setData(addrService.insertSelective(tbaddr));
 		if (resultInfo.getData() > 0) {
 			resultInfo.setStatus(true);
 			resultInfo.setMessage(ConfigUtil.getSuccess());
@@ -65,7 +65,7 @@ public class AddrController {
 	@RequestMapping(value = "updatebyprimarykey", method = RequestMethod.PUT)
 	public ResultInfo<Integer> updateByPrimaryKey(@RequestBody Addr tbaddr) {
 		ResultInfo<Integer> resultInfo = new ResultInfo<>();
-		resultInfo.setData(addrService.updateByPrimaryKey(tbaddr));
+		resultInfo.setData(addrService.updateByPrimaryKeySelective(tbaddr));
 		if (resultInfo.getData() > 0) {
 			resultInfo.setStatus(true);
 			resultInfo.setMessage(ConfigUtil.getSuccess());

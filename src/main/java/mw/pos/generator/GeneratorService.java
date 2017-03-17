@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.Method;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -37,19 +39,27 @@ public class GeneratorService implements IGeneratorCode {
 			return;
 		}
 
-		for (String string : lstClass) {
+		for (String lstclass : lstClass) {
 			String classCode = tempCode;
-			String serviceName = Common.toLowerCaseFirstOne(string.replace("com.pos.dao.", "").replace("Mapper", ""));
+			String serviceName = Common.toLowerCaseFirstOne(lstclass.replace("com.pos.dao.", "").replace("Mapper", ""));
 			String ServiceName = Common.toUpperCaseFirstOne(serviceName);
 			classCode = classCode.replace("{serviceName}", serviceName).replace("{ServiceName}", ServiceName);
+			Class<?> classMw=null;
+			try {
+				classMw = Class.forName(lstclass);
+			} catch (ClassNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			Type[] temp = ((ParameterizedType) classMw.getGenericInterfaces()[0]).getActualTypeArguments();
+			java.lang.reflect.TypeVariable<?>[] typeVariable = classMw.getInterfaces()[0].getTypeParameters();
+			for (int i = 0; i < temp.length; i++) {
+				classCode=classCode.replace("{"+i+"}", ((Class) temp[i]).getSimpleName() );
+			}
+			/*String strings = GetMethodName(lstclass, serviceName);
 
-			String strings = GetMethodName(string, serviceName);
-
-			classCode = classCode.replace("{MethodName}", strings);
-			/*
-			 * System.out.println(classCode); break;
-			 */
-
+			classCode = classCode.replace("{MethodName}", strings);*/
+			 
 			File file = new File(
 					System.getProperty("user.dir") + "/src/main/java/mw/pos/service/impl/" + ServiceName + "Service.java");
 			try {
@@ -65,8 +75,14 @@ public class GeneratorService implements IGeneratorCode {
 		Method[] methods;
 		StringBuffer stringBuffer = new StringBuffer();
 		try {
+			
 			Class<?> classMw = Class.forName(className);
+			Class<?> classSuper= classMw.getSuperclass();
+			if (classSuper!=null) {
+				
+			}
 			methods = classMw.getDeclaredMethods();
+			
 			for (Method method : methods) {
 				String methodBody = getMethodBodyTemp();
 				String methodName = method.getName();

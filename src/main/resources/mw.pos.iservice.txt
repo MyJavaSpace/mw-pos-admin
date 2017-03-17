@@ -1,7 +1,7 @@
 package mw.pos.service;
 
 import com.pos.entity.*;
-
-public interface I{ServiceName}Service {
-{MethodName}
+import mw.pos.base.IServiceBase;
+public interface I{ServiceName}Service extends IServiceBase<{0}, {1}> {
+ 
 }

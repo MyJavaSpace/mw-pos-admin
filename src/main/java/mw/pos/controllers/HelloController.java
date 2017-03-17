@@ -1,52 +1,39 @@
 package mw.pos.controllers;
 
-import java.awt.List;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
-
 import javax.annotation.Resource;
-import javax.servlet.ServletContext;
-import javax.servlet.http.HttpServletRequest;
-
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.BeanFactoryUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.context.WebApplicationContext;
-import org.springframework.web.context.support.WebApplicationContextUtils;
 import org.springframework.web.method.HandlerMethod;
-import org.springframework.web.servlet.HandlerMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.condition.PatternsRequestCondition;
 import org.springframework.web.servlet.mvc.condition.RequestMethodsRequestCondition;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
-import com.pos.entity.User;
-import com.pos.entity.UserKey;
+/*import com.pos.entity.User;
+import com.pos.entity.UserKey;*/
 
 //import mw.pos.service.IUserService;
 
-import mw.pos.aop.ISysLog;
 import mw.pos.handler.ResultInfo;
 import mw.pos.service.IAddrService;
-import mw.pos.service.IUserService;
-import mw.pos.viewmodel.RequestToMethodItem;
+//import mw.pos.service.IUserService;
 
 @Controller
 @RequestMapping("/")
 public class HelloController {
 
 	private static Logger logger = Logger.getLogger(HelloController.class);
-	@Resource
-	private IUserService userService = null;
+	/*@Resource
+	private IUserService userService = null;*/
 	@Resource
 	private IAddrService addrService = null;
 	@Autowired
@@ -114,11 +101,11 @@ public class HelloController {
 		return urlList;
 	}
 
-	@RequestMapping(value = "getuser", method = RequestMethod.GET)
-	public User geTbuser() {
+//	@RequestMapping(value = "getuser", method = RequestMethod.GET)
+/*	public User geTbuser() {
 		UserKey userKey = new UserKey();
 		userKey.setFsshopguid("25854");
 		userKey.setFsstaffid("admin");
 		return userService.selectByPrimaryKey(userKey);
-	}
+	}*/
 }
