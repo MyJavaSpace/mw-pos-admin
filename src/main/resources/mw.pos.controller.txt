@@ -10,14 +10,14 @@ import mw.pos.base.BaseController;
 import mw.pos.service.*;
 
 @Controller
-@RequestMapping("/addr")
-public class AddrController extends BaseController<Addr,AddrKey> {
+@RequestMapping("/{serviceName}")
+public class {ServiceName}Controller extends BaseController<{0},{1}> {
 	@Autowired
-	private IAddrService addrService = null;
-	private static Logger logger = Logger.getLogger(AddrController.class);
+	private I{ServiceName}Service {serviceName}Service = null;
+	private static Logger logger = Logger.getLogger({ServiceName}Controller.class);
 
 	@Autowired
 	public void setBaseMapper() {
-		super.setBaseService(addrService);
+		super.setBaseService({serviceName}Service);
 	}
 }
