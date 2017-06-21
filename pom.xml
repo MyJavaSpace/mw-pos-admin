@@ -267,7 +267,7 @@
 		<dependency>
 			<groupId>mw-pos</groupId>
 			<artifactId>mw-pos</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
 	</dependencies>
 	<build>
