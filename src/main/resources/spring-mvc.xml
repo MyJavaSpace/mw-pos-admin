@@ -6,6 +6,8 @@
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans         http://www.springframework.org/schema/beans/spring-beans.xsd         http://www.springframework.org/schema/context         http://www.springframework.org/schema/context/spring-context.xsd     http://www.springframework.org/schema/tx     http://www.springframework.org/schema/tx/spring-tx-4.1.xsd         http://www.springframework.org/schema/mvc          http://www.springframework.org/schema/mvc/spring-mvc.xsd        http://www.springframework.org/schema/aop       http://www.springframework.org/schema/aop/spring-aop-4.1.xsd"
 	default-lazy-init="true">
+	<!-- 默认的注解映射的支持 -->
+	<mvc:annotation-driven validator="validator"  />
 	<context:component-scan base-package="mw.pos" />
 
 	<!-- <context:component-scan base-package="com.lanyuan.logAop" /> -->
@@ -14,6 +16,23 @@
 	<aop:aspectj-autoproxy proxy-target-class="true" />
 	<!-- 注解支持 -->
 	<context:annotation-config />
+	<mvc:annotation-driven>
+		<!-- 处理responseBody 里面日期类型 -->
+		<mvc:message-converters>
+			<bean
+					class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+				<property name="objectMapper">
+					<bean class="com.fasterxml.jackson.databind.ObjectMapper">
+						<property name="dateFormat">
+							<bean class="java.text.SimpleDateFormat">
+								<constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss" />
+							</bean>
+						</property>
+					</bean>
+				</property>
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
 	<!--避免IE执行AJAX时，返回JSON出现下载文件 -->
 	<bean id="mappingJackson2HttpMessageConverter"
 		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
@@ -74,23 +93,21 @@
 		</property>
 		<property name="ignoreAcceptHeader" value="true" />
 	</bean>
-	<mvc:annotation-driven>
-		<!-- 处理responseBody 里面日期类型 -->
-		<mvc:message-converters>
-			<bean
-				class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
-				<property name="objectMapper">
-					<bean class="com.fasterxml.jackson.databind.ObjectMapper">
-						<property name="dateFormat">
-							<bean class="java.text.SimpleDateFormat">
-								<constructor-arg type="java.lang.String" value="yyyy-MM-dd HH:mm:ss" />
-							</bean>
-						</property>
-					</bean>
-				</property>
-			</bean>
-		</mvc:message-converters>
-	</mvc:annotation-driven>
+	<!-- 资源文件：messages.properties -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="defaultEncoding">
+			<value>UTF-8</value>
+		</property>
+		<property name="basenames">
+			<list>
+				<value>message</value>
+			</list>
+		</property>
+	</bean>
+	<!-- 验证器 -->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource"/>
+	</bean>
 	<!-- 配置文件上传，如果没有使用文件上传可以不用配置，当然如果不配，那么配置文件中也不必引入上传组件包 -->
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
@@ -108,4 +125,6 @@
 		<property name="jsonMessageConverter" ref="mappingJackson2HttpMessageConverter" />
 	</bean>
 	<!-- <import resource="spring-mvc-shiro.xml"/> -->
+
+	<bean name="requestMappingHandlerMapping" class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
 </beans>
